@@ -210,7 +210,7 @@
         </div>
       </div>
       <div class="comp-member-list index">
-        <?php get_template_part('parts/member/topMember', null); ?>
+        <?php get_template_part('parts/top/topMember', null); ?>
       </div>
       <div class="comp-link-button large center sp">
         <a href="#aaaa"><span>メンバー一覧</span></a>

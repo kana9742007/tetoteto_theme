@@ -1,0 +1,27 @@
+.page-case-list{
+  .case-list{
+    margin-bottom: 100px;
+    .main_image{
+      width: 100%;
+      height: 450px;
+      @include bgSet;
+      margin-bottom: 60px;
+      img{
+        display: none;
+      }
+    }
+
+    .section_inner{
+      .lead_txt{
+        .comp-section-title{
+          margin-bottom: 30px;
+        }
+        .sub_ttl{
+          font-size: 24px;
+          line-height: 1.88;
+          margin-bottom: 40px;
+        }
+      }
+    }
+  }
+}
