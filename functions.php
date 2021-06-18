@@ -36,5 +36,5 @@ function enqueue_scripts()
 add_action('wp_enqueue_scripts', 'enqueue_scripts');
 
 // サムネイル表示
-// add_theme_support( 'post-thumbnails' );
+add_theme_support( 'post-thumbnails' );
 ?>

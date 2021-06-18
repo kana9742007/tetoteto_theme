@@ -420,30 +420,4 @@
     </div><!-- section_inner -->
   </section>
 </article>
-<div id="hummenu" class="hummenu">
-  <div class="hummenu_inner">
-    <div class="height_adjust"></div>
-    <div class="content">
-      <a class="h_logo fade_box" href="#aaaa"></a>
-      <span class="copy fade_box"><span>暮らしの感度を高める</span><span>クリエイティブプロダクション</span></span>
-      <nav class="header_nav fade_box">
-        <ul>
-          <li class="fade_box"><a href="#aaaa">私たちについて</a></li>
-          <li class="fade_box"><a href="#aaaa">制作実績</a></li>
-          <li class="fade_box"><a href="#aaaa">プロジェクトメンバー</a></li>
-          <li class="fade_box"><a href="#aaaa">会社概要</a></li>
-          <li class="fade_box"><a href="#aaaa">ブログ</a></li>
-        </ul>
-      </nav>
-      <div class="h_footer">
-        <a class="contact fade_box" href="#aaaa">お問い合わせ</a>
-        <div class="sns_wrap fade_box">
-          <a class="ig" href="#aaaa"></a>
-          <a class="fb" href="#aaaa"></a>
-          <a class="tw" href="#aaaa"></a>
-        </div>
-      </div>
-    </div>
-  </div>
-</div><!-- hummenu -->
 <?php get_footer(); ?>
