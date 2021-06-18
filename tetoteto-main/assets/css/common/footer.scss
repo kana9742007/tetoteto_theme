@@ -1,0 +1,181 @@
+footer{
+  position: relative;
+  z-index: 10;
+  width: calc(100vw - 270px);
+  padding: 60px 0;
+  background-color: #242424;
+  .footer_inner{
+    @include waku;
+    .footer_logo{
+      display: block;
+      width: 62px;
+      height: 120px;
+      @include bgSet;
+      background-image: url(../img/common/logo_white.svg);
+      margin: 0 auto 40px;
+      transition: opacity 0.3s;
+    }
+    .footer_nav{
+      display: none;
+    }
+    .copyright{
+      text-align: center;
+      color: #f1f1f1;
+      font-size: 12px;
+      line-height: 1.67;
+      letter-spacing: 0.75px;
+    }
+  }
+}
+
+@media screen and (max-width: 1150px){
+  footer{
+    width: calc(100vw - 220px);
+  }
+}
+@media screen and (max-width: 980px){
+  footer{
+    width: 100vw;
+    padding: 80px 0;
+    .footer_inner{
+      max-width: 60%;
+      .footer_logo{
+        margin: 0 auto 30px;
+      }
+      .footer_nav{
+        display: block;
+        .footer_txt{
+          font-size: 14px;
+          line-height: 1.83;
+          letter-spacing: 0.33px;
+          text-align: center;
+          color: #fff;
+          span{
+            display: block;
+          }
+        }
+        .nav{
+          margin-top: 40px;
+          padding-top: 40px;
+          margin-bottom: 80px;
+          border-top: solid 1px #d8d8d8;
+          ul{
+            @include flexSet;
+            justify-content: center;
+            li{
+              padding: 0 15px;
+              writing-mode: vertical-rl;
+              a{
+                font-size: 16px;
+                line-height: 1.19;
+                letter-spacing: 0.33px;
+                text-align: center;
+                color: #fff;
+              }
+            }
+          }
+        }
+        .h_footer{
+          .contact{
+            display: block;
+            width: 100%;
+            padding: 12px 0;
+            text-align: center;
+            font-size: 18px;
+            line-height: 1;
+            letter-spacing: 0.42px;
+            text-align: center;
+            border: 1px solid #fff;
+            border-radius: 100px;
+            color: #fff;
+            @include hover;
+          }
+          .sns_wrap{
+            @include flexSet;
+            justify-content: center;
+            margin-top: 45px;
+            a{
+              @include hover;
+              display: block;
+              margin-bottom: 60px;
+              width: 35px;
+              height: 35px;
+              margin-right: 10px;
+              border-radius: 50%;
+              border: solid 1px #fff;
+              @include bgSet;
+              &.ig{
+                background-size: 15px;
+                background-image: url(../img/common/icon_ig_white.png);
+              }
+              &.fb{
+                background-size: 10px;
+                background-image: url(../img/common/icon_fb_white.png);
+              }
+              &.tw{
+                background-size: 14px;
+                background-image: url(../img/common/icon_tw_white.png);
+              }
+            }
+          }
+        }
+      }
+      .copyright{
+        text-align: center;
+        color: #f1f1f1;
+        font-size: 12px;
+        line-height: 1.67;
+        letter-spacing: 0.75px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 720px){
+  footer{
+    width: 100vw;
+    padding: 60px 0;
+    .footer_inner{
+      max-width: 80%;
+      .footer_logo{
+        margin: 0 auto 30px;
+        background-size: contain;
+      }
+      .footer_nav{
+        display: block;
+        .footer_txt{
+          font-size: 14px;
+          letter-spacing: 0.33px;
+        }
+        .nav{
+          margin-top: 40px;
+          padding-top: 40px;
+          margin-bottom: 60px;
+          ul{
+            li{
+              padding: 0 12px;
+              a{
+                font-size: 16px;
+              }
+            }
+          }
+        }
+        .h_footer{
+          .contact{
+            display: block;
+            width: 100%;
+            padding: 12px 0;
+            text-align: center;
+            font-size: 18px;
+            line-height: 1;
+            letter-spacing: 0.42px;
+            text-align: center;
+            border: 1px solid #fff;
+            border-radius: 100px;
+            color: #fff;
+            @include hover;
+          }
+        }
+      }
+    }
+  }
+}

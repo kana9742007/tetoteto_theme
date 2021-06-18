@@ -1,0 +1,170 @@
+.comp-member-list{
+  @include flexSet;
+  .member_item{
+    width: 22%;
+    margin-right: 4%;
+    margin-bottom: 40px;
+    &:nth-of-type(4n){
+      margin-right: 0;
+    }
+    .img_wrap{
+      border-radius: 15px;
+      overflow: hidden;
+      margin-bottom: 30px;
+    }
+    .txt_wrap{
+      .name{
+        font-size: 22px;
+        margin-bottom: 15px;
+      }
+      .role{
+        display: block;
+        font-size: 12px;
+      }
+      .ref{
+        @include flexSet;
+        margin-top: 20px;
+        a{
+          display: block;
+          width: 25px;
+          height: 25px;
+          background: $basicBgColor;
+          border-radius: 50%;
+          @include hover;
+          @include bgSet;
+          margin-right: 7px;
+          &:nth-last-of-type(1){
+            margin-right: 0;
+          }
+          &.ig{
+            background-size: 12px;
+            background-image: url(../img/common/icon_ig.png);
+          }
+          &.fb{
+            background-size: 7px;
+            background-image: url(../img/common/icon_fb.png);
+          }
+          &.tw{
+            background-size: 11px;
+            background-image: url(../img/common/icon_tw.png);
+          }
+          &.folio{
+            background-size: 10px;
+            background-image: url(../img/common/icon_folio.png);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1150px){
+  .comp-member-list{
+    @include flexSet;
+    .member_item{
+      width: 30%;
+      margin-right: 5%;
+      margin-bottom: 40px;
+      &:nth-of-type(4n){
+        margin-right: 5%;
+      }
+      &:nth-of-type(3n){
+        margin-right: 0%;
+      }
+      .img_wrap{
+        border-radius: 15px;
+        overflow: hidden;
+        margin-bottom: 30px;
+      }
+      .txt_wrap{
+        .name{
+          font-size: 22px;
+          margin-bottom: 15px;
+        }
+        .role{
+          display: block;
+          font-size: 12px;
+        }
+        .ref{
+          @include flexSet;
+          margin-top: 20px;
+          a{
+            display: block;
+            width: 25px;
+            height: 25px;
+            background: $basicBgColor;
+            border-radius: 50%;
+            @include hover;
+            @include bgSet;
+            margin-right: 7px;
+            &:nth-last-of-type(1){
+              margin-right: 0;
+            }
+            &.ig{
+              background-size: 12px;
+              background-image: url(../img/common/icon_ig.png);
+            }
+            &.fb{
+              background-size: 7px;
+              background-image: url(../img/common/icon_fb.png);
+            }
+            &.tw{
+              background-size: 11px;
+              background-image: url(../img/common/icon_tw.png);
+            }
+            &.folio{
+              background-size: 10px;
+              background-image: url(../img/common/icon_folio.png);
+            }
+          }
+        }
+      }
+    }
+    &.index{
+      .member_item{
+        &:nth-of-type(n+7){
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 720px){
+  .comp-member-list{
+    @include flexSet;
+    .member_item{
+      width: 48%;
+      margin-right: 4%;
+      margin-bottom: 30px;
+      &:nth-of-type(3n){
+        margin-right: 4%;
+      }
+      &:nth-of-type(2n){
+        margin-right: 0;
+      }
+      .img_wrap{
+        border-radius: 10px;
+        overflow: hidden;
+        margin-bottom: 20px;
+      }
+      .txt_wrap{
+        .name{
+          font-size: 18px;
+          margin-bottom: 15px;
+        }
+        .role{
+          display: block;
+          font-size: 10px;
+        }
+      }
+    }
+    &.index{
+      .member_item{
+        &:nth-of-type(n+7){
+          display: block;
+        }
+      }
+    }
+  }
+}

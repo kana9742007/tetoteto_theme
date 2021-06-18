@@ -1,0 +1,61 @@
+.comp-section-title{
+  &.margin{
+    margin-bottom: 40px;
+  }
+  &.center{
+    text-align: center;
+  }
+  &.white{
+    .title_en, .title_ja{
+      color: #fff;
+    }
+  }
+  .title_en{
+    display: block;
+    @include varela;
+    font-size: 14px;
+    line-height: 1;
+    color: #646464;
+    margin-bottom: 20px;
+    text-indent: 0.2em;
+  }
+  .title_ja{
+    font-size: 45px;
+    font-style: normal;
+    line-height: 1;
+  }
+}
+
+@media screen and (max-width: 1150px){
+  .comp-section-title{
+    &.margin{
+      margin-bottom: 40px;
+    }
+    .title_en{
+      font-size: 13px;
+      margin-bottom: 20px;
+    }
+    .title_ja{
+      font-size: 40px;
+    }
+  }
+}
+
+@media screen and (max-width: 720px){
+  .comp-section-title{
+    &.margin{
+      margin-bottom: 40px;
+    }
+    .title_en{
+      font-size: 3vw;
+      margin-bottom: 15px;
+    }
+    .title_ja{
+      font-size: 7.8vw;
+      span{
+        line-height: 1.8;
+        display: block;
+      }
+    }
+  }
+}

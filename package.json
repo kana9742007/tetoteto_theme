@@ -1,0 +1,13 @@
+{
+  "scripts": {
+    "sass": "node-sass -r -w tetoteto-main/assets/css/style.scss assets/style/css/style.css",
+    "build": "node-sass assets/style/css/style.css assets/style/css/style.css --output-style compressed"
+  },
+  "dependencies": {
+    "@material/textfield": "^8.0.0",
+    "@terwanerik/scrolltrigger": "^1.0.5",
+    "node-sass": "^5.0.0",
+    "scrollreveal": "^4.0.7"
+  },
+  "license": "UNLICENSED"
+}

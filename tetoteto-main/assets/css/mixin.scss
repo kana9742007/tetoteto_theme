@@ -1,0 +1,135 @@
+$black01: #363636;
+$black02: #646464;
+$basicRed: #e60012;
+$basicBaige: #bb9f7b;
+$basicBgColor: #f9f6f3;
+$pointYellow: #BF992E;
+
+/* ----- Google Fonts ----- */
+@font-face {
+    font-family: 'varela';
+		font-weight: 400;
+    src: url('../fonts/varela.eot'),url('../fonts/varela.woff') format('woff'),
+    url('../fonts/varela.ttf') format('truetype'),
+}
+
+@mixin varela{
+  font-family: 'varela', "FOT-筑紫A丸ゴシック Std D", 游ゴシック体, "Yu Gothic", YuGothic, "ヒラギノ角ゴシック Pro", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  letter-spacing: 0.15em;
+}
+@mixin heebo{
+  font-family: 'Heebo', sans-serif;
+  font-weight: normal;
+}
+
+@mixin yugo{
+  /*font-family: 游ゴシック体, "Yu Gothic", YuGothic, "ヒラギノ角ゴシック Pro", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;*/
+  font-family: tbudrgothic-std, "ヒラギノ丸ゴ Pro W4","ヒラギノ丸ゴ Pro","Hiragino Maru Gothic Pro","ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","HG丸ｺﾞｼｯｸM-PRO","HGMaruGothicMPRO";
+  font-weight: normal;
+  letter-spacing: 0.06em;
+}
+
+@mixin tsukushi-r{
+  font-family: "TsukuARdGothicStd-R";
+  font-weight: normal;
+}
+
+@mixin tsukushi-b{
+  font-family: "FOT-筑紫A丸ゴシック Std D";
+  font-weight: bold;
+}
+
+
+@mixin waku{
+  max-width: 1200px;
+  width: calc(100% - 200px);
+  margin-left: auto;
+  margin-right: auto;
+  @media screen and (max-width: 1250px){
+    width: calc(100% - 120px);
+  }
+  @media screen and (max-width: 1100px){
+    width: calc(100% - 100px);
+  }
+  @media screen and (max-width: 980px){
+    max-width: 780px;
+    width: 86vw;
+  }
+  @media screen and (max-width: 720px){
+    width: 88vw;
+  }
+}
+@mixin flexSet {
+	display: flex;
+	flex-wrap: wrap;
+}
+@mixin bgSet{
+  background:{
+    repeat: no-repeat;
+    position: center center;
+    size: cover;
+  }
+}
+@mixin hover{
+  transition: opacity .3s;
+  &:hover{
+    opacity: 0.75;
+  }
+}
+@mixin txtHover{
+  transition: color .2s;
+  &:hover{
+    color: #979797;
+  }
+}
+@mixin blackBg{
+  background: $black02;
+  padding: 80px;
+  box-sizing: border-box;
+  @media screen and (max-width: 1100px){
+      padding: 60px;
+  }
+  @media screen and (max-width: 980px){
+    max-width: unset;
+    width: 100vw;
+    padding: 90px 7vw;
+    margin-left: -7vw;
+  }
+  @media screen and (max-width: 720px){
+    padding: 60px 6vw;
+    margin-left: -6vw;
+  }
+}
+@mixin wave{
+  padding: 0 0 0 30px;
+  background: url(../img/common/wave.png) repeat-y left top;
+  background-size: 4px 9px;
+  @media screen and (max-width: 720px){
+    padding: 0 0 0 20px;
+  }
+}
+@mixin border{
+  padding: 30px 0 0 0;
+  background: url(../img/common/wave.png) repeat-y center bottom;
+}
+@mixin basicP{
+  p{
+    @include yugo;
+    font-size: 15px;
+    line-height: 2;
+    letter-spacing: 0.8px;
+    color: #363636;
+    font-weight: normal;
+    margin-bottom: 1em;
+    @media screen and (max-width: 720px){
+      font-size: 14px;
+      letter-spacing: 0.6px;
+    }
+    span{
+      display: block;
+    }
+    &:nth-last-of-type(1){
+      margin-bottom: 0;
+    }
+  }
+}

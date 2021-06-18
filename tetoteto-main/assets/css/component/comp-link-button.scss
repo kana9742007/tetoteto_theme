@@ -1,0 +1,59 @@
+.comp-link-button{
+  a{
+    width: 200px;
+    display: block;
+    font-size: 18px;
+    padding: 10px 0;
+    line-height: 1;
+    letter-spacing: 0.42px;
+    text-align: center;
+    background: $basicBaige;
+    border: 1px solid $basicBaige;
+    color: #fff;
+    text-align: center;
+    border-radius: 100px;
+    transition: color .2s, background .2s;
+    &:hover{
+      color: $basicBaige;
+      background: #fff;
+    }
+  }
+  &.align_right{
+    @include flexSet;
+    justify-content: flex-end;
+  }
+  &.center{
+    a{
+      margin: 0 auto;
+    }
+  }
+  &.large{
+    a{
+      max-width: 100%;
+      width: 500px;
+      padding: 15px 0;
+    }
+  }
+  &.sp{
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1150px){
+  .comp-link-button{
+    &.sp{
+      display: block;
+      margin-top: 40px;
+    }
+  }
+}
+@media screen and (max-width: 1150px){
+  .comp-link-button{
+    a{
+      width: 100%;
+      font-size: 18px;
+      padding: 12px 0;
+      letter-spacing: 0.4px;
+    }
+  }
+}
