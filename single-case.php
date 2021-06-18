@@ -11,9 +11,9 @@ if (have_posts()) :
     $project_flows = SCF::get('project_flows');
     $members = SCF::get('member');
     $title = get_the_title();
-    $thumbnails = get_the_post_thumbnail_url();
+    $thumbnails = get_the_post_thumbnail_url( get_the_ID(), 'large' );
     $sp_thumbnails_id = get_post_meta($post_id, 'sp_thumbnail', true);
-    $sp_thumbnails = wp_get_attachment_url($sp_thumbnails_id);
+    $sp_thumbnails = wp_get_attachment_url($sp_thumbnails_id,'medium_large');
     $cat = get_the_terms($post_id, 'case_cat');
     $cat_slug = $cat[0]->slug;
 ?>
@@ -60,8 +60,16 @@ if (have_posts()) :
             <div class="visual_wrap">
               <?php foreach ($images as $image) :
               ?>
-                <div class="visual_item <?= $image['image_option'] ?> ">
-                  <img src=" <?= wp_get_attachment_url($image['image']) ?> ">
+              <?php
+                $img_size = $image['image_option'];
+                if ( $img_size != 'column2' ) {
+                  $set_image = wp_get_attachment_image_src($image['image'],'medium');
+                }else{
+                  $set_image = wp_get_attachment_image_src($image['image'],'medium_large');
+                }
+              ?>
+                <div class="visual_item <?= $img_size ?>">
+                  <img src="<?= $set_image[0]?>">
                 </div>
               <?php endforeach; ?>
             </div>

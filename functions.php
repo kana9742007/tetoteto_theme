@@ -38,6 +38,8 @@ add_action('wp_enqueue_scripts', 'enqueue_scripts');
 // サムネイル表示
 add_theme_support( 'post-thumbnails' );
 
-// 出力画像サイズ変更
+// 出力画像サイズ追加
 add_image_size('small', 440, 9999);
+add_image_size('ogp', 1200, 9999);
+
 ?>
