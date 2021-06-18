@@ -108,7 +108,7 @@ if (have_posts()) :
               <?php foreach ($members as $m) :
                 $member = array('id' => $m);
               ?>
-                <?php get_template_part('parts/memberItem', null, $member); ?>
+                <?php get_template_part('parts/member/memberItem', null, $member); ?>
               <?php endforeach; ?>
             </div>
           </div><!-- section_inner -->
@@ -117,7 +117,7 @@ if (have_posts()) :
 
       <!-- 関連記事 -->
       <?php $catDetail = array('cat_slug' => $cat_slug, 'post_id' => $post_id); ?>
-      <?php get_template_part('parts/otherProject', null, $catDetail); ?>
+      <?php get_template_part('parts/case/otherProject', null, $catDetail); ?>
     </article>
 <?php
   endwhile;
