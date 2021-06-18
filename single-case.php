@@ -12,6 +12,8 @@ if (have_posts()) :
     $members = SCF::get('member');
     $title = get_the_title();
     $thumbnails = get_the_post_thumbnail_url();
+    $sp_thumbnails_id = get_post_meta($post_id, 'sp_thumbnail', true);
+    $sp_thumbnails = wp_get_attachment_url($sp_thumbnails_id);
     $cat = get_the_terms($post_id, 'case_cat');
     $cat_slug = $cat[0]->slug;
 ?>
@@ -20,7 +22,7 @@ if (have_posts()) :
 
       <section class="section-lead">
         <div class="main_image" style="background-image: url(<?= $thumbnails ?>;)">
-          <img src="<?= $thumbnails ?>">
+          <img src="<?= $sp_thumbnails ?>">
         </div>
         <div class="lead_txt">
           <div class="comp-section-title center">
