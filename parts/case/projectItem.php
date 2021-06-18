@@ -2,13 +2,13 @@
   global $post_id;
   global $cat;
   global $title;
-  global $thumbnails;
+  global $thumbnail;
   global $cat_name;
 ?>
 
 <div class="project_item">
   <a href="<?= esc_url(get_permalink()) ?>">
-    <img src="<?= $thumbnails ?>">
+    <img src="<?= $thumbnail ?>">
   </a>
   <div class="txt_wrap">
     <span class="category"><?= $cat_name ?></span>
