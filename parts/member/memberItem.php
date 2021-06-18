@@ -24,10 +24,10 @@ $folio = get_post_meta($id, 'folio', true);
     <h3 class="name"><?= $title ?></h3>
     <span class="role"><?= $position ?> </span>
     <div class="ref">
-      <a class="ig" href="<?= $instagram ?>"></a>
-      <a class="fb" href="<?= $facebook ?>"></a>
-      <a class="tw" href="<?= $twitter ?>"></a>
-      <a class="folio" href="<?= $folio ?>"></a>
+      <a class="ig" style="background-image: url(<?= get_template_directory_uri() ?>/tetoteto-main/assets/img/common/icon_ig.png);" href="<?= $instagram ?>"></a>
+      <a class="fb" style="background-image: url(<?= get_template_directory_uri() ?>/tetoteto-main/assets/img/common/icon_fb.png);" href="<?= $facebook ?>"></a>
+      <a class="tw" style="background-image: url(<?= get_template_directory_uri() ?>/tetoteto-main/assets/img/common/icon_tw.png);" href="<?= $twitter ?>"></a>
+      <a class="folio" style="background-image: url(<?= get_template_directory_uri() ?>/tetoteto-main/assets/img/common/icon_folio.png);" href="<?= $folio ?>"></a>
     </div>
   </div>
 </div><!-- member_item -->

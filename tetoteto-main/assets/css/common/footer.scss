@@ -11,7 +11,7 @@ footer{
       width: 62px;
       height: 120px;
       @include bgSet;
-      background-image: url(../img/common/logo_white.svg);
+      @include logoWhiteSvg;
       margin: 0 auto 40px;
       transition: opacity 0.3s;
     }
@@ -106,15 +106,15 @@ footer{
               @include bgSet;
               &.ig{
                 background-size: 15px;
-                background-image: url(../img/common/icon_ig_white.png);
+                // background-image: url(../img/common/icon_ig_white.png);
               }
               &.fb{
                 background-size: 10px;
-                background-image: url(../img/common/icon_fb_white.png);
+                // background-image: url(../img/common/icon_fb_white.png);
               }
               &.tw{
                 background-size: 14px;
-                background-image: url(../img/common/icon_tw_white.png);
+                // background-image: url(../img/common/icon_tw_white.png);
               }
             }
           }
