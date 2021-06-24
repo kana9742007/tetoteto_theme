@@ -30,10 +30,13 @@ if ($the_query->have_posts()) :
         global $title;
         global $thumbnails;
         global $cat_name;
+        global $thumbnail;
         $post_id = get_the_ID();
         $cat = get_the_terms($post_id, 'case_cat');
         $title = get_the_title();
-        $thumbnails = get_the_post_thumbnail_url();
+        $sp_thumbnails_id = SCF::get('sp_thumbnail');
+        $thumbnails = wp_get_attachment_image_src($sp_thumbnails_id);
+        $thumbnail = $thumbnails[0];
         $cat_name = $cat[0]->name;
     ?>
         <?php get_template_part('parts/case/projectItem', null); ?>

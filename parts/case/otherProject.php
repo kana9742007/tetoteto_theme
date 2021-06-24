@@ -45,8 +45,8 @@ if ($the_query->have_posts()) :
             $cat = get_the_terms($post_id, 'case_cat');
             $title = get_the_title();
             $thumbnails = get_the_post_thumbnail_url();
-            $sp_thumbnails_id = SCF::get('sp_thumbnail', $post_id);
-            $sp_thumbnails = wp_get_attachment_image_src($sp_thumbnails_id,'thumbnail');
+            $sp_thumbnails_id = SCF::get('sp_thumbnail');
+            $sp_thumbnails = wp_get_attachment_image_src($sp_thumbnails_id);
             $thumbnail = $sp_thumbnails[0];
             $cat_name = $cat[0]->name;
         ?>
