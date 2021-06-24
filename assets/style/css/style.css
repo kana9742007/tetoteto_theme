@@ -1774,6 +1774,10 @@ footer {
     font-size: 24px;
     line-height: 1.88;
     margin-bottom: 40px; }
+  .page-case-list .case-list .section_inner .is-list-page {
+    margin-top: 106px; }
+    .page-case-list .case-list .section_inner .is-list-page .project_item {
+      margin-bottom: 21px; }
 
 /*########## コンポーネント ##########*/
 /* 共通パーツ */

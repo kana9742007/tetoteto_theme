@@ -14,6 +14,12 @@
       </div>
 
       <!-- TODO カテゴリー 絞り込み -->
+      <div class="search-wrapper">
+        <div class="search-type">
+          <p>タイプで絞り込む</p>
+          <span></span>
+        </div>
+      </div>
 
       <!-- カテゴリーリスト -->
       <?php get_template_part('parts/case/projectList', null,); ?>

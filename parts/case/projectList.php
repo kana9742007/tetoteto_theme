@@ -22,7 +22,7 @@ $the_query = new WP_Query($posts);
 if ($the_query->have_posts()) :
 ?>
 
-  <div class="comp-project-list detail">
+  <div class="comp-project-list detail is-list-page">
     <?php if ($the_query->have_posts()) :
       while ($the_query->have_posts()) : $the_query->the_post();
         global $post_id;
@@ -35,7 +35,7 @@ if ($the_query->have_posts()) :
         $cat = get_the_terms($post_id, 'case_cat');
         $title = get_the_title();
         $sp_thumbnails_id = SCF::get('sp_thumbnail');
-        $thumbnails = wp_get_attachment_image_src($sp_thumbnails_id);
+        $thumbnails = wp_get_attachment_image_src($sp_thumbnails_id , 'full');
         $thumbnail = $thumbnails[0];
         $cat_name = $cat[0]->name;
     ?>
