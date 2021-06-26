@@ -1369,8 +1369,7 @@ footer {
   height: 100vh;
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: cover;
-  background-image: url(../img/aboutus/main.jpg); }
+  background-size: cover; }
   .page-about .service_bg::before {
     display: block;
     content: "";
