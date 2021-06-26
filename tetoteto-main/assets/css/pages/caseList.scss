@@ -201,3 +201,159 @@
     }
   }
 }
+
+
+@media screen and (max-width: 720px){
+  .page-case-list{
+    .case-list{
+      margin-bottom: 58px;
+      .main_image{
+        width: 100%;
+        height: 335px;
+        @include bgSet;
+        margin-bottom: 41px;
+        img{
+          display: none;
+        }
+      }
+
+      .section_inner{
+        .lead_txt{
+          .comp-section-title{
+            margin-bottom: 30px;
+          }
+          .sub_ttl{
+            font-size: 4.8vw;
+            line-height: 1.88;
+            margin-bottom: 40px;
+          }
+        }
+
+        .search-wrapper{
+          display: block;
+
+          .search{
+            display: block;
+            margin-bottom: 6px;
+            padding: 8px 20px 21px 16px;
+            background-color: #f9f6f3;
+            width: calc( 100% - 36px);
+
+            p{
+              font-size: 4.8vw;
+              margin-bottom: 20px;
+            }
+
+            .search-line{
+              display: none;
+            }
+          }
+
+          .search-type{
+            margin-right: 33px;
+            .type-wrapper{
+              @include flexSet;
+              align-items: center;
+
+              .case-type{
+                width: 38px;
+                height: 27px;
+                background-color: #acacac;
+                border-radius: 50px;
+                color: #fffff0;
+                padding-top: 11px;
+                text-align: center;
+                display: block;
+                margin-right: 13px;
+                font-size: 4vw;
+                font-weight: normal;
+
+                &:last-child{
+                  margin-right: 0px;
+                }
+              }
+
+              .active{
+                background-color: #cab599;
+                color: #fffff0;
+                width: 58px;
+                font-size: 5.6vw;
+                padding-top: 19px;
+                height: 39px;
+              }
+            }
+          }
+
+          .search-cat{
+            padding: 8px 15px 17px 15px;
+            width: calc( 100% - 30px);
+            .case-wrapper{
+              margin-left: 0px;
+
+              a{
+                width: calc((100% / 2) - 10px);
+                text-align: center;
+                display: block;
+                font-size: 3.7vw;
+                background-color: #ffffff;
+                padding: 13px 0px 14px;
+
+                .ja-text{
+                  font-size: 10px;
+                  font-weight: normal;
+                  font-style: normal;
+                  line-height: 1;
+                  letter-spacing: 0.33px;
+                  text-align: center;
+                  display: block;
+                  text-decoration: none;
+                  width: 100%;
+                  margin-top: 4px;
+                }
+
+                &:first-child{
+                  margin-right: 10px;
+                }
+              }
+
+              .active{
+                background-color: #cab599;
+                color: #fffff0;
+              }
+            }
+          }
+        }
+
+        // 事例一覧
+        .is-list-page{
+          margin-top: 45px;
+          .project_item{
+            margin-bottom: 21px;
+          }
+        }
+      }
+
+      .projects-navigation{
+        margin-top: 59px;
+
+        .wp-pagenavi{
+
+          a{
+            padding: 12px 0px;
+            width: 38px;
+          }
+
+          .current{
+            padding: 12px 0px;
+            width: 38px;
+          }
+
+          .extend{
+            padding: 12px 0px;
+            width: 38px;
+          }
+        }
+      }
+    }
+  }
+}

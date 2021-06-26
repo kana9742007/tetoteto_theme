@@ -1906,6 +1906,108 @@ footer {
       color: #cab599;
       text-align: center; }
 
+@media screen and (max-width: 720px) {
+  .page-case-list .case-list {
+    margin-bottom: 58px; }
+    .page-case-list .case-list .main_image {
+      width: 100%;
+      height: 335px;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+      margin-bottom: 41px; }
+      .page-case-list .case-list .main_image img {
+        display: none; }
+    .page-case-list .case-list .section_inner .lead_txt .comp-section-title {
+      margin-bottom: 30px; }
+    .page-case-list .case-list .section_inner .lead_txt .sub_ttl {
+      font-size: 4.8vw;
+      line-height: 1.88;
+      margin-bottom: 40px; }
+    .page-case-list .case-list .section_inner .search-wrapper {
+      display: block; }
+      .page-case-list .case-list .section_inner .search-wrapper .search {
+        display: block;
+        margin-bottom: 6px;
+        padding: 8px 20px 21px 16px;
+        background-color: #f9f6f3;
+        width: calc( 100% - 36px); }
+        .page-case-list .case-list .section_inner .search-wrapper .search p {
+          font-size: 4.8vw;
+          margin-bottom: 20px; }
+        .page-case-list .case-list .section_inner .search-wrapper .search .search-line {
+          display: none; }
+      .page-case-list .case-list .section_inner .search-wrapper .search-type {
+        margin-right: 33px; }
+        .page-case-list .case-list .section_inner .search-wrapper .search-type .type-wrapper {
+          display: flex;
+          flex-wrap: wrap;
+          align-items: center; }
+          .page-case-list .case-list .section_inner .search-wrapper .search-type .type-wrapper .case-type {
+            width: 38px;
+            height: 27px;
+            background-color: #acacac;
+            border-radius: 50px;
+            color: #fffff0;
+            padding-top: 11px;
+            text-align: center;
+            display: block;
+            margin-right: 13px;
+            font-size: 4vw;
+            font-weight: normal; }
+            .page-case-list .case-list .section_inner .search-wrapper .search-type .type-wrapper .case-type:last-child {
+              margin-right: 0px; }
+          .page-case-list .case-list .section_inner .search-wrapper .search-type .type-wrapper .active {
+            background-color: #cab599;
+            color: #fffff0;
+            width: 58px;
+            font-size: 5.6vw;
+            padding-top: 19px;
+            height: 39px; }
+      .page-case-list .case-list .section_inner .search-wrapper .search-cat {
+        padding: 8px 15px 17px 15px;
+        width: calc( 100% - 30px); }
+        .page-case-list .case-list .section_inner .search-wrapper .search-cat .case-wrapper {
+          margin-left: 0px; }
+          .page-case-list .case-list .section_inner .search-wrapper .search-cat .case-wrapper a {
+            width: calc((100% / 2) - 10px);
+            text-align: center;
+            display: block;
+            font-size: 3.7vw;
+            background-color: #ffffff;
+            padding: 13px 0px 14px; }
+            .page-case-list .case-list .section_inner .search-wrapper .search-cat .case-wrapper a .ja-text {
+              font-size: 10px;
+              font-weight: normal;
+              font-style: normal;
+              line-height: 1;
+              letter-spacing: 0.33px;
+              text-align: center;
+              display: block;
+              text-decoration: none;
+              width: 100%;
+              margin-top: 4px; }
+            .page-case-list .case-list .section_inner .search-wrapper .search-cat .case-wrapper a:first-child {
+              margin-right: 10px; }
+          .page-case-list .case-list .section_inner .search-wrapper .search-cat .case-wrapper .active {
+            background-color: #cab599;
+            color: #fffff0; }
+    .page-case-list .case-list .section_inner .is-list-page {
+      margin-top: 45px; }
+      .page-case-list .case-list .section_inner .is-list-page .project_item {
+        margin-bottom: 21px; }
+    .page-case-list .case-list .projects-navigation {
+      margin-top: 59px; }
+      .page-case-list .case-list .projects-navigation .wp-pagenavi a {
+        padding: 12px 0px;
+        width: 38px; }
+      .page-case-list .case-list .projects-navigation .wp-pagenavi .current {
+        padding: 12px 0px;
+        width: 38px; }
+      .page-case-list .case-list .projects-navigation .wp-pagenavi .extend {
+        padding: 12px 0px;
+        width: 38px; } }
+
 /*########## コンポーネント ##########*/
 /* 共通パーツ */
 .comp-section-title.margin {
