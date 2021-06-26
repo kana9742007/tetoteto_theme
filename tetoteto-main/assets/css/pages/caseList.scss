@@ -1,0 +1,203 @@
+.page-case-list{
+  .case-list{
+    margin-bottom: 100px;
+    .main_image{
+      width: 100%;
+      height: 450px;
+      @include bgSet;
+      margin-bottom: 60px;
+      img{
+        display: none;
+      }
+    }
+
+    .section_inner{
+      .lead_txt{
+        .comp-section-title{
+          margin-bottom: 30px;
+        }
+        .sub_ttl{
+          font-size: 24px;
+          line-height: 1.88;
+          margin-bottom: 40px;
+        }
+      }
+
+      .search-wrapper{
+        @include flexSet;
+        align-items: center;
+
+        .search{
+          @include flexSet;
+          align-items: center;
+
+          p{
+            font-size: 18px;
+            font-weight: normal;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.44;
+            letter-spacing: 0.6px;
+            color: #363636;
+          }
+
+          .search-line{
+            border-left: solid 1px #d8d8d8;
+            width: 1px;
+            display: block;
+            height: 70px;
+            margin: 0px 32px;
+          }
+        }
+
+        .search-type{
+          margin-right: 33px;
+          .type-wrapper{
+            @include flexSet;
+            align-items: center;
+
+            .case-type{
+              width: 50px;
+              height: 35px;
+              background-color: #acacac;
+              border-radius: 50px;
+              color: #fffff0;
+              padding-top: 15px;
+              text-align: center;
+              display: block;
+              margin-right: 13px;
+              font-size: 20px;
+              font-weight: normal;
+
+              &:last-child{
+                margin-right: 0px;
+              }
+            }
+
+            .active{
+              background-color: #cab599;
+              color: #fffff0;
+              width: 75px;
+              font-size: 28px;
+              padding-top: 22px;
+              height: 53px;
+            }
+          }
+        }
+
+        .search-cat{
+          .case-wrapper{
+            @include flexSet;
+            margin-left: 28px;
+
+            a{
+              padding: 13px 24px 14px 25px;
+              border-radius: 5px;
+              border: solid 1px #cab599;
+              text-decoration: none;
+              color: #cab599;
+              font-size: 14px;
+              font-weight: normal;
+              font-stretch: normal;
+              font-style: normal;
+              line-height: normal;
+              letter-spacing: 1.08px;
+              @include varela;
+
+              .ja-text{
+                font-size: 10px;
+                font-weight: normal;
+                font-style: normal;
+                line-height: 1;
+                letter-spacing: 0.33px;
+                text-align: center;
+                display: block;
+                text-decoration: none;
+                width: 100%;
+                margin-top: 4px;
+              }
+
+              &:first-child{
+                margin-right: 10px;
+              }
+            }
+
+            .active{
+              background-color: #cab599;
+              color: #fffff0;
+            }
+          }
+        }
+      }
+
+      // 事例一覧
+      .is-list-page{
+        margin-top: 106px;
+        .project_item{
+          margin-bottom: 21px;
+        }
+      }
+    }
+  }
+
+  .projects-navigation{
+    margin-top: 112px;
+
+    .wp-pagenavi{
+      @include flexSet;
+      justify-content: center;
+
+      a{
+        padding: 13px 0px;
+        width: 42px;
+        border: solid 1px #cab599;
+        color: #cab599;
+        text-align: center;
+      }
+
+      .current{
+        padding: 13px 0px;
+        width: 42px;
+        border: solid 1px #cab599;
+        color: #ffffff;
+        text-align: center;
+        background-color: #cab599;
+      }
+
+      .nextpostslink ,.previouspostslink{
+        position: relative;
+
+        &::after,&::before{
+          content: '';
+          display: block;
+          width: 8px;
+          height: 2px;
+          background-color: #cab599;
+          position: absolute;
+          left: 43%;
+        }
+
+        &::after{
+          transform: rotate(-45deg);
+          top: 42%;
+        }
+        &::before{
+          transform: rotate(45deg);
+          top: 52%;
+        }
+      }
+
+      .nextpostslink{
+        transform: rotate(180deg);
+      }
+
+      .extend{
+        padding: 13px 0px;
+        width: 42px;
+        border: solid 1px #cab599;
+        color: #cab599;
+        text-align: center;
+      }
+    }
+  }
+}
