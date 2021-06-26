@@ -1774,10 +1774,137 @@ footer {
     font-size: 24px;
     line-height: 1.88;
     margin-bottom: 40px; }
+  .page-case-list .case-list .section_inner .search-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center; }
+    .page-case-list .case-list .section_inner .search-wrapper .search {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center; }
+      .page-case-list .case-list .section_inner .search-wrapper .search p {
+        font-size: 18px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.44;
+        letter-spacing: 0.6px;
+        color: #363636; }
+      .page-case-list .case-list .section_inner .search-wrapper .search .search-line {
+        border-left: solid 1px #d8d8d8;
+        width: 1px;
+        display: block;
+        height: 70px;
+        margin: 0px 32px; }
+    .page-case-list .case-list .section_inner .search-wrapper .search-type {
+      margin-right: 33px; }
+      .page-case-list .case-list .section_inner .search-wrapper .search-type .type-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center; }
+        .page-case-list .case-list .section_inner .search-wrapper .search-type .type-wrapper .case-type {
+          width: 50px;
+          height: 35px;
+          background-color: #acacac;
+          border-radius: 50px;
+          color: #fffff0;
+          padding-top: 15px;
+          text-align: center;
+          display: block;
+          margin-right: 13px;
+          font-size: 20px;
+          font-weight: normal; }
+          .page-case-list .case-list .section_inner .search-wrapper .search-type .type-wrapper .case-type:last-child {
+            margin-right: 0px; }
+        .page-case-list .case-list .section_inner .search-wrapper .search-type .type-wrapper .active {
+          background-color: #cab599;
+          color: #fffff0;
+          width: 75px;
+          font-size: 28px;
+          padding-top: 22px;
+          height: 53px; }
+    .page-case-list .case-list .section_inner .search-wrapper .search-cat .case-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      margin-left: 28px; }
+      .page-case-list .case-list .section_inner .search-wrapper .search-cat .case-wrapper a {
+        padding: 13px 24px 14px 25px;
+        border-radius: 5px;
+        border: solid 1px #cab599;
+        text-decoration: none;
+        color: #cab599;
+        font-size: 14px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: 1.08px;
+        font-family: 'varela', "FOT-筑紫A丸ゴシック Std D", 游ゴシック体, "Yu Gothic", YuGothic, "ヒラギノ角ゴシック Pro", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+        letter-spacing: 0.15em; }
+        .page-case-list .case-list .section_inner .search-wrapper .search-cat .case-wrapper a .ja-text {
+          font-size: 10px;
+          font-weight: normal;
+          font-style: normal;
+          line-height: 1;
+          letter-spacing: 0.33px;
+          text-align: center;
+          display: block;
+          text-decoration: none;
+          width: 100%;
+          margin-top: 4px; }
+        .page-case-list .case-list .section_inner .search-wrapper .search-cat .case-wrapper a:first-child {
+          margin-right: 10px; }
+      .page-case-list .case-list .section_inner .search-wrapper .search-cat .case-wrapper .active {
+        background-color: #cab599;
+        color: #fffff0; }
   .page-case-list .case-list .section_inner .is-list-page {
     margin-top: 106px; }
     .page-case-list .case-list .section_inner .is-list-page .project_item {
       margin-bottom: 21px; }
+
+.page-case-list .projects-navigation {
+  margin-top: 112px; }
+  .page-case-list .projects-navigation .wp-pagenavi {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; }
+    .page-case-list .projects-navigation .wp-pagenavi a {
+      padding: 13px 0px;
+      width: 42px;
+      border: solid 1px #cab599;
+      color: #cab599;
+      text-align: center; }
+    .page-case-list .projects-navigation .wp-pagenavi .current {
+      padding: 13px 0px;
+      width: 42px;
+      border: solid 1px #cab599;
+      color: #ffffff;
+      text-align: center;
+      background-color: #cab599; }
+    .page-case-list .projects-navigation .wp-pagenavi .nextpostslink, .page-case-list .projects-navigation .wp-pagenavi .previouspostslink {
+      position: relative; }
+      .page-case-list .projects-navigation .wp-pagenavi .nextpostslink::after, .page-case-list .projects-navigation .wp-pagenavi .nextpostslink::before, .page-case-list .projects-navigation .wp-pagenavi .previouspostslink::after, .page-case-list .projects-navigation .wp-pagenavi .previouspostslink::before {
+        content: '';
+        display: block;
+        width: 8px;
+        height: 2px;
+        background-color: #cab599;
+        position: absolute;
+        left: 43%; }
+      .page-case-list .projects-navigation .wp-pagenavi .nextpostslink::after, .page-case-list .projects-navigation .wp-pagenavi .previouspostslink::after {
+        transform: rotate(-45deg);
+        top: 42%; }
+      .page-case-list .projects-navigation .wp-pagenavi .nextpostslink::before, .page-case-list .projects-navigation .wp-pagenavi .previouspostslink::before {
+        transform: rotate(45deg);
+        top: 52%; }
+    .page-case-list .projects-navigation .wp-pagenavi .nextpostslink {
+      transform: rotate(180deg); }
+    .page-case-list .projects-navigation .wp-pagenavi .extend {
+      padding: 13px 0px;
+      width: 42px;
+      border: solid 1px #cab599;
+      color: #cab599;
+      text-align: center; }
 
 /*########## コンポーネント ##########*/
 /* 共通パーツ */

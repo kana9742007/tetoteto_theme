@@ -45,3 +45,12 @@ add_image_size('ogp', 1200, 9999);
 // 記事のHTML自動整形機能を無効化する
 remove_filter('the_content', 'wpautop'); // 記事の自動整形を無効にする
 remove_filter('the_excerpt', 'wpautop'); // 抜粋の自動整形を無効にする
+
+// 事例一覧パラメータ
+function my_query_vars($vars)
+{
+  $vars[] = 'case_cat';
+  $vars[] = 'case_type';
+  return $vars;
+}
+add_filter('query_vars', 'my_query_vars');
