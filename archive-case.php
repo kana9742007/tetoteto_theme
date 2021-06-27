@@ -21,19 +21,19 @@
             <div class="arrow"></div>
           </div>
           <span class="search-line"></span>
-          <?php get_template_part('parts/case/searchType', null,); ?>
+          <?php get_template_part('parts/case/searchType', null); ?>
         </div>
         <div class="search search-cat">
           <div class="is_sp-flex">
             <p>カテゴリで絞り込む</p>
             <div class="arrow"></div>
           </div>
-          <?php get_template_part('parts/case/searchCat', null,); ?>
+          <?php get_template_part('parts/case/searchCat', null); ?>
         </div>
       </div>
 
       <!-- カテゴリーリスト -->
-      <?php get_template_part('parts/case/projectList', null,); ?>
+      <?php get_template_part('parts/case/projectList', null); ?>
     </div>
   </section>
 </article>
