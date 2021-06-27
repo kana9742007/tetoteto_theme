@@ -1,7 +1,8 @@
 <?php get_header(); ?>
 
 <article id="about" class="page-about">
-  <div id="serviceBg" class="service_bg" style="background-image: url(<?= get_template_directory_uri() ?>/tetoteto-main/assets/img/aboutus/main.jpg;)"></div>
+  <div id="serviceBg" class="service_bg service_bg_pc" style="background-image: url(<?= get_template_directory_uri() ?>/tetoteto-main/assets/img/aboutus/main.jpg;)"></div>
+  <div id="serviceBg" class="service_bg service_bg_sp" style="background-image: url(<?= get_template_directory_uri() ?>/tetoteto-main/assets/img/aboutus/main_sp.jpg;)"></div>
   <section class="section-lead">
     <div class="section_inner">
       <div class="comp-section-title white">
