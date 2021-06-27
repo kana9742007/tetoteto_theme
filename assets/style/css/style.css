@@ -1369,8 +1369,7 @@ footer {
   height: 100vh;
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: cover;
-  background-image: url(../img/aboutus/main.jpg); }
+  background-size: cover; }
   .page-about .service_bg::before {
     display: block;
     content: "";
@@ -1384,6 +1383,10 @@ footer {
     background-color: rgba(0, 0, 0, 0.5);
     opacity: 0;
     transition: opacity .3s; }
+  .page-about .service_bg_pc {
+    display: block; }
+  .page-about .service_bg_sp {
+    display: none; }
   .page-about .service_bg.rolled::before {
     opacity: 1; }
 
@@ -1530,8 +1533,10 @@ footer {
       padding-bottom: 100px; } }
 
 @media screen and (max-width: 720px) {
-  .page-about .service_bg {
-    background-image: url(../img/aboutus/main_sp.jpg); }
+  .page-about .service_bg_pc {
+    display: none; }
+  .page-about .service_bg_sp {
+    display: block; }
   .page-about section .section_inner.border {
     padding-bottom: 60px; }
   .page-about .section-lead {
