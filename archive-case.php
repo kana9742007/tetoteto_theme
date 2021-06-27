@@ -16,12 +16,18 @@
       <!-- TODO カテゴリー 絞り込み -->
       <div class="search-wrapper">
         <div class="search search-type">
-          <p>タイプで絞り込む</p>
+          <div class="is_sp-flex">
+            <p>タイプで絞り込む</p>
+            <div class="arrow"></div>
+          </div>
           <span class="search-line"></span>
           <?php get_template_part('parts/case/searchType', null,); ?>
         </div>
         <div class="search search-cat">
-          <p>カテゴリで絞り込む</p>
+          <div class="is_sp-flex">
+            <p>カテゴリで絞り込む</p>
+            <div class="arrow"></div>
+          </div>
           <?php get_template_part('parts/case/searchCat', null,); ?>
         </div>
       </div>

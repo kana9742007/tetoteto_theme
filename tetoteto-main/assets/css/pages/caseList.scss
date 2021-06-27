@@ -48,6 +48,14 @@
             height: 70px;
             margin: 0px 32px;
           }
+
+          .is_sp-flex{
+            display: block;
+          }
+
+          .arrow{
+            display: none;
+          }
         }
 
         .search-type{
@@ -202,6 +210,24 @@
   }
 }
 
+@media screen and (max-width: 1360px){
+
+  .page-case-list{
+    .case-list{
+
+      .section_inner{
+
+        .search-wrapper{
+
+          .search-type{
+            margin-bottom: 10px;
+          }
+        }
+      }
+    }
+  }
+
+}
 
 @media screen and (max-width: 720px){
   .page-case-list{
@@ -247,6 +273,42 @@
             .search-line{
               display: none;
             }
+
+            .is_sp-flex{
+              @include flexSet;
+              justify-content: space-between;
+              margin-top: 15px;
+            }
+
+            .arrow{
+              display: block;
+              position: relative;
+              width: 13px;
+              height: 13px;
+
+              &::after{
+                content: '';
+                position: absolute;
+                transform: rotate(45deg);
+                width: 8px;
+                height: 1px;
+                display: block;
+                background-color: #363636;
+                top: 6px;
+                right: 0px;
+              }
+              &::before{
+                content: '';
+                position: absolute;
+                transform: rotate(-45deg);
+                width: 8px;
+                height: 1px;
+                display: block;
+                background-color: #363636;
+                top: 6px;
+                left: 0px;
+              }
+            }
           }
 
           .search-type{
@@ -265,7 +327,7 @@
                 text-align: center;
                 display: block;
                 margin-right: 13px;
-                font-size: 4vw;
+                font-size: 15.4px;
                 font-weight: normal;
 
                 &:last-child{
@@ -277,7 +339,7 @@
                 background-color: #cab599;
                 color: #fffff0;
                 width: 58px;
-                font-size: 5.6vw;
+                font-size: 21.5px;
                 padding-top: 19px;
                 height: 39px;
               }
@@ -351,6 +413,31 @@
           .extend{
             padding: 12px 0px;
             width: 38px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 375px){
+  .page-case-list{
+    .case-list{
+      .section_inner{
+
+        .search-wrapper{
+
+          .search-type{
+            .type-wrapper{
+
+              .case-type{
+                font-size: 4vw;
+              }
+
+              .active{
+                font-size: 5.6vw;
+              }
+            }
           }
         }
       }
