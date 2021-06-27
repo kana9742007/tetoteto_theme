@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 <article id="caseList" class="page-case-list">
   <section class="case-list">
-    <div class="main_image" style="background-image: url(<?= get_template_directory_uri() ?>/tetoteto-main/assets/img/case/projectList.jpeg;)">
+    <div class="main_image" style="background-image: url(<?= get_template_directory_uri() ?>/tetoteto-main/assets/img/case/projectList_sp.jpg;)">
       <img src="<?= get_template_directory_uri() ?>/tetoteto-main/assets/img/case/projectList.jpeg">
     </div>
     <div class="section_inner">
@@ -16,12 +16,18 @@
       <!-- TODO カテゴリー 絞り込み -->
       <div class="search-wrapper">
         <div class="search search-type">
-          <p>タイプで絞り込む</p>
+          <div class="is_sp-flex">
+            <p>タイプで絞り込む</p>
+            <div class="arrow"></div>
+          </div>
           <span class="search-line"></span>
           <?php get_template_part('parts/case/searchType', null,); ?>
         </div>
         <div class="search search-cat">
-          <p>カテゴリで絞り込む</p>
+          <div class="is_sp-flex">
+            <p>カテゴリで絞り込む</p>
+            <div class="arrow"></div>
+          </div>
           <?php get_template_part('parts/case/searchCat', null,); ?>
         </div>
       </div>
