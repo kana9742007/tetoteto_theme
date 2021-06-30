@@ -37,6 +37,10 @@
           td{
             border-bottom: solid 1px #d0d0d0;
             font-size: 16px;
+
+            .is_sp{
+              display: none;
+            }
           }
 
           &:last-child{
@@ -69,6 +73,7 @@
           @include flexSet;
           justify-content: space-between;
           align-items: flex-start;
+          max-width: 969px;
 
           &__add-bottom{
             margin-bottom: 66px;
@@ -170,6 +175,174 @@
 
     .first-block{
       margin-bottom: 122px;
+    }
+  }
+}
+
+@media screen and (max-width: 720px){
+  .page-profile{
+    padding-bottom: 106px;
+    .profile-content{
+      margin-bottom: 0px;
+      .main_image{
+        width: 100%;
+        height: 335px;
+        @include bgSet;
+        margin-bottom: 41px;
+        img{
+          display: none;
+        }
+      }
+
+      .section_inner{
+        .lead_txt{
+          .comp-section-title{
+            margin-bottom: 15px;
+          }
+        }
+
+        .profile_table{
+
+          tr{
+            border-bottom: 1px solid #d0d0d0;
+            position: relative;
+
+            &::after{
+              content: "";
+              display: block;
+              overflow: hidden;
+              position: absolute;
+              left: 0px;
+              bottom: -1px;
+              width: 30%;
+              border-bottom: 1px solid #b09470;
+            }
+
+            th,td{
+              display: block;
+              padding: 0px;
+            }
+            th{
+              border-bottom: none;
+              font-size: 18px;
+              width: 291px;
+              padding-bottom: 11px;
+              padding-top: 25px;
+            }
+
+            td{
+              border-bottom: none;
+              font-size: 14px;
+              line-height: 22px;
+              padding-bottom: 22px;
+
+              .is_sp{
+                display: block;
+              }
+            }
+
+            &:first-child{
+
+              th{
+                padding-top: 0px;
+              }
+            }
+
+            &:last-child{
+              border: none;
+
+              &::after{
+                display: none;
+              }
+              th{
+                border: none;
+                padding: 25px 0px 0px;
+              }
+              td{
+                padding: 0px;
+                border: none;
+              }
+            }
+          }
+        }
+
+        .profile-detail{
+
+          &__add-bottom{
+            margin-bottom: 70px;
+          }
+
+          .detail-main-title{
+            font-size: 20px;
+            line-height: 2.25;
+            letter-spacing: 0.56px;
+            @include tsukushi-r;
+            margin-bottom: 38px;
+          }
+
+          .profile-flex{
+            display: block;
+
+            &__add-bottom{
+              margin-bottom: 66px;
+            }
+
+            .image_wrap{
+              margin-right: 0px;
+              margin-bottom: 31px;
+              width: 100%;
+              height: 88vw;
+              border-radius: 15px;
+
+              img{
+                border-radius: 15px;
+              }
+            }
+
+            .member_item{
+              margin-bottom: 33px;
+            }
+
+            .is-profile{
+              margin-top: 25px;
+              .flow_item{
+                margin-bottom: 30px;
+                &:nth-last-of-type(1)::before{
+                  height: calc(100% + 10px);
+                }
+              }
+              .date{
+                font-size: 12px;
+                &::before{
+                  top: 4px;
+                }
+              }
+              .flow_ttl{
+                font-size: 16px;
+              }
+            }
+
+            .detail_wrap{
+              width: 100%;
+
+              .detail-title{
+                font-size: 18px;
+                letter-spacing: 1.93px;
+              }
+
+              .detail-text{
+                font-size: 14px;
+                letter-spacing: 0.88px;
+                margin-top: 27px;
+              }
+            }
+          }
+        }
+      }
+
+      .first-block{
+        margin-bottom: 118px;
+      }
     }
   }
 }

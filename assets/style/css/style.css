@@ -2084,6 +2084,8 @@ footer {
     .page-profile .profile-content .section_inner .profile_table tr td {
       border-bottom: solid 1px #d0d0d0;
       font-size: 16px; }
+      .page-profile .profile-content .section_inner .profile_table tr td .is_sp {
+        display: none; }
     .page-profile .profile-content .section_inner .profile_table tr:last-child th, .page-profile .profile-content .section_inner .profile_table tr:last-child td {
       border: none;
       padding: 39px 0px 0px; }
@@ -2103,7 +2105,8 @@ footer {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    align-items: flex-start; }
+    align-items: flex-start;
+    max-width: 969px; }
     .page-profile .profile-content .section_inner .profile-detail .profile-flex__add-bottom {
       margin-bottom: 66px; }
     .page-profile .profile-content .section_inner .profile-detail .profile-flex .image_wrap {
@@ -2176,6 +2179,109 @@ footer {
         font-weight: normal; }
   .page-profile .profile-content .first-block {
     margin-bottom: 122px; }
+
+@media screen and (max-width: 720px) {
+  .page-profile {
+    padding-bottom: 106px; }
+    .page-profile .profile-content {
+      margin-bottom: 0px; }
+      .page-profile .profile-content .main_image {
+        width: 100%;
+        height: 335px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        margin-bottom: 41px; }
+        .page-profile .profile-content .main_image img {
+          display: none; }
+      .page-profile .profile-content .section_inner .lead_txt .comp-section-title {
+        margin-bottom: 15px; }
+      .page-profile .profile-content .section_inner .profile_table tr {
+        border-bottom: 1px solid #d0d0d0;
+        position: relative; }
+        .page-profile .profile-content .section_inner .profile_table tr::after {
+          content: "";
+          display: block;
+          overflow: hidden;
+          position: absolute;
+          left: 0px;
+          bottom: -1px;
+          width: 30%;
+          border-bottom: 1px solid #b09470; }
+        .page-profile .profile-content .section_inner .profile_table tr th, .page-profile .profile-content .section_inner .profile_table tr td {
+          display: block;
+          padding: 0px; }
+        .page-profile .profile-content .section_inner .profile_table tr th {
+          border-bottom: none;
+          font-size: 18px;
+          width: 291px;
+          padding-bottom: 11px;
+          padding-top: 25px; }
+        .page-profile .profile-content .section_inner .profile_table tr td {
+          border-bottom: none;
+          font-size: 14px;
+          line-height: 22px;
+          padding-bottom: 22px; }
+          .page-profile .profile-content .section_inner .profile_table tr td .is_sp {
+            display: block; }
+        .page-profile .profile-content .section_inner .profile_table tr:first-child th {
+          padding-top: 0px; }
+        .page-profile .profile-content .section_inner .profile_table tr:last-child {
+          border: none; }
+          .page-profile .profile-content .section_inner .profile_table tr:last-child::after {
+            display: none; }
+          .page-profile .profile-content .section_inner .profile_table tr:last-child th {
+            border: none;
+            padding: 25px 0px 0px; }
+          .page-profile .profile-content .section_inner .profile_table tr:last-child td {
+            padding: 0px;
+            border: none; }
+      .page-profile .profile-content .section_inner .profile-detail__add-bottom {
+        margin-bottom: 70px; }
+      .page-profile .profile-content .section_inner .profile-detail .detail-main-title {
+        font-size: 20px;
+        line-height: 2.25;
+        letter-spacing: 0.56px;
+        font-family: "TsukuARdGothicStd-R";
+        font-weight: normal;
+        margin-bottom: 38px; }
+      .page-profile .profile-content .section_inner .profile-detail .profile-flex {
+        display: block; }
+        .page-profile .profile-content .section_inner .profile-detail .profile-flex__add-bottom {
+          margin-bottom: 66px; }
+        .page-profile .profile-content .section_inner .profile-detail .profile-flex .image_wrap {
+          margin-right: 0px;
+          margin-bottom: 31px;
+          width: 100%;
+          height: 88vw;
+          border-radius: 15px; }
+          .page-profile .profile-content .section_inner .profile-detail .profile-flex .image_wrap img {
+            border-radius: 15px; }
+        .page-profile .profile-content .section_inner .profile-detail .profile-flex .member_item {
+          margin-bottom: 33px; }
+        .page-profile .profile-content .section_inner .profile-detail .profile-flex .is-profile {
+          margin-top: 25px; }
+          .page-profile .profile-content .section_inner .profile-detail .profile-flex .is-profile .flow_item {
+            margin-bottom: 30px; }
+            .page-profile .profile-content .section_inner .profile-detail .profile-flex .is-profile .flow_item:nth-last-of-type(1)::before {
+              height: calc(100% + 10px); }
+          .page-profile .profile-content .section_inner .profile-detail .profile-flex .is-profile .date {
+            font-size: 12px; }
+            .page-profile .profile-content .section_inner .profile-detail .profile-flex .is-profile .date::before {
+              top: 4px; }
+          .page-profile .profile-content .section_inner .profile-detail .profile-flex .is-profile .flow_ttl {
+            font-size: 16px; }
+        .page-profile .profile-content .section_inner .profile-detail .profile-flex .detail_wrap {
+          width: 100%; }
+          .page-profile .profile-content .section_inner .profile-detail .profile-flex .detail_wrap .detail-title {
+            font-size: 18px;
+            letter-spacing: 1.93px; }
+          .page-profile .profile-content .section_inner .profile-detail .profile-flex .detail_wrap .detail-text {
+            font-size: 14px;
+            letter-spacing: 0.88px;
+            margin-top: 27px; }
+      .page-profile .profile-content .first-block {
+        margin-bottom: 118px; } }
 
 /*########## コンポーネント ##########*/
 /* 共通パーツ */

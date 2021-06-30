@@ -18,7 +18,7 @@
         </tr>
         <tr>
           <th>所在地</th>
-          <td>東京都世田谷区奥沢7-23-14カーサ九品仏111</td>
+          <td>東京都世田谷区奥沢7-23-14<br class="is_sp">カーサ九品仏111</td>
         </tr>
         <tr>
           <th>設立</th>
@@ -55,7 +55,7 @@
           </div>
         </div>
       </div>
-      <div class="profile-detail profile-detail__add-bottom">
+      <div class="profile-detail">
         <p class="detail-main-title">役員プロフィール</p>
         <div class="profile-flex profile-flex__add-bottom">
           <div class="member_item">
@@ -111,7 +111,7 @@
             </div>
             <div class="txt_wrap">
               <h3 class="name">井上豪希</h3>
-              <p class="detail">((いのうえ ももこ)
+              <p class="detail">(いのうえ ももこ)
                 <br><br>代表取締役
                 <br>ライフスタイルデザイナー
               </p>
@@ -147,8 +147,8 @@
                 </div>
               </div>
             </div>
-            <p class="detail-text">1985年 大分県出身。<br>
-              当様々なジャンル、調理法を用いたレシピ開発が得意。 料理人とプロデユーサーのスキルを生かして、 飲食店や商品のプロデュースを行うTETOTETO Inc.の代表を務める。</p>
+            <p class="detail-text">11985年 神奈川県出身。<br>
+              ライフスタイルデザイナー。テーブルコーディネート、イベントやパーティーの企画、スタイリング、フラワーアレンジメント、グラフィックデザインを行う。 またブログの執筆、SNSの発信を担当している。</p>
           </div>
         </div>
       </div>
