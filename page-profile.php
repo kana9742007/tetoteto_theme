@@ -18,7 +18,7 @@
         </tr>
         <tr>
           <th>所在地</th>
-          <td>東京都世田谷区奥沢7-23-14カーサ九品仏111</td>
+          <td>東京都世田谷区奥沢7-23-14<br class="is_sp">カーサ九品仏111</td>
         </tr>
         <tr>
           <th>設立</th>
@@ -55,7 +55,7 @@
           </div>
         </div>
       </div>
-      <div class="profile-detail profile-detail__add-bottom">
+      <div class="profile-detail">
         <p class="detail-main-title">役員プロフィール</p>
         <div class="profile-flex profile-flex__add-bottom">
           <div class="member_item">
