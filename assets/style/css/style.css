@@ -2285,6 +2285,136 @@ footer {
       .page-profile .profile-content .first-block {
         margin-bottom: 118px; } }
 
+.page-contact .section-contact {
+  margin-bottom: 100px; }
+  .page-contact .section-contact .main_image {
+    width: 100%;
+    height: 450px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    margin-bottom: 60px; }
+    .page-contact .section-contact .main_image img {
+      display: none; }
+  .page-contact .section-contact .section_inner .lead_txt {
+    margin-bottom: 50px; }
+    .page-contact .section-contact .section_inner .lead_txt .comp-section-title {
+      margin-bottom: 30px; }
+    .page-contact .section-contact .section_inner .lead_txt .sub_ttl {
+      font-size: 20px;
+      line-height: 2;
+      letter-spacing: 0.56px;
+      font-weight: normal; }
+  .page-contact .section-contact .section_inner .contact-form {
+    width: 100%;
+    max-width: 860px; }
+    .page-contact .section-contact .section_inner .contact-form .form_content {
+      display: block;
+      margin-bottom: 26px; }
+      .page-contact .section-contact .section_inner .contact-form .form_content__add-bottom {
+        margin-bottom: 80px; }
+      .page-contact .section-contact .section_inner .contact-form .form_content label {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-bottom: 29px;
+        font-weight: normal;
+        font-size: 20px; }
+        .page-contact .section-contact .section_inner .contact-form .form_content label span {
+          display: block;
+          border-radius: 5px;
+          border: solid 1px #cab599;
+          color: #cab599;
+          width: 79px;
+          text-align: center;
+          padding: 8.5px 0px;
+          font-size: 16px;
+          letter-spacing: 0.94px;
+          font-family: "FOT-筑紫A丸ゴシック Std D";
+          font-weight: bold;
+          font-weight: normal; }
+        .page-contact .section-contact .section_inner .contact-form .form_content label .required {
+          background-color: #cab599;
+          color: #fff; }
+      .page-contact .section-contact .section_inner .contact-form .form_content input, .page-contact .section-contact .section_inner .contact-form .form_content textarea, .page-contact .section-contact .section_inner .contact-form .form_content select {
+        display: block;
+        width: 100%;
+        padding: 15px 22px 12px;
+        background-color: #f4f4f4;
+        border: none;
+        border-radius: 10px;
+        color: #303030; }
+      .page-contact .section-contact .section_inner .contact-form .form_content .select-cover {
+        position: relative;
+        cursor: pointer; }
+        .page-contact .section-contact .section_inner .contact-form .form_content .select-cover::before {
+          content: '▼';
+          font-size: 16px;
+          color: #00371f;
+          display: block;
+          width: 19px;
+          height: 16px;
+          position: absolute;
+          right: 20px;
+          top: 34%;
+          z-index: 1; }
+      .page-contact .section-contact .section_inner .contact-form .form_content textarea {
+        height: 180px; }
+    .page-contact .section-contact .section_inner .contact-form .contact_button {
+      border-radius: 27.5px;
+      background-color: #bb9f7b;
+      max-width: 500px;
+      padding: 15px 0px;
+      color: #fff;
+      font-size: 20px;
+      letter-spacing: 0.42px;
+      display: block;
+      width: 80%;
+      margin: 0 auto;
+      font-family: "FOT-筑紫A丸ゴシック Std D";
+      font-weight: bold;
+      font-weight: normal; }
+
+@media screen and (max-width: 720px) {
+  .page-contact .section-contact {
+    margin-bottom: 50px; }
+    .page-contact .section-contact .main_image {
+      width: 100%;
+      height: 335px;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+      margin-bottom: 41px; }
+      .page-contact .section-contact .main_image img {
+        display: none; }
+    .page-contact .section-contact .section_inner .lead_txt {
+      margin-bottom: 38px; }
+      .page-contact .section-contact .section_inner .lead_txt .comp-section-title {
+        margin-bottom: 20px; }
+      .page-contact .section-contact .section_inner .lead_txt .sub_ttl {
+        font-size: 4.3vw;
+        line-height: 1.88;
+        margin-bottom: 40px; }
+    .page-contact .section-contact .section_inner .contact-form {
+      width: 100%;
+      max-width: 860px; }
+      .page-contact .section-contact .section_inner .contact-form .form_content {
+        display: block;
+        margin-bottom: 34px; }
+        .page-contact .section-contact .section_inner .contact-form .form_content__add-bottom {
+          margin-bottom: 48px; }
+        .page-contact .section-contact .section_inner .contact-form .form_content label {
+          font-size: 16px;
+          margin-bottom: 14px; }
+          .page-contact .section-contact .section_inner .contact-form .form_content label span {
+            font-size: 12px;
+            width: 47px;
+            padding: 8px 0px; }
+    .page-contact .section-contact .section_inner .contact_button {
+      font-size: 20px; }
+      .page-contact .section-contact .section_inner .contact_button span {
+        display: none; } }
+
 /*########## コンポーネント ##########*/
 /* 共通パーツ */
 .comp-section-title.margin {

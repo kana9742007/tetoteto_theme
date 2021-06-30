@@ -9,7 +9,7 @@
   <meta name="description" content="沖縄県の新たなお土産を作りたいというクライアントの依頼を受けて、新商品開発を行なったプロジェクト。商品企画、コンセプトメイク、レシピ提案、プロダクトデザイン、生産ラインの確保等、商品開発に関わる全方位を担当しました。商品開発に初めて挑戦するクライアントに対して、商品開発についてのナレッジの共有・蓄積を支援。同社のブランディングの方向性についても、コンサルティングを行いました。">
   <link rel="shortcut icon" type="image/x-icon" href="http://tetoteto.co/wp/wp-content/themes/tetoteto/img/favicon.ico">
   <link href="assets/img/icon/icon.png" rel="apple-touch-icon" sizes="200x200">
-  <link rel="shortcut icon" type="image/x-icon" href="tetoteto-main/assets/img/icon/icon.png">
+  <link rel="shortcut icon" type="image/x-icon" href="http://tetoteto.co/wp/wp-content/themes/tetoteto/tetoteto-main/assets/img/icon/icon.png">
   <meta property="og:type" content="article">
   <meta property="og:image" content="tetoteto-main/assets/img/ogp/ogp.jpg">
   <meta property="og:url" content="https://demo.agestream.jp/tetoteto">
