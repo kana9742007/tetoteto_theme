@@ -1,6 +1,6 @@
 <header>
   <div class="header_inner">
-    <a class="h_logo" href="#aaaa"></a>
+    <a class="h_logo" href="/"></a>
     <div class="header_hummenu">
       <button id="humButton" class="hum_menu_button">
         <span></span>
@@ -11,10 +11,10 @@
     <h1 class="copy"><span>暮らしの感度を高める</span><span>クリエイティブプロダクション</span></h1>
     <nav class="header_nav">
       <ul>
-        <li><a href="#aaaa">私たちについて</a></li>
-        <li><a href="#aaaa">制作実績</a></li>
+        <li><a href="/about">私たちについて</a></li>
+        <li><a href="/case">制作実績</a></li>
         <li><a href="#aaaa">プロジェクトメンバー</a></li>
-        <li><a href="#aaaa">会社概要</a></li>
+        <li><a href="/profile">会社概要</a></li>
         <li><a href="#aaaa">ブログ</a></li>
       </ul>
     </nav>

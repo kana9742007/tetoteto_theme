@@ -18,7 +18,7 @@
         <div class="search search-type">
           <div class="is_sp-flex">
             <p>タイプで絞り込む</p>
-            <div class="arrow"></div>
+            <a class="arrow"></a>
           </div>
           <span class="search-line"></span>
           <?php get_template_part('parts/case/searchType', null,); ?>
@@ -26,7 +26,7 @@
         <div class="search search-cat">
           <div class="is_sp-flex">
             <p>カテゴリで絞り込む</p>
-            <div class="arrow"></div>
+            <a class="arrow"></a>
           </div>
           <?php get_template_part('parts/case/searchCat', null,); ?>
         </div>

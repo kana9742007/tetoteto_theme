@@ -9,7 +9,7 @@ $args = wp_parse_args(
 $uri = esc_url(home_url('/case'));
 ?>
 
-<div class="type-wrapper">
+<div class="type-wrapper box-bottom">
   <?php
   // カテゴリーを取得
   $cat = array(
@@ -19,11 +19,12 @@ $uri = esc_url(home_url('/case'));
 
   foreach ($types as $type) : // 取得したカテゴリの配列でループを回す
     $nowTerm = $type->slug == $term;
+    $isFood = $type->slug == 'food';
     if ($args['slug']) :
       $nowTerm = $type->slug == $args['slug'][0]->name;
     endif;
   ?>
-    <a href="<?= $uri ?>?case_type=<?= $type->slug ?>" class="<?php echo $nowTerm ? 'active' : '' ?> case-type"><?php echo $type->name; ?></a>
+    <a href="<?= $uri ?>?case_type=<?= $type->slug ?>" class="<?php echo $isFood ? 'is-food' : '' ?> <?php echo $nowTerm ? 'active' : '' ?> case-type"><?php echo $type->name; ?></a>
   <?php
   endforeach; // カテゴリのループ終わり
   ?>

@@ -1383,10 +1383,6 @@ footer {
     background-color: rgba(0, 0, 0, 0.5);
     opacity: 0;
     transition: opacity .3s; }
-  .page-about .service_bg_pc {
-    display: block; }
-  .page-about .service_bg_sp {
-    display: none; }
   .page-about .service_bg.rolled::before {
     opacity: 1; }
 
@@ -1533,10 +1529,6 @@ footer {
       padding-bottom: 100px; } }
 
 @media screen and (max-width: 720px) {
-  .page-about .service_bg_pc {
-    display: none; }
-  .page-about .service_bg_sp {
-    display: block; }
   .page-about section .section_inner.border {
     padding-bottom: 60px; }
   .page-about .section-lead {
@@ -1827,6 +1819,9 @@ footer {
             margin-right: 0px; }
         .page-case-list .case-list .section_inner .search-wrapper .search-type .type-wrapper .active {
           background-color: #cab599;
+          color: #fffff0; }
+        .page-case-list .case-list .section_inner .search-wrapper .search-type .type-wrapper .is-food {
+          background-color: #cab599;
           color: #fffff0;
           width: 75px;
           font-size: 28px;
@@ -1959,7 +1954,9 @@ footer {
           display: block;
           position: relative;
           width: 13px;
-          height: 13px; }
+          height: 13px;
+          cursor: pointer;
+          transition: .3s; }
           .page-case-list .case-list .section_inner .search-wrapper .search .arrow::after {
             content: '';
             position: absolute;
@@ -1980,6 +1977,8 @@ footer {
             background-color: #363636;
             top: 6px;
             left: 0px; }
+        .page-case-list .case-list .section_inner .search-wrapper .search .open {
+          transform: rotate(180deg); }
       .page-case-list .case-list .section_inner .search-wrapper .search-type {
         margin-right: 33px; }
         .page-case-list .case-list .section_inner .search-wrapper .search-type .type-wrapper {
@@ -2001,6 +2000,9 @@ footer {
             .page-case-list .case-list .section_inner .search-wrapper .search-type .type-wrapper .case-type:last-child {
               margin-right: 0px; }
           .page-case-list .case-list .section_inner .search-wrapper .search-type .type-wrapper .active {
+            background-color: #cab599;
+            color: #fffff0; }
+          .page-case-list .case-list .section_inner .search-wrapper .search-type .type-wrapper .is-food {
             background-color: #cab599;
             color: #fffff0;
             width: 58px;
@@ -2054,7 +2056,7 @@ footer {
 @media screen and (max-width: 375px) {
   .page-case-list .case-list .section_inner .search-wrapper .search-type .type-wrapper .case-type {
     font-size: 4vw; }
-  .page-case-list .case-list .section_inner .search-wrapper .search-type .type-wrapper .active {
+  .page-case-list .case-list .section_inner .search-wrapper .search-type .type-wrapper .is-food {
     font-size: 5.6vw; } }
 
 .page-profile {
