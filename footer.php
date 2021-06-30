@@ -14,7 +14,7 @@
                 </ul>
             </nav>
             <div class="h_footer">
-                <a class="contact fade_box" href="#aaaa">お問い合わせ</a>
+                <a class="contact fade_box" href="/contact">お問い合わせ</a>
                 <div class="sns_wrap fade_box">
                     <a class="ig" style="background-image: url(<?= get_template_directory_uri() ?>/tetoteto-main/assets/img/common/icon_ig_white.png);" href="#aaaa"></a>
                     <a class="fb" style="background-image: url(<?= get_template_directory_uri() ?>/tetoteto-main/assets/img/common/icon_fb_white.png);" href="#aaaa"></a>
@@ -39,7 +39,7 @@
                 </ul>
             </nav>
             <div class="h_footer">
-                <a class="contact" href="#aaaa">お問い合わせ</a>
+                <a class="contact" href="/contact">お問い合わせ</a>
                 <div class="sns_wrap">
                     <a class="ig" href="#aaaa"></a>
                     <a class="fb" href="#aaaa"></a>
