@@ -2,14 +2,14 @@
     <div class="hummenu_inner">
         <div class="height_adjust"></div>
         <div class="content">
-            <a class="h_logo fade_box" href="#aaaa"></a>
+            <a class="h_logo fade_box" href="/"></a>
             <span class="copy fade_box"><span>暮らしの感度を高める</span><span>クリエイティブプロダクション</span></span>
             <nav class="header_nav fade_box">
                 <ul>
-                    <li class="fade_box"><a href="#aaaa">私たちについて</a></li>
-                    <li class="fade_box"><a href="#aaaa">制作実績</a></li>
+                    <li class="fade_box"><a href="/about">私たちについて</a></li>
+                    <li class="fade_box"><a href="/case">制作実績</a></li>
                     <li class="fade_box"><a href="#aaaa">プロジェクトメンバー</a></li>
-                    <li class="fade_box"><a href="#aaaa">会社概要</a></li>
+                    <li class="fade_box"><a href="/profile">会社概要</a></li>
                     <li class="fade_box"><a href="#aaaa">ブログ</a></li>
                 </ul>
             </nav>
@@ -26,15 +26,15 @@
 </div><!-- hummenu -->
 <footer>
     <div class="footer_inner">
-        <a class="footer_logo" href="#aaaa"></a>
+        <a class="footer_logo" href="/"></a>
         <div class="footer_nav">
             <div class="footer_txt"><span>暮らしの感度を高める</span><span>クリエイティブプロダクション</span></div>
             <nav class="nav">
                 <ul>
-                    <li><a href="#aaaa">私たちについて</a></li>
-                    <li><a href="#aaaa">制作実績</a></li>
+                    <li><a href="/about">私たちについて</a></li>
+                    <li><a href="/case">制作実績</a></li>
                     <li><a href="#aaaa">プロジェクトメンバー</a></li>
-                    <li><a href="#aaaa">会社概要</a></li>
+                    <li><a href="/profile">会社概要</a></li>
                     <li><a href="#aaaa">ブログ</a></li>
                 </ul>
             </nav>

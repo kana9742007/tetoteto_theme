@@ -19,14 +19,6 @@
       transition: opacity .3s;
     }
 
-    &_pc{
-      display: block;
-    }
-
-    &_sp{
-      display: none;
-    }
-
     &.rolled{
       &::before{
         opacity: 1;
@@ -186,15 +178,6 @@
 
 @media screen and (max-width: 720px){
   .page-about{
-    .service_bg{
-      &_pc{
-        display: none;
-      }
-
-      &_sp{
-        display: block;
-      }
-    }
     section{
       .section_inner{
         &.border{

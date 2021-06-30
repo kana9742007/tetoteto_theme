@@ -52,6 +52,7 @@
           .is_sp-flex{
             display: block;
           }
+          
 
           .arrow{
             display: none;
@@ -83,6 +84,11 @@
             }
 
             .active{
+              background-color: #cab599;
+              color: #fffff0;
+            }
+
+            .is-food{
               background-color: #cab599;
               color: #fffff0;
               width: 75px;
@@ -280,11 +286,17 @@
               margin-top: 15px;
             }
 
+            .box-bottom{
+
+            }
+
             .arrow{
               display: block;
               position: relative;
               width: 13px;
               height: 13px;
+              cursor: pointer;
+              transition: .3s;
 
               &::after{
                 content: '';
@@ -308,6 +320,10 @@
                 top: 6px;
                 left: 0px;
               }
+            }
+
+            .open{
+              transform: rotate(180deg);
             }
           }
 
@@ -334,8 +350,12 @@
                   margin-right: 0px;
                 }
               }
-
               .active{
+                background-color: #cab599;
+                color: #fffff0;
+              }
+
+              .is-food{
                 background-color: #cab599;
                 color: #fffff0;
                 width: 58px;
@@ -434,7 +454,7 @@
                 font-size: 4vw;
               }
 
-              .active{
+              .is-food{
                 font-size: 5.6vw;
               }
             }
