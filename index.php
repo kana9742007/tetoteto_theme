@@ -106,7 +106,7 @@
           <p>そして、昨日よりちょっと良い今日を作るために、私たちは「てとてと」という活動をはじめました。</p>
         </div>
         <div class="comp-link-button">
-          <a href="#aaaa"><span>詳しく知る</span></a>
+          <a href="/about"><span>詳しく知る</span></a>
         </div>
       </div>
     </div><!-- section_inner -->
@@ -121,55 +121,41 @@
       </div>
       <div class="comp-case-slider">
         <div id="caseSlider" class="slick-slider">
+          <?php
+            $paged = get_query_var('paged') ? get_query_var('paged') : 1 ;
+            $wp_query = new WP_Query();
+            $param = array(
+              'posts_per_page' => '5',
+              'orderby' => 'rand',
+              'post_status' => 'publish',
+              'post_type' => 'case',
+              'paged' => $paged,
+            );
+            $wp_query->query($param);
+            if($wp_query->have_posts()): while($wp_query->have_posts()) : $wp_query->the_post();
+            $post_id = get_the_ID();
+            $title = get_the_title($post_id);
+            $cat = get_the_terms($post_id, 'case_cat');
+            $thumbnails = get_the_post_thumbnail_url();
+            $sp_thumbnails_id = SCF::get('sp_thumbnail');
+            $sp_thumbnails = wp_get_attachment_image_src($sp_thumbnails_id, 'full');
+            $thumbnail = $sp_thumbnails[0];
+            $cat_name = $cat[0]->name;
+            ?>
           <div class="item_box">
-            <a href="#aaaa">
-              <img src="<?= get_template_directory_uri() ?>/tetoteto-main/assets/img/case/case01.jpg">
+            <a href="<?php the_permalink();?>">
+              <img src="<?= $thumbnail ?>">
             </a>
             <div class="txt_wrap">
-              <span class="category">PROJECT</span>
-              <h3 class="case_name">ビーンズトーキョー</h3>
+              <span class="category"><?= $cat_name ?></span>
+              <h3 class="case_name"><?= $title ?></h3>
             </div>
           </div>
-          <div class="item_box">
-            <a href="#aaaa">
-              <img src="<?= get_template_directory_uri() ?>/tetoteto-main/assets/img/case/case02.jpg">
-            </a>
-            <div class="txt_wrap">
-              <span class="category">PROJECT</span>
-              <h3 class="case_name">金楠水産</h3>
-            </div>
-          </div>
-          <div class="item_box">
-            <a href="#aaaa">
-              <img src="<?= get_template_directory_uri() ?>/tetoteto-main/assets/img/case/case03.jpg">
-            </a>
-            <div class="txt_wrap">
-              <span class="category">PROJECT</span>
-              <h3 class="case_name">WAKO COFFE BREWING</h3>
-            </div>
-          </div>
-          <div class="item_box">
-            <a href="#aaaa">
-              <img src="<?= get_template_directory_uri() ?>/tetoteto-main/assets/img/case/case04.jpg">
-            </a>
-            <div class="txt_wrap">
-              <span class="category">PROJECT</span>
-              <h3 class="case_name">ゴウキさんのりんごバター</h3>
-            </div>
-          </div>
-          <div class="item_box">
-            <a href="#aaaa">
-              <img src="<?= get_template_directory_uri() ?>/tetoteto-main/assets/img/case/case05.jpg">
-            </a>
-            <div class="txt_wrap">
-              <span class="category">PROJECT</span>
-              <h3 class="case_name">とどめ茶 -TODOMECHA-</h3>
-            </div>
-          </div>
+          <?php endwhile; endif; ?>
         </div>
       </div><!-- comp-case-slider -->
       <div class="comp-link-button large center">
-        <a href="#aaaa"><span>制作事例一覧を見る</span></a>
+        <a href="/case"><span>制作事例一覧を見る</span></a>
       </div>
     </div><!-- section_inner -->
   </section>
@@ -183,7 +169,7 @@
           <span class="title_en">CREATIVE LABO</span>
           <h2 class="title_ja">シェアスペースについて</h2>
         </div>
-        <div class="img_wrap"></div>
+        <div class="img_wrap" style="background-image: url(<?= get_template_directory_uri() ?>/tetoteto-main/assets/img/index/space_sp.jpg)"></div>
         <h3 class="sub_ttl"><span>食のゼロイチを生み出し続ける、</span><span>クリエイターのための研究所。</span></h3>
         <div class="desc_flex">
           <div class="desc_wrap">
@@ -215,7 +201,7 @@
       <div class="comp-link-button large center sp">
         <a href="#aaaa"><span>メンバー一覧</span></a>
       </div>
-    </div><!-- section_inner -->
+    </div>
   </section>
   <section class="section-blog">
     <div class="section_inner border">
@@ -225,7 +211,7 @@
           <h2 class="title_ja">ブログ・最新情報</h2>
         </div>
         <div class="comp-link-button">
-          <a href="#aaaa"><span>記事をもっと見る</span></a>
+          <a target="_blank" href="http://tetoteto.info/"><span>記事をもっと見る</span></a>
         </div>
       </div>
       <div class="comp-blog-list">
@@ -258,7 +244,7 @@
         </div>
       </div><!-- comp-blog-list -->
       <div class="comp-link-button large center sp">
-        <a href="#aaaa"><span>記事をもっと見る</span></a>
+        <a target="_blank" href="http://tetoteto.info/"><span>記事をもっと見る</span></a>
       </div>
     </div><!-- section_inner -->
   </section>
@@ -270,31 +256,31 @@
       </div>
       <div class="comp-shop-link">
         <div class="link_item">
-          <a class="img_wrap" href="#aaaa"><img src="<?= get_template_directory_uri() ?>/tetoteto-main/assets/img/links/link01.jpg"></a>
+          <a class="img_wrap" target="_blank" href="https://tetotetoshop.official.ec/items/36457556"><img src="<?= get_template_directory_uri() ?>/tetoteto-main/assets/img/links/link01.jpg"></a>
           <div class="txt_wrap"><span>ゴウキさんの</span><span>りんごバター</span></div>
         </div>
         <div class="link_item">
-          <a class="img_wrap" href="#aaaa"><img src="<?= get_template_directory_uri() ?>/tetoteto-main/assets/img/links/link02.jpg"></a>
+          <a class="img_wrap" target="_blank" href="https://itwokashi.official.ec/"><img src="<?= get_template_directory_uri() ?>/tetoteto-main/assets/img/links/link02.jpg"></a>
           <div class="txt_wrap"><span>ItWokashi</span></div>
         </div>
         <div class="link_item">
-          <a class="img_wrap" href="#aaaa"><img src="<?= get_template_directory_uri() ?>/tetoteto-main/assets/img/links/link03.jpg"></a>
+          <a class="img_wrap" target="_blank" href="https://shop.kanekusu.com/"><img src="<?= get_template_directory_uri() ?>/tetoteto-main/assets/img/links/link03.jpg"></a>
           <div class="txt_wrap"><span>金楠水産</span></div>
         </div>
         <div class="link_item">
-          <a class="img_wrap" href="#aaaa"><img src="<?= get_template_directory_uri() ?>/tetoteto-main/assets/img/links/link04.jpg"></a>
+          <a class="img_wrap" target="_blank" href="https://shop.lml.co.jp/"><img src="<?= get_template_directory_uri() ?>/tetoteto-main/assets/img/links/link04.jpg"></a>
           <div class="txt_wrap"><span>レモンマートル</span></div>
         </div>
         <div class="link_item">
-          <a class="img_wrap" href="#aaaa"><img src="<?= get_template_directory_uri() ?>/tetoteto-main/assets/img/links/link05.jpg"></a>
+          <a class="img_wrap" target="_blank" href="https://tetotaro.stores.jp/"><img src="<?= get_template_directory_uri() ?>/tetoteto-main/assets/img/links/link05.jpg"></a>
           <div class="txt_wrap"><span>てとたろうコーラ</span></div>
         </div>
         <div class="link_item">
-          <a class="img_wrap" href="#aaaa"><img src="<?= get_template_directory_uri() ?>/tetoteto-main/assets/img/links/link06.jpg"></a>
+          <a class="img_wrap" target="_blank" href="https://todome.official.ec/"><img src="<?= get_template_directory_uri() ?>/tetoteto-main/assets/img/links/link06.jpg"></a>
           <div class="txt_wrap"><span>とどめ茶</span></div>
         </div>
         <div class="link_item">
-          <a class="img_wrap" href="#aaaa"><img src="<?= get_template_directory_uri() ?>/tetoteto-main/assets/img/links/link07.jpg"></a>
+          <a class="img_wrap" target="_blank" href="https://nobeyama.base.shop/"><img src="<?= get_template_directory_uri() ?>/tetoteto-main/assets/img/links/link07.jpg"></a>
           <div class="txt_wrap"><span>野辺山ほうれん草</span><span>カレーペースト</span></div>
         </div>
       </div><!-- comp-shop-link -->
