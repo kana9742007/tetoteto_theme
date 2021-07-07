@@ -17,11 +17,11 @@
     $thumnail = get_template_directory_uri().'/assets/img/ogp/ogp.jpg';
     $description = "沖縄県の新たなお土産を作りたいというクライアントの依頼を受けて、新商品開発を行なったプロジェクト。商品企画、コンセプトメイク、レシピ提案、プロダクトデザイン、生産ラインの確保等、商品開発に関わる全方位を担当しました。商品開発に初めて挑戦するクライアントに対して、商品開発についてのナレッジの共有・蓄積を支援。同社のブランディングの方向性についても、コンサルティングを行いました。";
   } else if( is_category() || is_archive() ){
-    $page_title = single_cat_title("", false).' | TETOTETO Inc.';
-    $site_title = single_cat_title("", false).' | TETOTETO Inc.';
+    $page_title = '事例一覧 | TETOTETO Inc.';
+    $site_title = '事例一覧 | TETOTETO Inc.';
     $thumnail = get_template_directory_uri().'/assets/img/ogp/ogp.jpg';
     $site_permalink = get_the_permalink();
-    $description = single_cat_title("", false).'に関する作品一覧';
+    $description = 'TETOTETO Inc.の制作事例ページです。こだわりを持ち、ハイクオリティーなものづくりを追求する生産者・クリエイターを巻き込みながら、食を中心とした、生活の感度を高めるプロダクトを作っています。';
   } else if( is_single() || is_page() ) {
     $site_title = get_the_title($post->ID).' | TETOTETO Inc.';
     $site_permalink = get_the_permalink($post->ID);

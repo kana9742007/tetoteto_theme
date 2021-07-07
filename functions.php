@@ -30,9 +30,7 @@ function enqueue_scripts()
   wp_enqueue_script('slick-js', get_template_directory_uri() . '/tetoteto-main/assets/slick/slick.min.js', array(), '1.0.0', false);
   // layout
   wp_enqueue_script('layout-js', get_template_directory_uri() . '/tetoteto-main/assets/js/layout.js?ver210610', array(), '1.0.0', false);
-
-  // search
-  wp_enqueue_script('search-box', get_template_directory_uri() . '/tetoteto-main/assets/js/search-box.js', array(), '1.0.0', false);
+  
 }
 
 

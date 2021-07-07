@@ -198,7 +198,7 @@
       </div>
     </div><!-- section_inner -->
   </section>
-  <section class="section-member" style="display: none;">
+  <section class="section-member">
     <div class="section_inner border">
       <div class="comp-title-flex">
         <div class="comp-section-title">

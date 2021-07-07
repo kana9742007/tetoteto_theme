@@ -1,0 +1,151 @@
+.comp-profile-detail{
+  margin-top: 30px;
+  .profile_ttl{
+    font-size: 24px;
+    line-height: 1.6;
+    margin-bottom: 45px;
+    &.margin{
+      margin-top: 60px;
+    }
+  }
+  .detail_item{
+    @include flexSet;
+    margin-bottom: 60px;
+    &:nth-last-of-type(1){
+      margin-bottom: 0;
+    }
+    &.align_center{
+      align-items: center;
+    }
+    .img_wrap{
+      width: 220px;
+      min-height: 220px;
+      margin-right: 45px;
+      img{
+        border-radius: 15px;
+        pointer-events: none;
+      }
+      .name{
+        margin-top: 25px;
+        font-size: 24px;
+        margin-bottom: 10px;
+        .kana{
+          display: block;
+          font-size: 12px;
+          font-weight: normal;
+          line-height: 1.83;
+          letter-spacing: 0.4px;
+          margin-top: 3px;
+        }
+      }
+      .detail{
+        font-size: 12px;
+        font-weight: normal;
+        line-height: 1.83;
+        letter-spacing: 0.4px;
+      }
+    }
+    .txt_wrap{
+      width: calc(100% - 265px);
+      .detail_title{
+        font-size: 22px;
+        margin-bottom: 20px;
+      }
+      .detail_desc{
+        position: relative;
+        z-index: 10;
+        line-height: 1.8;
+        @include yugo;
+        font-size: 14px;
+      }
+      .career-wrapper{
+        margin-bottom: 30px;
+        .title{
+          font-size: 20px;
+          margin-bottom: 15px;
+        }
+        .flow_item{
+          margin-bottom: 15px;
+          .date{
+            width: 85px;
+          }
+          .flow_ttl{
+            width: calc(100% - 135px);
+            line-height: 1.4;
+            font-size: 18px;
+            box-sizing: border-box;
+          }
+          &:nth-last-of-type(1){
+            &::before{
+              height: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 720px){
+  .comp-profile-detail{
+    margin-top: 30px;
+    .profile_ttl{
+      font-size: 20px;
+      line-height: 1.6;
+      margin-bottom: 25px;
+      &.margin{
+        margin-top: 60px;
+      }
+    }
+    .detail_item{
+      display: block;
+      margin-bottom: 60px;
+      .img_wrap{
+        width: 100%;
+        margin-right: 0px;
+        margin-bottom: 25px;
+        img{
+          border-radius: 10px;
+        }
+        .name{
+          margin-top: 25px;
+          font-size: 24px;
+          margin-bottom: 10px;
+          .kana{
+            font-size: 12px;
+            letter-spacing: 0.4px;
+            margin-top: 10px;
+          }
+        }
+        .detail{
+          font-size: 16px;
+          letter-spacing: 0.5px;
+        }
+      }
+      .txt_wrap{
+        width: 100%;
+        .detail_title{
+          font-size: 20px;
+          margin-bottom: 20px;
+        }
+        .career-wrapper{
+          margin-bottom: 30px;
+          .title{
+            font-size: 20px;
+            margin-bottom: 15px;
+          }
+          .flow_item{
+            margin-bottom: 15px;
+            .date{
+              width: 100%;
+            }
+            .flow_ttl{
+              width: 100%;
+              font-size: 16px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
