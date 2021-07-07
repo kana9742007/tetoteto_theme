@@ -1,8 +1,8 @@
 <?php get_header(); ?>
 <article id="team" class="page-team-list">
   <section class="team-list">
-    <div class="main_image" style="background-image: url(<?= get_template_directory_uri() ?>/tetoteto-main/assets/img/member/main_sp.jpg;)">
-      <img src="<?= get_template_directory_uri() ?>/tetoteto-main/assets/img/member/main.jpg">
+    <div class="main_image" style="background-image: url(<?= get_template_directory_uri() ?>/tetoteto-main/assets/img/member/main.jpg;)">
+      <img src="<?= get_template_directory_uri() ?>/tetoteto-main/assets/img/member/main_sp.jpg">
     </div>
     <div class="section_inner">
       <div class="lead_txt">

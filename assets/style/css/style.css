@@ -2418,7 +2418,7 @@ footer {
   margin-bottom: 100px; }
   .page-team-list .team-list .main_image {
     width: 100%;
-    height: 450px;
+    height: 500px;
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -2440,12 +2440,12 @@ footer {
     .page-team-list .team-list .main_image {
       width: 100%;
       height: 335px;
-      background-repeat: no-repeat;
-      background-position: center center;
-      background-size: cover;
-      margin-bottom: 41px; }
+      background-image: none;
+      margin-bottom: 40px; }
       .page-team-list .team-list .main_image img {
-        display: none; }
+        display: block;
+        height: 100%;
+        object-fit: cover; }
     .page-team-list .team-list .section_inner .lead_txt .comp-section-title {
       margin-bottom: 30px; }
     .page-team-list .team-list .section_inner .lead_txt .sub_ttl {
