@@ -446,59 +446,55 @@ function humMenuControll(target){
 
 humMenuControll($('#hummenu'));
 
-// お問い合わせフォームのポップアップ
+function categoryToggle(target){
+  var searchBox = [];
+  var toggleButton = [];
+  var toggleContents = [];
+  var toggleState = [];
 
-function contactPopCtrl(target){
-  var humClose = $('#entryPopClose');
-  var humMenuState = 0;
-  var current_scrollY;
-
-  function hummenuMove(e){
-    if(humMenuState == 0){
-      target.addClass('open');
-      humMenuState = 1;
-    }else{
-      target.removeClass('open');
-      humMenuState = 0;
+  function toggleMove(e) {
+    if (toggleState[e] == -1 || toggleState[e] == 0) {
+      toggleButton[e].addClass('active');
+      var buttonHeight = toggleButton[e].outerHeight();
+      var tagetHeight = toggleContents[e].outerHeight();
+      searchBox[e].css({
+        'height': buttonHeight + tagetHeight + 'px'
+      });
+      toggleState[e] = 1;
+    } else {
+      toggleButton[e].removeClass('active');
+      var toggleHeight = toggleButton[e].outerHeight();
+        searchBox[e].css({
+          'height': toggleHeight + 'px'
+        });
+      toggleState[e] = 0;
     }
   }
 
-  function init(){
-    humClose.on({
-      'click': function(){
-        hummenuMove();
-      }
-    })
-    $('.func-contact').on({
-      'click': function(){
-        hummenuMove();
-      }
-    })
+  function init() {
+    $.each(target.find('.search_box'), function(index) {
+      console.log('index:' + index);
+      searchBox[index] = $(this);
+      toggleButton[index] = $(this).find('.toggle_button');
+      toggleContents[index] = $(this).find('.toggle_content');
+      $(this).css({'height': toggleButton[index].outerHeight() + 'px'});
+      toggleState[index] = -1;
+      toggleButton[index].on({
+        'click': function() {
+          toggleMove(index);
+        }
+      });
+    });
   }
 
-  init()
-
+  init();
 }
 
-contactPopCtrl($('#entryPop'));
 
-function ctrlFooterLink(){
-  var spaceOwner = $('#spaceOwner');
-  var farmer = $('#farmer');
-  var selector = $('select[name=category]');
-  spaceOwner.on({
-    'click': function(){
-      selector.val('スペースオーナーの募集について');
-    }
-  })
-  farmer.on({
-    'click': function(){
-      selector.val('パートナー農家さんの募集について');
-    }
-  })
+if (document.getElementById('caseList')) {
+  categoryToggle($('#serchWrapper'));
 }
 
-ctrlFooterLink();
 
 
 if (document.getElementById('index')) {

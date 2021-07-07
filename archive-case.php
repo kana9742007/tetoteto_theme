@@ -1,8 +1,8 @@
 <?php get_header(); ?>
 <article id="caseList" class="page-case-list">
   <section class="case-list">
-    <div class="main_image" style="background-image: url(<?= get_template_directory_uri() ?>/tetoteto-main/assets/img/case/projectList_sp.jpg;)">
-      <img src="<?= get_template_directory_uri() ?>/tetoteto-main/assets/img/case/projectList.jpeg">
+    <div class="main_image" style="background-image: url(<?= get_template_directory_uri() ?>/tetoteto-main/assets/img/case/projectList.jpg;)">
+      <img src="<?= get_template_directory_uri() ?>/tetoteto-main/assets/img/case/projectList_sp.jpeg">
     </div>
     <div class="section_inner">
       <div class="lead_txt">
@@ -13,27 +13,29 @@
         <h3 class="sub_ttl"><span>食のゼロイチを生み出し続ける、</span><span>クリエイターのための研究所。</span></h3>
       </div>
 
-      <!-- TODO カテゴリー 絞り込み -->
-      <div class="search-wrapper">
-        <div class="search search-type">
-          <div class="is_sp-flex">
-            <p>タイプで絞り込む</p>
-            <a class="arrow"></a>
+      <div id="serchWrapper" class="comp-search-wrapper">
+        <div class="search_box search-type">
+          <button class="toggle_button">
+            <span class="txt">タイプで絞り込む</span>
+            <span class="arrow"></span>
+          </button>
+          <div class="type_wrapper toggle_content">
+            <?php get_template_part('parts/case/searchType'); ?>
           </div>
-          <span class="search-line"></span>
-          <?php get_template_part('parts/case/searchType', null,); ?>
-        </div>
-        <div class="search search-cat">
-          <div class="is_sp-flex">
-            <p>カテゴリで絞り込む</p>
-            <a class="arrow"></a>
+        </div><!-- search_box -->
+        <div class="search_box search-cat">
+          <button class="toggle_button">
+            <span class="txt">カテゴリで絞り込む</span>
+            <span class="arrow"></span>
+          </button>
+          <div class="case_wrapper toggle_content">
+            <?php get_template_part('parts/case/searchCat'); ?>
           </div>
-          <?php get_template_part('parts/case/searchCat', null,); ?>
-        </div>
-      </div>
+        </div> <!-- search_box -->
+      </div><!-- comp-search-wrappe -->
 
       <!-- カテゴリーリスト -->
-      <?php get_template_part('parts/case/projectList', null,); ?>
+      <?php get_template_part('parts/case/projectList'); ?>
     </div>
   </section>
 </article>
