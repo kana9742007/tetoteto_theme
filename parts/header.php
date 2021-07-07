@@ -13,8 +13,8 @@
       <ul>
         <li><a href="/about">私たちについて</a></li>
         <li><a href="/case">制作実績</a></li>
-        <li><a href="#aaaa">プロジェクトメンバー</a></li>
-        <li><a href="/profile">会社概要</a></li>
+        <li><a href="/team">プロジェクトメンバー</a></li>
+        <li><a href=" /profile">会社概要</a></li>
         <li><a href="#aaaa">ブログ</a></li>
       </ul>
     </nav>
