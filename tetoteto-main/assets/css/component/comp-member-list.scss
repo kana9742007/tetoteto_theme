@@ -18,8 +18,20 @@
         margin-bottom: 15px;
       }
       .role{
-        display: block;
+        display: inline-block;
         font-size: 12px;
+        line-height: 22px;
+
+        &-last{
+          position: relative;
+          padding-left: 8px;
+          &::before{
+            content: '/';
+            position: absolute;
+            left: 0px;
+            top: 0px;
+          }
+        }
       }
       .ref{
         @include flexSet;
@@ -156,6 +168,14 @@
         .role{
           display: block;
           font-size: 10px;
+
+          &-last{
+            position: relative;
+            padding-left: 0px;
+            &::before{
+              display: none;
+            }
+          }
         }
       }
     }
