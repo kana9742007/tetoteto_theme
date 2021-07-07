@@ -206,14 +206,14 @@
           <h2 class="title_ja"><span>てとてとの</span>チームメンバー</h2>
         </div>
         <div class="comp-link-button">
-          <a href="#aaaa"><span>メンバー一覧</span></a>
+          <a href="/team"><span>メンバー一覧</span></a>
         </div>
       </div>
       <div class="comp-member-list index">
-        <?php get_template_part('parts/top/topMember', null); ?>
+        <?php get_template_part('parts/member/topMember', null); ?>
       </div>
       <div class="comp-link-button large center sp">
-        <a href="#aaaa"><span>メンバー一覧</span></a>
+        <a href="/team"><span>メンバー一覧</span></a>
       </div>
     </div><!-- section_inner -->
   </section>

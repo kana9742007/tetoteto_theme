@@ -2414,6 +2414,47 @@ footer {
       .page-contact .section-contact .section_inner .contact_button span {
         display: none; } }
 
+.page-team-list .team-list {
+  margin-bottom: 100px; }
+  .page-team-list .team-list .main_image {
+    width: 100%;
+    height: 450px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    margin-bottom: 60px; }
+    .page-team-list .team-list .main_image img {
+      display: none; }
+  .page-team-list .team-list .section_inner .lead_txt .comp-section-title {
+    margin-bottom: 30px; }
+  .page-team-list .team-list .section_inner .lead_txt .sub_ttl {
+    font-size: 20px;
+    line-height: 1.88;
+    margin-bottom: 75px; }
+    .page-team-list .team-list .section_inner .lead_txt .sub_ttl br {
+      display: block; }
+
+@media screen and (max-width: 720px) {
+  .page-team-list .team-list {
+    margin-bottom: 58px; }
+    .page-team-list .team-list .main_image {
+      width: 100%;
+      height: 335px;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+      margin-bottom: 41px; }
+      .page-team-list .team-list .main_image img {
+        display: none; }
+    .page-team-list .team-list .section_inner .lead_txt .comp-section-title {
+      margin-bottom: 30px; }
+    .page-team-list .team-list .section_inner .lead_txt .sub_ttl {
+      font-size: 4.25vw;
+      line-height: 1.88;
+      margin-bottom: 29px; }
+      .page-team-list .team-list .section_inner .lead_txt .sub_ttl br {
+        display: none; } }
+
 /*########## コンポーネント ##########*/
 /* 共通パーツ */
 .comp-section-title.margin {
@@ -3302,8 +3343,17 @@ footer {
       font-size: 22px;
       margin-bottom: 15px; }
     .comp-member-list .member_item .txt_wrap .role {
-      display: block;
-      font-size: 12px; }
+      display: inline-block;
+      font-size: 12px;
+      line-height: 22px; }
+      .comp-member-list .member_item .txt_wrap .role-last {
+        position: relative;
+        padding-left: 8px; }
+        .comp-member-list .member_item .txt_wrap .role-last::before {
+          content: '/';
+          position: absolute;
+          left: 0px;
+          top: 0px; }
     .comp-member-list .member_item .txt_wrap .ref {
       display: flex;
       flex-wrap: wrap;
@@ -3410,6 +3460,11 @@ footer {
       .comp-member-list .member_item .txt_wrap .role {
         display: block;
         font-size: 10px; }
+        .comp-member-list .member_item .txt_wrap .role-last {
+          position: relative;
+          padding-left: 0px; }
+          .comp-member-list .member_item .txt_wrap .role-last::before {
+            display: none; }
     .comp-member-list.index .member_item:nth-of-type(n+7) {
       display: block; } }
 
