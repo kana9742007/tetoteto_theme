@@ -3,6 +3,7 @@
   width: calc(100% + 100px);
   .slick-slider{
     overflow: hidden;
+    user-select: unset !important;
     .slick-arrow{
       display: none !important;
     }
