@@ -209,34 +209,8 @@
           <a target="_blank" href="http://tetoteto.info/"><span>記事をもっと見る</span></a>
         </div>
       </div>
-      <div class="comp-blog-list">
-        <div class="blog_item">
-          <div class="img_wrap">
-            <a target="_blank" href="http://tetoteto.info/things/tetotetonokoto/nin20210613"><img src="<?= get_template_directory_uri() ?>/tetoteto-main/assets/img/blog/blog01.jpg"></a>
-          </div>
-          <div class="title_wrap">
-            <span class="date">2021年06月13日</span>
-            <a target="_blank" class="title" href="http://tetoteto.info/things/tetotetonokoto/nin20210613">新ブランド「nin」美しいものを瓶に詰めてお届け。</a>
-          </div>
-        </div>
-        <div class="blog_item">
-          <div class="img_wrap">
-            <a target="_blank" href="http://tetoteto.info/things/tetotetonokoto/gokisapplebutter01"><img src="<?= get_template_directory_uri() ?>/tetoteto-main/assets/img/blog/blog02.jpg"></a>
-          </div>
-          <div class="title_wrap">
-            <span class="date">2021年6月13日</span>
-            <a target="_blank" class="title" href="http://tetoteto.info/things/tetotetonokoto/gokisapplebutter01">「所さん お届けモノです！ 」で紹介された「りんごバター」はネットから購入できます</a>
-          </div>
-        </div>
-        <div class="blog_item">
-          <div class="img_wrap">
-            <a target="_blank" href="http://tetoteto.info/things/tetotetonokoto/20210101gantan"><img src="<?= get_template_directory_uri() ?>/tetoteto-main/assets/img/blog/blog03.jpg"></a>
-          </div>
-          <div class="title_wrap">
-            <span class="date">2021年01月01日</span>
-            <a target="_blank" class="title" href="http://tetoteto.info/things/tetotetonokoto/20210101gantan">あけましておめでとうございます 2021</a>
-          </div>
-        </div>
+      <div id="blogItem" class="comp-blog-list">
+        <!-- FEED FROM REST API -->
       </div><!-- comp-blog-list -->
       <div class="comp-link-button large center sp">
         <a target="_blank" href="http://tetoteto.info/"><span>記事をもっと見る</span></a>
@@ -251,32 +225,60 @@
       </div>
       <div class="comp-shop-link">
         <div class="link_item">
-          <a class="img_wrap" href="#aaaa"><img src="<?= get_template_directory_uri() ?>/tetoteto-main/assets/img/links/link01.jpg"></a>
-          <div class="txt_wrap"><span>ゴウキさんの</span><span>りんごバター</span></div>
+          <a class="img_wrap" target="_blank" href="https://www.ninninnin.jp/"><img src="<?= get_template_directory_uri() ?>/assets/img/links/link01.jpg"></a>
+          <div class="txt_wrap">
+            <a href="https://www.ninninnin.jp/" target="_blank" class="title">NIN</a>
+            <p class="desc">美しいものを瓶に詰めてお届けします。</p>
+          </div>
         </div>
         <div class="link_item">
-          <a class="img_wrap" href="#aaaa"><img src="<?= get_template_directory_uri() ?>/tetoteto-main/assets/img/links/link02.jpg"></a>
-          <div class="txt_wrap"><span>ItWokashi</span></div>
+          <a class="img_wrap" target="_blank" href="https://tetotaro.stores.jp/"><img src="<?= get_template_directory_uri() ?>/assets/img/links/link02.jpg"></a>
+          <div class="txt_wrap">
+            <a href="https://tetotaro.stores.jp/" target="_blank" class="title">てとたろうコーラ</a>
+            <p class="desc">ひたすら味のみを追及した原価無視のコーラです。</p>
+          </div>
         </div>
         <div class="link_item">
-          <a class="img_wrap" href="#aaaa"><img src="<?= get_template_directory_uri() ?>/tetoteto-main/assets/img/links/link03.jpg"></a>
-          <div class="txt_wrap"><span>金楠水産</span></div>
+          <a class="img_wrap" target="_blank" href="https://itwokashi.official.ec/"><img src="<?= get_template_directory_uri() ?>/assets/img/links/link03.jpg"></a>
+          <div class="txt_wrap">
+            <a href="https://itwokashi.official.ec/" target="_blank" class="title">It Wokashi</a>
+            <p class="desc">究極のふわふわ、とろとろを追及した新感覚の大福です。</p>
+          </div>
         </div>
         <div class="link_item">
-          <a class="img_wrap" href="#aaaa"><img src="<?= get_template_directory_uri() ?>/tetoteto-main/assets/img/links/link04.jpg"></a>
-          <div class="txt_wrap"><span>レモンマートル</span></div>
+          <a class="img_wrap" target="_blank" href="https://kanekusu.official.ec/"><img src="<?= get_template_directory_uri() ?>/assets/img/links/link04.jpg"></a>
+          <div class="txt_wrap">
+            <a href="https://kanekusu.official.ec/" target="_blank" class="title">金楠水産の明石だこ</a>
+            <p class="desc">明石で100年たこを茹で続けた男たちの究極の茹でたこ。</p>
+          </div>
         </div>
         <div class="link_item">
-          <a class="img_wrap" href="#aaaa"><img src="<?= get_template_directory_uri() ?>/tetoteto-main/assets/img/links/link05.jpg"></a>
-          <div class="txt_wrap"><span>てとたろうコーラ</span></div>
+          <a class="img_wrap" target="_blank" href="https://shop.lml.co.jp/"><img src="<?= get_template_directory_uri() ?>/assets/img/links/link05.jpg"></a>
+          <div class="txt_wrap">
+            <a href="https://shop.lml.co.jp/" target="_blank" class="title">レモンマートル</a>
+            <p class="desc">“森の治療薬”とも呼ばれる、つよくてやさしい、抗菌の王。</p>
+          </div>
         </div>
         <div class="link_item">
-          <a class="img_wrap" href="#aaaa"><img src="<?= get_template_directory_uri() ?>/tetoteto-main/assets/img/links/link06.jpg"></a>
-          <div class="txt_wrap"><span>とどめ茶</span></div>
+          <a class="img_wrap" target="_blank" href="https://nobeyama.base.shop/"><img src="<?= get_template_directory_uri() ?>/assets/img/links/link06.jpg"></a>
+          <div class="txt_wrap">
+            <a href="https://nobeyama.base.shop/" target="_blank" class="title">野辺山ほうれん草</a>
+            <p class="desc">標高1300ｍの長野県野辺山高原で栽培するほうれん草を使ったカレーペースト</p>
+          </div>
         </div>
         <div class="link_item">
-          <a class="img_wrap" href="#aaaa"><img src="<?= get_template_directory_uri() ?>/tetoteto-main/assets/img/links/link07.jpg"></a>
-          <div class="txt_wrap"><span>野辺山ほうれん草</span><span>カレーペースト</span></div>
+          <a class="img_wrap" target="_blank" href="https://nikudevise.base.shop/"><img src="<?= get_template_directory_uri() ?>/assets/img/links/link07.jpg"></a>
+          <div class="txt_wrap">
+            <a href="https://nikudevise.base.shop/" target="_blank" class="title">NIKU DEVISE</a>
+            <p class="desc">熟成肉を余すところなく活かし、熟成肉のブランド価値をあげるブランド。</p>
+          </div>
+        </div>
+        <div class="link_item">
+          <a class="img_wrap" target="_blank" href="https://todome.official.ec/"><img src="<?= get_template_directory_uri() ?>/assets/img/links/link08.jpg"></a>
+          <div class="txt_wrap">
+            <a href="https://todome.official.ec/" target="_blank" class="title">とどめ茶</a>
+            <p class="desc">徹底的に管理された土から育ついい原葉。製茶の原点、手揉み茶製法の探求。</p>
+          </div>
         </div>
       </div><!-- comp-shop-link -->
     </div><!-- section_inner -->
