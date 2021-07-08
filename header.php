@@ -70,6 +70,10 @@
 	<script type="text/javascript" src="<?php echo get_template_directory_uri();?>/assets/js/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript" src="<?php echo get_template_directory_uri();?>/assets/slick/slick.min.js"></script>
 	<script type="text/javascript" src="<?php echo get_template_directory_uri();?>/assets/js/layout.js?<?php echo date('Ymd-Hi');?>"></script>
+  <?php $url = $_SERVER['REQUEST_URI']; ?>
+  <?php if(strstr($url,'contact')): ?>
+  <script type="text/javascript" src="<?php echo get_template_directory_uri();?>/assets/js/form.js?<?php echo date('Ymd-Hi');?>"></script>
+  <?php endif; ?>
   <?php wp_head(); ?>
 </head>
 

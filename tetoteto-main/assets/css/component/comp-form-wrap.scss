@@ -1,0 +1,291 @@
+.comp-form-wrap {
+  width: 100%;
+  .attention{
+    width: 100%;
+    display: block;
+    @include yugo;
+    font-size: 14px;
+    padding: 10px 0 0;
+    color: red;
+  }
+  .form_content {
+    display: block;
+    margin-bottom: 26px;
+
+    label {
+      @include flexSet;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 15px;
+      .title{
+        font-size: 18px;
+      }
+
+      .option {
+        display: block;
+        border-radius: 5px;
+        border: solid 1px #cab599;
+        color: #cab599;
+        width: 70px;
+        text-align: center;
+        padding: 8px 0;
+        font-size: 14px;
+        letter-spacing: 0.5px;
+        font-weight: normal;
+        &.required {
+          background-color: #cab599;
+          color: #fff;
+        }
+      }
+    }
+
+    input,
+    select,
+    textarea {
+      display: block;
+      width: 100%;
+      padding: 15px 15px;
+      background-color: #f4f4f4;
+      border: none;
+      border-radius: 10px;
+      color: #303030;
+    }
+
+    textarea {
+      height: 180px;
+    }
+
+    .select-cover {
+      position: relative;
+      cursor: pointer;
+
+      &::before {
+        content: '▼';
+        font-size: 12px;
+        color: #00371f;
+        display: block;
+        width: 12px;
+        height: 12px;
+        position: absolute;
+        right: 15px;
+        top:0;
+        bottom:0;
+        margin: auto;
+        z-index: 1;
+      }
+    }
+  }
+  .privacy_wrap{
+    margin-top: 40px;
+    .privacy_ttl{
+      font-size: 18px;
+      line-height: 1.4;
+      letter-spacing: 1.35px;
+      color: $black01;
+      margin-bottom: 20px;
+    }
+    .privacy_inner{
+      border: 1px solid #979797;
+      padding: 20px;
+      height: 200px;
+      overflow: scroll;
+      margin-bottom: 40px;
+      font-weight: normal;
+      .privacy_content{
+        @include yugo;
+        h5{
+          font-size: 14px;
+          font-weight: bold;
+          line-height: 1.4;
+          letter-spacing: 0.5px;
+          color: #343434;
+          margin-bottom: 10px;
+        }
+        p{
+          font-size: 12px;
+          line-height: 1.6;
+          letter-spacing: 0.44px;
+          margin-bottom: 20px;
+          &:nth-last-of-type(1){
+            margin-bottom: 0px;
+          }
+        }
+      }
+    }
+    .agreement{
+      @include flexSet;
+      justify-content: center;
+      margin-bottom: 40px;
+      input[name="agreement"]{
+        margin-right: 10px;
+      }
+    }
+  }
+  .ajax_loader{
+    width: 100%;
+    height: 0px;
+    overflow: hidden;
+    transition: height .2s;
+    &.loading{
+      height: 100px;
+    }
+    .loading{
+      display: block;
+      width: 100%;
+      height: 100px;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: 30px;
+      background-image: url(../img/common/loading.svg);
+    }
+  }
+  .status_message{
+    height: 0;
+    overflow: hidden;
+    text-align: left;
+    font-size: 16px;
+    transition: height .2s;
+    text-align: center;
+    .text{
+      display: block;
+      background: $basicBgColor;
+      padding: 15px;
+      line-height: 1.6;
+    }
+    &.complete{
+      height: 80px;
+      margin-bottom: 0px;
+    }
+    &.error{
+      height: 100px;
+      margin-bottom: 0px;
+      .text{
+        color: #D62538;
+        border: 1px solid #D62538;
+      }
+    }
+  }
+  .submit_wrap{
+    max-width: 500px;
+    margin: 0 auto;
+    position: relative;
+    cursor: pointer;
+    background: $basicBaige;
+    color: #fff;
+    padding: 10px 0;
+    border-radius: 100px;
+    @include hover;
+    &.disabled{
+      background: #979797;
+      pointer-events: none;
+    }
+    .text_wrap{
+      position: relative;
+      z-index: 10;
+      @include flexSet;
+      justify-content: center;
+      align-items: center;
+      pointer-events: none;
+      .ja{
+        font-size: 20px;
+        line-height: normal;
+        letter-spacing: 1.15px;
+      }
+    }
+    input{
+      position: absolute;
+      z-index: 20;
+      opacity: 0;
+      width: 100%;
+      height: 100%;
+      top:0;
+      left:0;
+    }
+    &:hover{
+      &::before{
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 720px){
+  .comp-form-wrap {
+    width: 100%;
+
+    .form_content {
+      display: block;
+      padding-bottom: 25px;
+      margin-bottom: 20px;
+      border-bottom: 1px dotted #d8d8d8;
+      &.form_content__add-bottom{
+        border-bottom: 0;
+        margin-bottom: 0px;
+      }
+
+      label {
+        margin-bottom: 15px;
+        .title{
+          font-size: 16px;
+        }
+
+        .option {
+          font-size: 12px;
+          width: 50px;
+          padding: 8px 0px;
+        }
+      }
+    }
+    .privacy_wrap{
+      margin-top: 10px;
+      .privacy_inner{
+        padding: 15px;
+        height: 200px;
+        margin-bottom: 30px;
+        .privacy_content{
+          h5{
+            font-size: 14px;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+          }
+          p{
+            font-size: 12px;
+            line-height: 1.6;
+            letter-spacing: 0.4px;
+          }
+        }
+      }
+      .agreement{
+        margin-bottom: 30px;
+      }
+    }
+    .ajax_loader{
+      &.loading{
+        height: 100px;
+      }
+      .loading{
+        width: 100%;
+        height: 70px;
+        background-size: 30px;
+      }
+    }
+    .status_message{
+      text-align: left;
+      &.complete{
+        height: 100px;
+      }
+      &.error{
+        height: 120px;
+      }
+    }
+    .submit_wrap{
+      padding: 12px 0;
+      .text_wrap{
+        .ja{
+          font-size: 18px;
+          letter-spacing: 1px;
+        }
+      }
+    }
+  }
+}
