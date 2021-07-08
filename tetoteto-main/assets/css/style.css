@@ -2794,6 +2794,8 @@ footer .footer_inner .copyright {
 }
 .comp-case-slider .slick-slider {
   overflow: hidden;
+  -webkit-user-select: unset !important;
+          user-select: unset !important;
 }
 .comp-case-slider .slick-slider .slick-arrow {
   display: none !important;
@@ -3945,6 +3947,8 @@ footer .footer_inner .copyright {
 }
 .comp-work-slider .slick-slider {
   overflow: hidden;
+  -webkit-user-select: unset !important;
+          user-select: unset !important;
 }
 .comp-work-slider .slick-slider .slick-arrow {
   display: none !important;
@@ -3952,6 +3956,7 @@ footer .footer_inner .copyright {
 .comp-work-slider .slick-slider .slick-list {
   width: calc(410px * 3) !important;
   padding: 0 !important;
+  overflow: visible !important;
 }
 .comp-work-slider .slick-slider .slick-list .item_box {
   width: 410px !important;
@@ -4009,12 +4014,15 @@ footer .footer_inner .copyright {
 }
 .comp-wakuwaku-image .slick-slider {
   overflow: hidden;
+  -webkit-user-select: unset !important;
+          user-select: unset !important;
 }
 .comp-wakuwaku-image .slick-slider .slick-arrow {
   display: none !important;
 }
 .comp-wakuwaku-image .slick-slider .slick-list {
   padding: 0 !important;
+  overflow: visible !important;
 }
 @media screen and (min-width: 721px) {
   .comp-wakuwaku-image .slick-slider .slick-list .slick-track {

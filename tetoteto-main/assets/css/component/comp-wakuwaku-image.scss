@@ -1,11 +1,13 @@
 .comp-wakuwaku-image{
   .slick-slider{
     overflow: hidden;
+    user-select: unset !important;
     .slick-arrow{
       display: none !important;
     }
     .slick-list{
       padding: 0 !important;
+      overflow: visible !important;
       .slick-track{
         @media screen and (min-width: 721px){
           @include flexSet;
