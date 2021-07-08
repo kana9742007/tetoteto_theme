@@ -97,13 +97,13 @@
           <h2 class="title_ja">私たちについて</h2>
         </div>
         <div class="img_wrap">
-          <img src="<?= get_template_directory_uri() ?>/tetoteto-main/assets/img/index/about_img.jpg">
+          <img src="<?= get_template_directory_uri() ?>/assets/img/index/about_img.jpg">
         </div>
         <h3 class="sub_ttl"><span>暮らしの感度を高める</span><span>クリエイティブプロダクション</span></h3>
         <div class="desc_wrap">
-          <p>私たちは、日々のくらしと丁寧に向き合っていきたいと思っています。都会の真ん中でリアルな「生産」が見えない暮らしをしていると、ただ消費することに慣れてしまいます。</p>
+          <p>都会の生活での暮らしが長くなるとリアルな「生産」が見えにくくなり、ただ消費することに慣れてしまいます。</p>
           <p>そんな生活にふと疑問を感じた時、都会にいながらも丁寧なくらしに向き合いたいと模索しはじめました。旬の食材や植物に囲まれた食卓で四季を感じたり、作り手の思いや、背景にある物語に向き合うことであたりまえの日常がキラキラと楽しいものになりました。</p>
-          <p>そして、昨日よりちょっと良い今日を作るために、私たちは「てとてと」という活動をはじめました。</p>
+          <p>そんなきっかけから、私たちはつくる人・使う人・それを広めるクリエイターの全員が”わくわく”を感じることができ、生活に少しでも彩りを与えられることを願いながらものづくりをしています。</p>
         </div>
         <div class="comp-link-button">
           <a href="/about"><span>詳しく知る</span></a>
@@ -284,4 +284,30 @@
     </div><!-- section_inner -->
   </section>
 </article>
+<script>
+      var root = document.getElementById("blogItem");//挿入したいID名
+
+      function forEach(props, callback) {
+         for (var i = 0, max = props.length; i < max; i++) {
+            callback(props[i], i)
+         }
+      }
+
+      // callback関数が呼ばれる
+      function display_posts(posts) {
+         forEach(posts, function (post) {
+            var title = post.title.rendered;
+            var link = post.link;
+						var thumbnail = post.thumbnail_url;
+            var year = post.date.substr(0, 4);
+            var month = post.date.substr(5, 2);
+            var day = post.date.substr(8, 2);
+            newElement = '<div class="blog_item"><div class="img_wrap"><a target="_blank" href="'+link+'"><img src="' + thumbnail + '"></a></div><div class="title_wrap"><span class="date">' + year + '年' + month + '月' + day + '日' + '</span><a target="_blank" class="title" href="' + link + '">' + title + '</a></div></div>';
+
+						$("#blogItem").append(newElement);
+
+         })
+      }
+   </script>
+<script src="https://tetoteto.info/wp-json/wp/v2/posts?_jsonp=display_posts&categories=61&per_page=3"></script>
 <?php get_footer(); ?>

@@ -16,17 +16,16 @@ add_image_size('ogp', 1200, 9999);
 remove_filter('the_content', 'wpautop'); // 記事の自動整形を無効にする
 remove_filter('the_excerpt', 'wpautop'); // 抜粋の自動整形を無効にする
 
-// 事例一覧パラメータ
-/*
-function my_query_vars($vars)
-{
-  $vars[] = 'case_cat';
-  $vars[] = 'case_type';
-  return $vars;
+// REST APIからのデータ読み込みを許可
+function add_allow_header( $headers ) {
+  global $wp;
+  if (preg_match ('/wp-json/',$wp->request)) {
+    $headers['Access-Control-Allow-Origin'] = 'https://tetoteto.info';
+    $headers['Access-Control-Allow-Credentials'] = 'true';
+    return $headers;
+  }
 }
-
-add_filter('query_vars', 'my_query_vars');
-*/
+add_filter( 'wp_headers', 'add_allow_header' );
 
 function create_post_type() {
   $customPostSupports = [  // supports のパラメータを設定する配列（初期値だと title と editor のみ投稿画面で使える）
