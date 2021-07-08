@@ -89,7 +89,7 @@
   <section class="section-about">
     <div class="section_inner border">
       <div class="img_wrap">
-        <img src="<?= get_template_directory_uri() ?>/tetoteto-main/assets/img/index/about_img.jpg">
+        <img src="<?= get_template_directory_uri() ?>/assets/img/index/about_img.jpg">
       </div>
       <div class="txt_wrap">
         <div class="comp-section-title margin">
@@ -106,7 +106,7 @@
           <p>そして、昨日よりちょっと良い今日を作るために、私たちは「てとてと」という活動をはじめました。</p>
         </div>
         <div class="comp-link-button">
-          <a href="#aaaa"><span>詳しく知る</span></a>
+          <a href="/about"><span>詳しく知る</span></a>
         </div>
       </div>
     </div><!-- section_inner -->
@@ -121,55 +121,41 @@
       </div>
       <div class="comp-case-slider">
         <div id="caseSlider" class="slick-slider">
-          <div class="item_box">
-            <a href="#aaaa">
-              <img src="<?= get_template_directory_uri() ?>/tetoteto-main/assets/img/case/case01.jpg">
-            </a>
-            <div class="txt_wrap">
-              <span class="category">PROJECT</span>
-              <h3 class="case_name">ビーンズトーキョー</h3>
+          <?php
+              $paged = get_query_var('paged') ? get_query_var('paged') : 1 ;
+              $wp_query = new WP_Query();
+              $param = array(
+                'posts_per_page' => '5',
+                'orderby' => 'rand',
+                'post_status' => 'publish',
+                'post_type' => 'case',
+                'paged' => $paged,
+              );
+              $wp_query->query($param);
+              if($wp_query->have_posts()): while($wp_query->have_posts()) : $wp_query->the_post();
+              $post_id = get_the_ID();
+              $title = get_the_title($post_id);
+              $cat = get_the_terms($post_id, 'case_cat');
+              $thumbnails = get_the_post_thumbnail_url();
+              $sp_thumbnails_id = SCF::get('sp_thumbnail');
+              $sp_thumbnails = wp_get_attachment_image_src($sp_thumbnails_id, 'full');
+              $thumbnail = $sp_thumbnails[0];
+              $cat_name = $cat[0]->name;
+              ?>
+            <div class="item_box">
+              <a href="<?php the_permalink();?>">
+                <img src="<?= $thumbnail ?>">
+              </a>
+              <div class="txt_wrap">
+                <span class="category"><?= $cat_name ?></span>
+                <h3 class="case_name"><?= $title ?></h3>
+              </div>
             </div>
-          </div>
-          <div class="item_box">
-            <a href="#aaaa">
-              <img src="<?= get_template_directory_uri() ?>/tetoteto-main/assets/img/case/case02.jpg">
-            </a>
-            <div class="txt_wrap">
-              <span class="category">PROJECT</span>
-              <h3 class="case_name">金楠水産</h3>
-            </div>
-          </div>
-          <div class="item_box">
-            <a href="#aaaa">
-              <img src="<?= get_template_directory_uri() ?>/tetoteto-main/assets/img/case/case03.jpg">
-            </a>
-            <div class="txt_wrap">
-              <span class="category">PROJECT</span>
-              <h3 class="case_name">WAKO COFFE BREWING</h3>
-            </div>
-          </div>
-          <div class="item_box">
-            <a href="#aaaa">
-              <img src="<?= get_template_directory_uri() ?>/tetoteto-main/assets/img/case/case04.jpg">
-            </a>
-            <div class="txt_wrap">
-              <span class="category">PROJECT</span>
-              <h3 class="case_name">ゴウキさんのりんごバター</h3>
-            </div>
-          </div>
-          <div class="item_box">
-            <a href="#aaaa">
-              <img src="<?= get_template_directory_uri() ?>/tetoteto-main/assets/img/case/case05.jpg">
-            </a>
-            <div class="txt_wrap">
-              <span class="category">PROJECT</span>
-              <h3 class="case_name">とどめ茶 -TODOMECHA-</h3>
-            </div>
-          </div>
+            <?php endwhile; endif; ?>
         </div>
       </div><!-- comp-case-slider -->
       <div class="comp-link-button large center">
-        <a href="#aaaa"><span>制作事例一覧を見る</span></a>
+        <a href="/case"><span>制作事例一覧を見る</span></a>
       </div>
     </div><!-- section_inner -->
   </section>
@@ -217,43 +203,17 @@
       <div class="comp-title-flex">
         <div class="comp-section-title">
           <span class="title_en">BLOG&CONTENTS</span>
-          <h2 class="title_ja">ブログ・最新情報</h2>
+          <h2 class="title_ja" style="text-indent: -0.15em;">ブログ・最新情報</h2>
         </div>
         <div class="comp-link-button">
-          <a href="#aaaa"><span>記事をもっと見る</span></a>
+          <a target="_blank" href="http://tetoteto.info/"><span>記事をもっと見る</span></a>
         </div>
       </div>
-      <div class="comp-blog-list">
-        <div class="blog_item">
-          <div class="img_wrap">
-            <a href="#aaaa"><img src="<?= get_template_directory_uri() ?>/tetoteto-main/assets/img/blog/blog01.jpg"></a>
-          </div>
-          <div class="title_wrap">
-            <span class="date">2021年03月17日</span>
-            <a class="title" href="#aaaa">「ゴウキさんのりんごバター」がネットから購入できるようになりました！</a>
-          </div>
-        </div>
-        <div class="blog_item">
-          <div class="img_wrap">
-            <a href="#aaaa"><img src="<?= get_template_directory_uri() ?>/tetoteto-main/assets/img/blog/blog02.jpg"></a>
-          </div>
-          <div class="title_wrap">
-            <span class="date">2021年01月02日</span>
-            <a class="title" href="#aaaa">あけましておめでとうございます 2021</a>
-          </div>
-        </div>
-        <div class="blog_item">
-          <div class="img_wrap">
-            <a href="#aaaa"><img src="<?= get_template_directory_uri() ?>/tetoteto-main/assets/img/blog/blog03.jpg"></a>
-          </div>
-          <div class="title_wrap">
-            <span class="date">2021年01月01日</span>
-            <a class="title" href="#aaaa">【テレビ出演】羽鳥慎一モーニングショーで紹介されました。</a>
-          </div>
-        </div>
+      <div id="blogItem" class="comp-blog-list">
+        <!-- FEED FROM REST API -->
       </div><!-- comp-blog-list -->
       <div class="comp-link-button large center sp">
-        <a href="#aaaa"><span>記事をもっと見る</span></a>
+        <a target="_blank" href="http://tetoteto.info/"><span>記事をもっと見る</span></a>
       </div>
     </div><!-- section_inner -->
   </section>
@@ -265,32 +225,60 @@
       </div>
       <div class="comp-shop-link">
         <div class="link_item">
-          <a class="img_wrap" href="#aaaa"><img src="<?= get_template_directory_uri() ?>/tetoteto-main/assets/img/links/link01.jpg"></a>
-          <div class="txt_wrap"><span>ゴウキさんの</span><span>りんごバター</span></div>
+          <a class="img_wrap" target="_blank" href="https://www.ninninnin.jp/"><img src="<?= get_template_directory_uri() ?>/assets/img/links/link01.jpg"></a>
+          <div class="txt_wrap">
+            <a href="https://www.ninninnin.jp/" target="_blank" class="title">NIN</a>
+            <p class="desc">美しいものを瓶に詰めてお届けします。</p>
+          </div>
         </div>
         <div class="link_item">
-          <a class="img_wrap" href="#aaaa"><img src="<?= get_template_directory_uri() ?>/tetoteto-main/assets/img/links/link02.jpg"></a>
-          <div class="txt_wrap"><span>ItWokashi</span></div>
+          <a class="img_wrap" target="_blank" href="https://tetotaro.stores.jp/"><img src="<?= get_template_directory_uri() ?>/assets/img/links/link02.jpg"></a>
+          <div class="txt_wrap">
+            <a href="https://tetotaro.stores.jp/" target="_blank" class="title">てとたろうコーラ</a>
+            <p class="desc">ひたすら味のみを追及した原価無視のコーラです。</p>
+          </div>
         </div>
         <div class="link_item">
-          <a class="img_wrap" href="#aaaa"><img src="<?= get_template_directory_uri() ?>/tetoteto-main/assets/img/links/link03.jpg"></a>
-          <div class="txt_wrap"><span>金楠水産</span></div>
+          <a class="img_wrap" target="_blank" href="https://itwokashi.official.ec/"><img src="<?= get_template_directory_uri() ?>/assets/img/links/link03.jpg"></a>
+          <div class="txt_wrap">
+            <a href="https://itwokashi.official.ec/" target="_blank" class="title">It Wokashi</a>
+            <p class="desc">究極のふわふわ、とろとろを追及した新感覚の大福です。</p>
+          </div>
         </div>
         <div class="link_item">
-          <a class="img_wrap" href="#aaaa"><img src="<?= get_template_directory_uri() ?>/tetoteto-main/assets/img/links/link04.jpg"></a>
-          <div class="txt_wrap"><span>レモンマートル</span></div>
+          <a class="img_wrap" target="_blank" href="https://kanekusu.official.ec/"><img src="<?= get_template_directory_uri() ?>/assets/img/links/link04.jpg"></a>
+          <div class="txt_wrap">
+            <a href="https://kanekusu.official.ec/" target="_blank" class="title">金楠水産の明石だこ</a>
+            <p class="desc">明石で100年たこを茹で続けた男たちの究極の茹でたこ。</p>
+          </div>
         </div>
         <div class="link_item">
-          <a class="img_wrap" href="#aaaa"><img src="<?= get_template_directory_uri() ?>/tetoteto-main/assets/img/links/link05.jpg"></a>
-          <div class="txt_wrap"><span>てとたろうコーラ</span></div>
+          <a class="img_wrap" target="_blank" href="https://shop.lml.co.jp/"><img src="<?= get_template_directory_uri() ?>/assets/img/links/link05.jpg"></a>
+          <div class="txt_wrap">
+            <a href="https://shop.lml.co.jp/" target="_blank" class="title">レモンマートル</a>
+            <p class="desc">“森の治療薬”とも呼ばれる、つよくてやさしい、抗菌の王。</p>
+          </div>
         </div>
         <div class="link_item">
-          <a class="img_wrap" href="#aaaa"><img src="<?= get_template_directory_uri() ?>/tetoteto-main/assets/img/links/link06.jpg"></a>
-          <div class="txt_wrap"><span>とどめ茶</span></div>
+          <a class="img_wrap" target="_blank" href="https://nobeyama.base.shop/"><img src="<?= get_template_directory_uri() ?>/assets/img/links/link06.jpg"></a>
+          <div class="txt_wrap">
+            <a href="https://nobeyama.base.shop/" target="_blank" class="title">野辺山ほうれん草</a>
+            <p class="desc">標高1300ｍの長野県野辺山高原で栽培するほうれん草を使ったカレーペースト</p>
+          </div>
         </div>
         <div class="link_item">
-          <a class="img_wrap" href="#aaaa"><img src="<?= get_template_directory_uri() ?>/tetoteto-main/assets/img/links/link07.jpg"></a>
-          <div class="txt_wrap"><span>野辺山ほうれん草</span><span>カレーペースト</span></div>
+          <a class="img_wrap" target="_blank" href="https://nikudevise.base.shop/"><img src="<?= get_template_directory_uri() ?>/assets/img/links/link07.jpg"></a>
+          <div class="txt_wrap">
+            <a href="https://nikudevise.base.shop/" target="_blank" class="title">NIKU DEVISE</a>
+            <p class="desc">熟成肉を余すところなく活かし、熟成肉のブランド価値をあげるブランド。</p>
+          </div>
+        </div>
+        <div class="link_item">
+          <a class="img_wrap" target="_blank" href="https://todome.official.ec/"><img src="<?= get_template_directory_uri() ?>/assets/img/links/link08.jpg"></a>
+          <div class="txt_wrap">
+            <a href="https://todome.official.ec/" target="_blank" class="title">とどめ茶</a>
+            <p class="desc">徹底的に管理された土から育ついい原葉。製茶の原点、手揉み茶製法の探求。</p>
+          </div>
         </div>
       </div><!-- comp-shop-link -->
     </div><!-- section_inner -->

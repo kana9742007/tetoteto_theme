@@ -446,6 +446,41 @@ function humMenuControll(target){
 
 humMenuControll($('#hummenu'));
 
+function blogContentAPI(){
+  var all_data = [];
+
+  $.ajax({
+    type: "GET",
+    dataType: "json",
+    url: "https://tetoteto.info/wp-json/wp/v2/posts?categories=61"
+  }).done(function (response) {
+    all_data = []; //初期化
+    all_data = response; //ここで投稿内容を取得する
+
+    for (var i = 0; i < 3; i++) {
+      var title = all_data[i].title.rendered; //記事のタイトル
+      var link = all_data[i].link; //記事のリンクURL
+      var date = all_data[i].date; //記事のリンクURL
+      var thumbnail = all_data[i].thumbnail_url;
+      var year = date.substr( 0, 4 );
+      var month = date.substr( 5, 2 );
+      var day = date.substr( 8, 2 );
+      var li = "" + title + ""
+
+    $("#blogItem").append('<div class="blog_item"><div class="img_wrap"><a href="'+link+'"><img src="' + thumbnail + '"></a></div><div class="title_wrap"><span class="date">' + year + '年' + month + '月' + day + '日' + '</span><a class="title" href="' + link + '">' + title + '</a></div></div>');
+
+  }
+  }).fail(function (XMLHttpRequest, textStatus, errorThrown) {
+    console.log("XMLHttpRequest : " + XMLHttpRequest.status);
+    console.log("textStatus     : " + textStatus);
+    console.log("errorThrown    : " + errorThrown.message);
+  });
+}
+
+if (document.getElementById('index')) {
+  blogContentAPI();
+}
+
 function categoryToggle(target){
   var searchBox = [];
   var toggleButton = [];

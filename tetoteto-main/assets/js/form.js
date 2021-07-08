@@ -222,16 +222,18 @@ $(function() {
       var userName = target.find("input[name=username]").val();
       var userMail = target.find("input[name=usermail]").val();
       var telNumber = target.find("input[name=telnumber]").val();
+      var company = target.find("input[name=company]").val();
       var content = target.find("textarea[name=content]").val();
       event.preventDefault();
       $.ajax({
-        url: "https://docs.google.com/forms/u/0/d/e/1FAIpQLSchnoi-Mr4brRJfZBmnfjqclOyaDjl9iiVdYKswXiN66X69uw/formResponse",
+        url: "https://docs.google.com/forms/u/0/d/e/1FAIpQLSfsHGZGbgVG2tDBCsWtYf4Ncdh4sCHeELRaUCJEKxyg2ACbMQ/formResponse",
         data: {
-          "entry.1846142867": category,
-          "entry.581386896": userName,
-          "entry.1754621765": userMail,
-          "entry.1224743144": telNumber,
-          "entry.691341744": content,
+          "entry.1408135657": category,
+          "entry.839566296": userName,
+          "entry.1407359512": userMail,
+          "entry.255823979": telNumber,
+          "entry.1033760270": company,
+          "entry.852812278": content,
         },
       type: "POST",
       dataType: "xml",
@@ -241,11 +243,14 @@ $(function() {
               $('#ajaxLoader').removeClass('loading');
               $('#statusMessage').addClass('complete').html('<span class="text">メッセージは送信されました。自動返信メールをご確認ください。</span>');
             }, 500);
+            setTimeout(function() {
+              location.href = 'https://corporate.tetoteto.co/'
+            }, 3000);
           },
           200: function () {
             $('#statusMessage').addClass('error').html('<span class="text">メッセージ送信に失敗しました。お手数ではございますが、時間を置いてもう一度お試しください。</span>');
             setTimeout(function() {
-              location.href = 'https://www.zeroworks.biz/'
+              location.href = 'https://corporate.tetoteto.co/'
             }, 3000);
           }
         }
