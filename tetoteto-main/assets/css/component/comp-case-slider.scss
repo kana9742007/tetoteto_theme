@@ -3,14 +3,12 @@
   width: calc(100% + 100px);
   .slick-slider{
     overflow: hidden;
-    user-select: unset !important;
     .slick-arrow{
       display: none !important;
     }
     .slick-list{
       width: calc(300px * 3) !important;
       padding: 0 !important;
-      overflow: visible !important;
       .item_box{
         width: 300px !important;
         padding: 0 5px;
@@ -51,7 +49,7 @@
             @include varela;
             font-size: 10px;
             line-height: 1;
-            text-indent: 0.1em;
+            text-indent: 0.2em;
             margin-bottom: 10px;
           }
           .case_name{
@@ -123,7 +121,7 @@
             border-radius: 0 0 10px 10px;
             padding: 15px;
             .category{
-              margin-bottom: 5px;
+              margin-bottom: 10px;
             }
             .case_name{
               font-size: 18px;

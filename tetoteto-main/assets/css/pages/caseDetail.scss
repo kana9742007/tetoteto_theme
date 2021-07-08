@@ -122,21 +122,14 @@
       margin-bottom: 60px;
       .main_image{
         width: 100%;
-        height: 100vw;
-        overflow: hidden;
+        height: 136vw;
         background-image: none !important;
         margin-bottom: 40px;
         img{
           display: block;
-          margin-top: -16vw;
         }
       }
       .lead_txt{
-        .comp-section-title{
-          .title_ja{
-            font-size: 7vw;
-          }
-        }
         .credit{
           margin: 30px auto 40px;
           font-size: 13px;

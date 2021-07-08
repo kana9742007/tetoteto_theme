@@ -9,8 +9,8 @@ $pointYellow: #BF992E;
 @font-face {
     font-family: 'varela';
 		font-weight: 400;
-    src: url('../fonts/varela.eot'),url('../fonts/varela.woff') format('woff'),
-    url('../fonts/varela.ttf') format('truetype'),
+    src: url('../../fonts/varela.eot'),url('../../fonts/varela.woff') format('woff'),
+    url('../../fonts/varela.ttf') format('truetype'),
 }
 
 @mixin varela{
@@ -23,7 +23,8 @@ $pointYellow: #BF992E;
 }
 
 @mixin yugo{
-  font-family: 游ゴシック体, "Yu Gothic", YuGothic, "ヒラギノ角ゴシック Pro", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  /*font-family: 游ゴシック体, "Yu Gothic", YuGothic, "ヒラギノ角ゴシック Pro", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;*/
+  font-family: tbudrgothic-std, "ヒラギノ丸ゴ Pro W4","ヒラギノ丸ゴ Pro","Hiragino Maru Gothic Pro","ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","HG丸ｺﾞｼｯｸM-PRO","HGMaruGothicMPRO";
   font-weight: normal;
   letter-spacing: 0.06em;
 }

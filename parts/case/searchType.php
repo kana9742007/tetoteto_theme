@@ -9,8 +9,6 @@ $args = wp_parse_args(
 $uri = esc_url(home_url('/case'));
 ?>
 
-
-
   <?php
   // カテゴリーを取得
   $cat = array(

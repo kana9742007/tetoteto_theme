@@ -26,6 +26,7 @@ $folio = SCF::get('folio');
   </div>
   <div class="txt_wrap">
     <h3 class="name"><?= $title ?></h3>
+    <!-- <div class="roles"> -->
     <span class="role"><?= $roles ?></span>
     <div class="ref">
       <?php if(get_post_meta($id, 'instagram',true)): ?>

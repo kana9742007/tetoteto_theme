@@ -446,7 +446,6 @@ function humMenuControll(target){
 
 humMenuControll($('#hummenu'));
 
-
 function categoryToggle(target){
   var searchBox = [];
   var toggleButton = [];
