@@ -3,7 +3,7 @@
     margin-bottom: 100px;
     .main_image{
       width: 100%;
-      height: 500px;
+      height: 34vw;
       @include bgSet;
       margin-bottom: 60px;
       img{
@@ -32,21 +32,28 @@
     }
   }
 }
-
+@media screen and (max-width: 980px){
+  .page-team-list{
+    .team-list{
+      margin-bottom: 80px;
+      .main_image{
+        width: 100%;
+        height: auto;
+        background-image: none !important;
+        margin-bottom: 60px;
+        img{
+          display: block;
+        }
+      }
+    }
+  }
+}
 @media screen and (max-width: 720px){
   .page-team-list{
     .team-list{
-      margin-bottom: 58px;
+      margin-bottom: 60px;
       .main_image{
-        width: 100%;
-        height: 335px;
-        background-image: none;
         margin-bottom: 40px;
-        img{
-          display: block;
-          height: 100%;
-          object-fit: cover;
-        }
       }
 
       .section_inner{

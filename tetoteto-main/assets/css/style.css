@@ -4,7 +4,7 @@
 @font-face {
   font-family: "varela";
   font-weight: 400;
-  src: url("../../fonts/varela.eot"), url("../../fonts/varela.woff") format("woff"), url("../../fonts/varela.ttf") format("truetype");
+  src: url("../fonts/varela.eot"), url("../fonts/varela.woff") format("woff"), url("../fonts/varela.ttf") format("truetype");
 }
 /*########## 共通レイアウト ##########*/
 /*
@@ -1427,15 +1427,10 @@ footer .footer_inner .copyright {
 .page-index .section-space .txt_wrap .img_wrap {
   display: none;
 }
-.page-index .section-space .txt_wrap .desc_flex {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+.page-index .section-space .txt_wrap .desc_wrap {
+  width: 100%;
 }
-.page-index .section-space .txt_wrap .desc_flex .desc_wrap {
-  width: 47.5%;
-}
-.page-index .section-space .txt_wrap .desc_flex .desc_wrap p {
+.page-index .section-space .txt_wrap .desc_wrap p {
   font-family: 游ゴシック体, "Yu Gothic", YuGothic, "ヒラギノ角ゴシック Pro", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
   font-weight: normal;
   letter-spacing: 0.06em;
@@ -1447,19 +1442,16 @@ footer .footer_inner .copyright {
   margin-bottom: 1em;
 }
 @media screen and (max-width: 720px) {
-  .page-index .section-space .txt_wrap .desc_flex .desc_wrap p {
+  .page-index .section-space .txt_wrap .desc_wrap p {
     font-size: 14px;
     letter-spacing: 0.6px;
   }
 }
-.page-index .section-space .txt_wrap .desc_flex .desc_wrap p span {
+.page-index .section-space .txt_wrap .desc_wrap p span {
   display: block;
 }
-.page-index .section-space .txt_wrap .desc_flex .desc_wrap p:nth-last-of-type(1) {
+.page-index .section-space .txt_wrap .desc_wrap p:nth-last-of-type(1) {
   margin-bottom: 0;
-}
-.page-index .section-space .txt_wrap .desc_flex .desc_wrap:nth-of-type(1) {
-  margin-bottom: 1em;
 }
 .page-index .section-member .section_inner {
   padding-bottom: 50px;
@@ -2251,12 +2243,12 @@ footer .footer_inner .copyright {
   text-indent: -0.1em;
 }
 .page-case-list .case-list .section_inner .lead_txt .sub_ttl {
-  font-size: 24px;
+  font-size: 20px;
   line-height: 1.88;
-  margin-bottom: 40px;
+  margin-bottom: 60px;
 }
 .page-case-list .case-list .section_inner .is-list-page {
-  margin-top: 80px;
+  margin-top: 100px;
 }
 .page-case-list .case-list .section_inner .is-list-page .project_item {
   margin-bottom: 20px;
@@ -2333,15 +2325,26 @@ footer .footer_inner .copyright {
     margin-top: 80px;
   }
 }
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 980px) {
   .page-case-list .case-list {
-    margin-bottom: 58px;
+    margin-bottom: 60px;
   }
   .page-case-list .case-list .main_image {
     width: 100%;
-    height: 89vw;
+    height: auto;
     background-image: none !important;
-    margin-bottom: 41px;
+    margin-bottom: 60px;
+  }
+  .page-case-list .case-list .main_image img {
+    display: block;
+  }
+}
+@media screen and (max-width: 720px) {
+  .page-case-list .case-list {
+    margin-bottom: 80px;
+  }
+  .page-case-list .case-list .main_image {
+    margin-bottom: 40px;
   }
   .page-case-list .case-list .main_image img {
     display: block;
@@ -2350,8 +2353,8 @@ footer .footer_inner .copyright {
     margin-bottom: 15px;
   }
   .page-case-list .case-list .section_inner .lead_txt .sub_ttl {
-    font-size: 18px;
-    line-height: 1.88;
+    font-size: 16px;
+    line-height: 1.8;
     margin-bottom: 25px;
   }
   .page-case-list .case-list .section_inner .lead_txt .sub_ttl span {
@@ -2542,7 +2545,7 @@ footer .footer_inner .copyright {
   text-indent: -0.1em;
 }
 
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 980px) {
   .page-profile {
     margin-bottom: 80px;
   }
@@ -2551,7 +2554,7 @@ footer .footer_inner .copyright {
   }
   .page-profile .section-main .main_image {
     width: 100%;
-    height: 100vw;
+    height: auto;
     overflow: hidden;
     background-image: none !important;
   }
@@ -2724,7 +2727,7 @@ footer .footer_inner .copyright {
 }
 .page-team-list .team-list .main_image {
   width: 100%;
-  height: 500px;
+  height: 34vw;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -2744,20 +2747,26 @@ footer .footer_inner .copyright {
 .page-team-list .team-list .section_inner .lead_txt .sub_ttl br {
   display: block;
 }
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 980px) {
   .page-team-list .team-list {
-    margin-bottom: 58px;
+    margin-bottom: 80px;
   }
   .page-team-list .team-list .main_image {
     width: 100%;
-    height: 335px;
-    background-image: none;
-    margin-bottom: 40px;
+    height: auto;
+    background-image: none !important;
+    margin-bottom: 60px;
   }
   .page-team-list .team-list .main_image img {
     display: block;
-    height: 100%;
-    object-fit: cover;
+  }
+}
+@media screen and (max-width: 720px) {
+  .page-team-list .team-list {
+    margin-bottom: 60px;
+  }
+  .page-team-list .team-list .main_image {
+    margin-bottom: 40px;
   }
   .page-team-list .team-list .section_inner .lead_txt .comp-section-title {
     margin-bottom: 30px;
@@ -2889,6 +2898,7 @@ footer .footer_inner .copyright {
 .comp-case-slider .slick-slider .slick-list {
   width: calc(300px * 3) !important;
   padding: 0 !important;
+  overflow: visible !important;
 }
 .comp-case-slider .slick-slider .slick-list .item_box {
   width: 300px !important;

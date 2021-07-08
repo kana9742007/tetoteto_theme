@@ -9,6 +9,7 @@
     .slick-list{
       width: calc(300px * 3) !important;
       padding: 0 !important;
+      overflow: visible !important;
       .item_box{
         width: 300px !important;
         padding: 0 5px;

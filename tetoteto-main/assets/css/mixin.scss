@@ -9,8 +9,8 @@ $pointYellow: #BF992E;
 @font-face {
     font-family: 'varela';
 		font-weight: 400;
-    src: url('../../fonts/varela.eot'),url('../../fonts/varela.woff') format('woff'),
-    url('../../fonts/varela.ttf') format('truetype'),
+    src: url('../fonts/varela.eot'),url('../fonts/varela.woff') format('woff'),
+    url('../fonts/varela.ttf') format('truetype'),
 }
 
 @mixin varela{

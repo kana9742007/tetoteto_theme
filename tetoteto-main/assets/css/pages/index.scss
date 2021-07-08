@@ -152,16 +152,9 @@
       .img_wrap{
         display: none;
       }
-      .desc_flex{
-        @include flexSet;
-        justify-content: space-between;
-        .desc_wrap{
-          width: 47.5%;
-          @include basicP;
-          &:nth-of-type(1){
-            margin-bottom: 1em;
-          }
-        }
+      .desc_wrap{
+        width: 100%;
+        @include basicP;
       }
     }
   }
