@@ -10,7 +10,7 @@
           <span class="title_en">PROJECT LIST</span>
           <h2 class="title_ja">プロジェクト一覧</h2>
         </div>
-        <h3 class="sub_ttl"><span>食のゼロイチを生み出し続ける、</span><span>クリエイターのための研究所。</span></h3>
+        <h3 class="sub_ttl">こだわりを持ち、ハイクオリティーなものづくりを追求する生産者・クリエイターを巻き込みながら、食を中心とした、生活の感度を高めるプロダクトを作っています。</h3>
       </div>
 
       <div id="serchWrapper" class="comp-search-wrapper">

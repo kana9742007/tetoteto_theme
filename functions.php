@@ -5,37 +5,6 @@
  */
 // require_once TEMPLATEPATH . "/functions/define.php";
 
-/*
- * functionsフォルダにあるファイルをすべて読み込む
-*/
-// foreach (glob(TEMPLATEPATH . "/functions/*/*.php") as $file) {
-//   require_once $file;
-// }
-
-function enqueue_styles()
-{
-  // サイト内のCSSの読み込み
-  wp_enqueue_style('style', get_template_directory_uri() . '/style.css');
-  wp_enqueue_style('main-style', get_template_directory_uri() . '/assets/style/css/style.css');
-  wp_enqueue_style('slick-style', get_template_directory_uri() . '/tetoteto-main/assets/slick/slick.css');
-}
-add_action('wp_enqueue_scripts', 'enqueue_styles');
-
-function enqueue_scripts()
-{
-  // サイト内のjs読み込み
-  // Jquery
-  wp_enqueue_script('jquery-js', get_template_directory_uri() . '/tetoteto-main/assets/js/jquery-3.3.1.min.js', array(), '1.0.0', false);
-  // slick
-  wp_enqueue_script('slick-js', get_template_directory_uri() . '/tetoteto-main/assets/slick/slick.min.js', array(), '1.0.0', false);
-  // layout
-  wp_enqueue_script('layout-js', get_template_directory_uri() . '/tetoteto-main/assets/js/layout.js?ver210610', array(), '1.0.0', false);
-  
-}
-
-
-add_action('wp_enqueue_scripts', 'enqueue_scripts');
-
 // サムネイル表示
 add_theme_support( 'post-thumbnails' );
 
@@ -48,10 +17,90 @@ remove_filter('the_content', 'wpautop'); // 記事の自動整形を無効にす
 remove_filter('the_excerpt', 'wpautop'); // 抜粋の自動整形を無効にする
 
 // 事例一覧パラメータ
+/*
 function my_query_vars($vars)
 {
   $vars[] = 'case_cat';
   $vars[] = 'case_type';
   return $vars;
 }
+
 add_filter('query_vars', 'my_query_vars');
+*/
+
+function create_post_type() {
+  $customPostSupports = [  // supports のパラメータを設定する配列（初期値だと title と editor のみ投稿画面で使える）
+    'title',  // 記事タイトル,
+    /*'custom-fields', //カスタムフィールド*/
+    'thumbnail',  // アイキャッチ画像*/
+  ];
+  //カスタム投稿タイプ１（ここから）
+  register_post_type(
+    'case',  // カスタム投稿名
+    array(
+      'labels' => array(
+        'name' => __( '事例' ), // 管理画面の左メニューに表示されるテキスト
+        'singular_name' => __( 'case' ),
+        'rewrite' => array('slug' => 'case-post'),
+        'rewrite' => array( 'with_front' => false ),
+      ),
+      'public' => true,
+      'menu_position' => 5,  // 「5」で「投稿」の下に配置
+      'has_archive' => true,
+      'supports' => $customPostSupports
+    )
+  );
+  register_post_type(
+    'member',  // カスタム投稿名
+    array(
+      'labels' => array(
+        'name' => __( 'メンバー' ),
+        'singular_name' => __( 'member' ),
+        'rewrite' => array('slug' => 'member-post'),
+        'rewrite' => array( 'with_front' => false ),
+      ),
+      'public' => true,
+      'menu_position' => 6,
+      'has_archive' => true,
+      'supports' => $customPostSupports
+    )
+  );
+  register_taxonomy(
+    'birth-place', //タグ名（任意）
+    'post', //カスタム投稿名
+    array(
+      'hierarchical' => true, //タグタイプの指定（階層をもつかどうか？）
+      //ダッシュボードに表示させる名前
+      'label' => '出身地',
+      'public' => true,
+      'show_ui' => true,
+      'rewrite' => true,
+    )
+  );
+  register_taxonomy(
+    'case_cat', //タグ名（任意）
+    'case', //カスタム投稿名
+    array(
+      'hierarchical' => true, //タグタイプの指定（階層をもつかどうか？）
+      //ダッシュボードに表示させる名前
+      'label' => '事例のカテゴリ',
+      'public' => true,
+      'show_ui' => true,
+      'rewrite' => true,
+    )
+  );
+  register_taxonomy(
+    'case_type', //タグ名（任意）
+    'case', //カスタム投稿名
+    array(
+      'hierarchical' => true, //タグタイプの指定（階層をもつかどうか？）
+      //ダッシュボードに表示させる名前
+      'label' => '事例のジャンル',
+      'public' => true,
+      'show_ui' => true,
+      'rewrite' => true,
+    )
+  );
+}
+
+add_action( 'init', 'create_post_type' );
