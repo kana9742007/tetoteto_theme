@@ -2,8 +2,8 @@
 <article id="profile" class="page-profile">
   <section class="profile-content">
     <section class="section-main">
-      <div class="main_image" style="background-image: url(<?= get_template_directory_uri() ?>/tetoteto-main/assets/img/index/space_img.jpg;)">
-        <img src="<?= get_template_directory_uri() ?>/tetoteto-main/assets/img/index/space_sp.jpg">
+      <div class="main_image" style="background-image: url(<?= get_template_directory_uri() ?>/assets/img/profile/main.jpg;)">
+        <img src="<?= get_template_directory_uri() ?>/assets/img/profile/main_sp.jpg">
       </div>
     </section>
     <section class="section-table">

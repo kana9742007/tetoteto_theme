@@ -65,6 +65,11 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@200&display=swap" rel="stylesheet">
   <script type="text/javascript" src="https://webfont.fontplus.jp/accessor/script/fontplus.js?QQ69TeiJCsk%3D&box=dFsrremOrPA%3D&aa=1&ab=2" charset="utf-8"></script>
+  <link rel="stylesheet" href="<?php echo get_template_directory_uri();?>/assets/css/style.css?<?php echo date('Ymd-Hi');?>">
+	<link rel="stylesheet" href="<?php echo get_template_directory_uri();?>/assets/slick/slick.css">
+	<script type="text/javascript" src="<?php echo get_template_directory_uri();?>/assets/js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="<?php echo get_template_directory_uri();?>/assets/slick/slick.min.js"></script>
+	<script type="text/javascript" src="<?php echo get_template_directory_uri();?>/assets/js/layout.js?<?php echo date('Ymd-Hi');?>"></script>
   <?php wp_head(); ?>
 </head>
 
