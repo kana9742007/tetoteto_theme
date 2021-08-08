@@ -27,45 +27,31 @@
     <div class="main_inner">
       <div class="main_image">
         <ul id="mainSlider" class="comp-main-slider">
-          <li class="main0">
-            <span class="img_wrap" style="background-image: url(<?= get_template_directory_uri() ?>/tetoteto-main/assets/img/index/main01.jpg);">
-              <img class="pc_image" src="<?= get_template_directory_uri() ?>/tetoteto-main/assets/img/index/main01.jpg">
-              <img class="sp_image" src="<?= get_template_directory_uri() ?>/tetoteto-main/assets/img/index/main01_sp.jpg">
+          <?php
+            $repeat_group = SCF::get('slider_box', 308);
+            foreach ( $repeat_group as $fields ) {
+              $slider_link = $fields['slider_link'];
+              $slider_cat = $fields['slider_cat'];
+              $slider_ttl = $fields['slider_ttl'];
+              $slide_desc = $fields['slide_desc'];
+              $slider_saturation = $fields['slider_saturation'];
+              $slider_img_pc = wp_get_attachment_image_src($fields['slider_img_pc'],'full');
+              $slider_img_sp = wp_get_attachment_image_src($fields['slider_img_sp'],'full');
+            ?>
+          <li class="<?php echo $slider_saturation;?>">
+            <span class="img_wrap" style="background-image: url(<?php echo $slider_img_pc[0];?>);">
+              <img class="pc_image" src="(<?php echo $slider_img_pc[0];?>">
+              <img class="sp_image" src="<?php echo $slider_img_sp[0];?>">
             </span>
             <div class="txt_wrap">
               <div class="txt_inner">
                 <span class="category">PRODUCE</span>
-                <a class="title" href="#aaaa">とどめ茶〜ごだわり狭山茶〜</a>
-                <p class="desc">そのお茶の味は、まさに「とどめ」。日本茶の味を極めるために生まれた新ブランド「とどめ茶 -TODOMECHA-」</p>
+                <a class="title" href="<?php echo $slider_cat;?>"><?php echo $slider_ttl;?></a>
+                <p class="desc"><?php echo $slide_desc;?></p>
               </div>
             </div>
           </li>
-          <li class="main1">
-            <span class="img_wrap" style="background-image: url(<?= get_template_directory_uri() ?>/tetoteto-main/assets/img/index/main02.jpg);">
-              <img class="pc_image" src="<?= get_template_directory_uri() ?>/tetoteto-main/assets/img/index/main02.jpg">
-              <img class="sp_image" src="<?= get_template_directory_uri() ?>/tetoteto-main/assets/img/index/main02_sp.jpg">
-            </span>
-            <div class="txt_wrap">
-              <div class="txt_inner">
-                <span class="category">PRODUCE</span>
-                <a class="title" href="#aaaa">ビーンズトーキョー</a>
-                <p class="desc">日本発の豆菓子で、美味しい笑顔をもっと、楽しい時間をずっと。</p>
-              </div>
-            </div>
-          </li>
-          <li class="main2">
-            <span class="img_wrap" style="background-image: url(<?= get_template_directory_uri() ?>/tetoteto-main/assets/img/index/main03.jpg);">
-              <img class="pc_image" src="<?= get_template_directory_uri() ?>/tetoteto-main/assets/img/index/main03.jpg">
-              <img class="sp_image" src="<?= get_template_directory_uri() ?>/tetoteto-main/assets/img/index/main03_sp.jpg">
-            </span>
-            <div class="txt_wrap">
-              <div class="txt_inner">
-                <span class="category">PRODUCE</span>
-                <a class="title" href="#aaaa">金楠水産</a>
-                <p class="desc">明石で100年たこを茹で続けた男たちの、究極の茹でたこ。</p>
-              </div>
-            </div>
-          </li>
+          <?php } ?>
         </ul>
       </div>
       <div class="main_slider_bar">
@@ -89,7 +75,7 @@
   <section class="section-about">
     <div class="section_inner border">
       <div class="img_wrap">
-        <img src="<?= get_template_directory_uri() ?>/assets/img/index/about_img.jpg">
+        <img src="https://res.cloudinary.com/tetoteto/image/upload/f_auto,q_auto/v1628410344/index/about_img_jcxfbq.jpg">
       </div>
       <div class="txt_wrap">
         <div class="comp-section-title margin">
@@ -97,12 +83,12 @@
           <h2 class="title_ja">私たちについて</h2>
         </div>
         <div class="img_wrap">
-          <img src="<?= get_template_directory_uri() ?>/assets/img/index/about_img.jpg">
+          <img src="https://res.cloudinary.com/tetoteto/image/upload/f_auto,q_auto/v1628410344/index/about_img_jcxfbq.jpg">
         </div>
         <h3 class="sub_ttl"><span>暮らしの感度を高める</span><span>クリエイティブプロダクション</span></h3>
         <div class="desc_wrap">
           <p>都会の生活での暮らしが長くなるとリアルな「生産」が見えにくくなり、ただ消費することに慣れてしまいます。</p>
-          <p>そんな生活にふと疑問を感じた時、都会にいながらも丁寧なくらしに向き合いたいと模索しはじめました。旬の食材や植物に囲まれた食卓で四季を感じたり、作り手の思いや、背景にある物語に向き合うことであたりまえの日常がキラキラと楽しいものになりました。</p>
+          <p>そんな生活にふと疑問を感じた時、都会にいながらも豊かな暮らしに向き合いたいと模索しはじめました。旬の食材や植物に囲まれた食卓で四季を感じたり、作り手の思いや、背景にある物語に向き合うことであたりまえの日常がキラキラと楽しいものになりました。</p>
           <p>そんなきっかけから、私たちはつくる人・使う人・それを広めるクリエイターの全員が”わくわく”を感じることができ、生活に少しでも彩りを与えられることを願いながらものづくりをしています。</p>
         </div>
         <div class="comp-link-button">
@@ -162,12 +148,12 @@
   <section class="section-space">
     <div class="section_inner border">
       <div class="img_wrap">
-        <img src="<?= get_template_directory_uri() ?>/tetoteto-main/assets/img/index/space_img.jpg">
+        <img src="https://res.cloudinary.com/tetoteto/image/upload/f_auto,q_auto/v1628410344/index/space_img_t91xns.jpg">
       </div>
       <div class="txt_wrap">
         <div class="comp-section-title">
           <span class="title_en">CREATIVE LABO</span>
-          <h2 class="title_ja">シェアスペースについて</h2>
+          <h2 class="title_ja">食のクリエイティブラボ</h2>
         </div>
         <div class="img_wrap"></div>
         <h3 class="sub_ttl"><span>食のゼロイチを生み出し続ける、</span><span>クリエイターのための研究所。</span></h3>
@@ -225,59 +211,66 @@
       </div>
       <div class="comp-shop-link">
         <div class="link_item">
-          <a class="img_wrap" target="_blank" href="https://www.ninninnin.jp/"><img src="<?= get_template_directory_uri() ?>/assets/img/links/link01.jpg"></a>
+          <a class="img_wrap" target="_blank" href="https://www.ninninnin.jp/"><img src="https://res.cloudinary.com/tetoteto/image/upload/f_auto,q_auto/v1628408880/index/link01_m40qci.jpg"></a>
           <div class="txt_wrap">
             <a href="https://www.ninninnin.jp/" target="_blank" class="title">NIN</a>
             <p class="desc">美しいものを瓶に詰めてお届けします。</p>
           </div>
         </div>
         <div class="link_item">
-          <a class="img_wrap" target="_blank" href="https://tetotaro.stores.jp/"><img src="<?= get_template_directory_uri() ?>/assets/img/links/link02.jpg"></a>
+          <a class="img_wrap" target="_blank" href="https://tetotaro.stores.jp/"><img src="https://res.cloudinary.com/tetoteto/image/upload/f_auto,q_auto/v1628408880/index/link02_zmpo63.jpg"></a>
           <div class="txt_wrap">
             <a href="https://tetotaro.stores.jp/" target="_blank" class="title">てとたろうコーラ</a>
             <p class="desc">ひたすら味のみを追及した原価無視のコーラです。</p>
           </div>
         </div>
         <div class="link_item">
-          <a class="img_wrap" target="_blank" href="https://itwokashi.official.ec/"><img src="<?= get_template_directory_uri() ?>/assets/img/links/link03.jpg"></a>
+          <a class="img_wrap" target="_blank" href="https://itwokashi.official.ec/"><img src="https://res.cloudinary.com/tetoteto/image/upload/f_auto,q_auto/v1628408880/index/link03_fwltvu.jpg"></a>
           <div class="txt_wrap">
             <a href="https://itwokashi.official.ec/" target="_blank" class="title">It Wokashi</a>
             <p class="desc">究極のふわふわ、とろとろを追及した新感覚の大福です。</p>
           </div>
         </div>
         <div class="link_item">
-          <a class="img_wrap" target="_blank" href="https://kanekusu.official.ec/"><img src="<?= get_template_directory_uri() ?>/assets/img/links/link04.jpg"></a>
+          <a class="img_wrap" target="_blank" href="https://kanekusu.official.ec/"><img src="https://res.cloudinary.com/tetoteto/image/upload/f_auto,q_auto/v1628408880/index/link04_npmuvr.jpg"></a>
           <div class="txt_wrap">
             <a href="https://kanekusu.official.ec/" target="_blank" class="title">金楠水産の明石だこ</a>
             <p class="desc">明石で100年たこを茹で続けた男たちの究極の茹でたこ。</p>
           </div>
         </div>
         <div class="link_item">
-          <a class="img_wrap" target="_blank" href="https://shop.lml.co.jp/"><img src="<?= get_template_directory_uri() ?>/assets/img/links/link05.jpg"></a>
+          <a class="img_wrap" target="_blank" href="https://shop.lml.co.jp/"><img src="https://res.cloudinary.com/tetoteto/image/upload/f_auto,q_auto/v1628408880/index/link05_sszzuu.jpg"></a>
           <div class="txt_wrap">
             <a href="https://shop.lml.co.jp/" target="_blank" class="title">レモンマートル</a>
             <p class="desc">“森の治療薬”とも呼ばれる、つよくてやさしい、抗菌の王。</p>
           </div>
         </div>
         <div class="link_item">
-          <a class="img_wrap" target="_blank" href="https://nobeyama.base.shop/"><img src="<?= get_template_directory_uri() ?>/assets/img/links/link06.jpg"></a>
+          <a class="img_wrap" target="_blank" href="https://nobeyama.base.shop/"><img src="https://res.cloudinary.com/tetoteto/image/upload/f_auto,q_auto/v1628408880/index/link06_yr8isp.jpg"></a>
           <div class="txt_wrap">
             <a href="https://nobeyama.base.shop/" target="_blank" class="title">野辺山ほうれん草</a>
             <p class="desc">標高1300ｍの長野県野辺山高原で栽培するほうれん草を使ったカレーペースト</p>
           </div>
         </div>
         <div class="link_item">
-          <a class="img_wrap" target="_blank" href="https://nikudevise.base.shop/"><img src="<?= get_template_directory_uri() ?>/assets/img/links/link07.jpg"></a>
+          <a class="img_wrap" target="_blank" href="https://nikudevise.base.shop/"><img src="https://res.cloudinary.com/tetoteto/image/upload/f_auto,q_auto/v1628408880/index/link07_jslid7.jpg"></a>
           <div class="txt_wrap">
             <a href="https://nikudevise.base.shop/" target="_blank" class="title">NIKU DEVISE</a>
             <p class="desc">熟成肉を余すところなく活かし、熟成肉のブランド価値をあげるブランド。</p>
           </div>
         </div>
         <div class="link_item">
-          <a class="img_wrap" target="_blank" href="https://todome.official.ec/"><img src="<?= get_template_directory_uri() ?>/assets/img/links/link08.jpg"></a>
+          <a class="img_wrap" target="_blank" href="https://todome.official.ec/"><img src="https://res.cloudinary.com/tetoteto/image/upload/f_auto,q_auto/v1628408880/index/link08_rc7ttn.jpg"></a>
           <div class="txt_wrap">
             <a href="https://todome.official.ec/" target="_blank" class="title">とどめ茶</a>
             <p class="desc">徹底的に管理された土から育ついい原葉。製茶の原点、手揉み茶製法の探求。</p>
+          </div>
+        </div>
+        <div class="link_item">
+          <a class="img_wrap" target="_blank" href="https://www.scream-icecream.com/"><img src="https://res.cloudinary.com/tetoteto/image/upload/f_auto,q_auto/v1628408880/index/link09_pqisqq.jpg"></a>
+          <div class="txt_wrap">
+            <a href="https://www.scream-icecream.com/" target="_blank" class="title">SCREAM ICECREAM</a>
+            <p class="desc">福岡の老舗アイスクリーム屋「古蓮」からスピンアウトした、挑戦的で創造的なアイスブランド。</p>
           </div>
         </div>
       </div><!-- comp-shop-link -->

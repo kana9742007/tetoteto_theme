@@ -1,0 +1,134 @@
+.comp-profile-table{
+  margin-top: 60px;
+  .profile_item{
+    @include flexSet;
+    position: relative;
+    padding-bottom: 35px;
+    margin-bottom: 35px;
+    &::before, &::after{
+      display: block;
+      content: "";
+      position: absolute;
+      bottom:0;
+      left:0;
+      height: 1px;
+    }
+    &::before{
+      width: 100%;
+      background: #d8d8d8;
+    }
+    &::after{
+      width: 250px;
+      background: $basicBaige;
+    }
+    dt{
+      width: 250px;
+      font-size: 20px;
+      line-height: normal;
+      letter-spacing: 0.03em;
+      padding: 0 10px;
+      box-sizing: border-box;
+    }
+    dd{
+      width: calc(100% - 250px);
+      padding: 0 10px;
+      box-sizing: border-box;
+      @include yugo;
+      line-height: 2;
+      margin-top: 5px;
+      .service_list{
+        li{
+          @include flexSet;
+          align-items: center;
+          margin-bottom: 10px;
+          &:nth-last-of-type(1){
+            margin-bottom: 0;
+          }
+          .num{
+            display: block;
+            width: 25px;
+            height: 25px;
+            margin-right: 10px;
+            background: $basicBgColor;
+            text-align: center;
+            font-size: 10px;
+            line-height: 25px;
+            border-radius: 50%;
+            letter-spacing: 0;
+          }
+          .content{
+            width: calc(100% - 35px);
+          }
+        }
+      }
+    }
+    &:nth-last-of-type(1){
+      padding-bottom: 0;
+      margin-bottom: 0;
+      &::before, &::after{
+        display: none;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 720px){
+  .comp-profile-table{
+    margin-top: 30px;
+    .profile_item{
+      display: block;
+      padding-bottom: 25px;
+      margin-bottom: 25px;
+      &::after{
+        width: 50%;
+      }
+      dt{
+        display: block;
+        width: 100%;
+        font-size: 18px;
+        padding: 0 5px;
+        margin-bottom: 10px;
+      }
+      dd{
+        width: 100%;
+        padding: 0 5px;
+        margin-top: 0px;
+        font-size: 14px;
+        line-height: 1.6;
+        span{
+          display: block;
+        }
+        .service_list{
+          margin-top: 15px;
+          li{
+            @include flexSet;
+            align-items: flex-start;
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px dotted #d8d8d8;
+            &:nth-last-of-type(1){
+              margin-bottom: 0;
+              padding-bottom: 0;
+              border-bottom: 0;
+            }
+            .num{
+              margin-top: 1px;
+            }
+            .content{
+              width: calc(100% - 35px);
+              line-height: 1.6;
+              margin-top: 2px;
+            }
+          }
+        }
+      }
+      &:nth-last-of-type(1){
+        padding-bottom: 0;
+        margin-bottom: 0;
+        &::before, &::after{
+          display: none;
+        }
+      }
+    }
+  }
+}

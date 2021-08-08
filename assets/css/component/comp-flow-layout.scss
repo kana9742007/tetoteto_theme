@@ -1,0 +1,255 @@
+.comp-flow-layout{
+  position: relative;
+  &::before{
+    display: block;
+    content: "";
+    width: 1px;
+    height: 100%;
+    border-left: 1px dotted #666;
+    position: absolute;
+    top: 18px;
+    left: 6px;
+  }
+  .flow_item{
+    position: relative;
+    margin-bottom: 35px;
+    .title_wrap{
+      @include flexSet;
+      align-items: center;
+      position: relative;
+      z-index: 10;
+      .date{
+        position: relative;
+        display: block;
+        font-size: 14px;
+        line-height: normal;
+        letter-spacing: 0.31px;
+        color: #646464;
+        padding-left: 35px;
+        margin-right: 1em;
+        &::before{
+          display: block;
+          content: "";
+          position: absolute;
+          top: 8px;
+          left:0;
+          width: 12px;
+          height: 12px;
+          border-radius: 50%;
+          background-color: $basicBaige;
+        }
+      }
+      .flow_ttl{
+        font-size: 22px;
+        line-height: normal;
+        color: #363636;
+        margin-top: 5px;
+      }
+    }
+    .desc_wrap{
+      position: relative;
+      z-index: 10;
+      margin-top: 15px;
+      @include basicP;
+      font-size: 14px;
+      padding-left: 35px;
+    }
+    &:nth-last-of-type(1){
+      position: relative;
+      margin-bottom: 0;
+      &::before{
+        display: block;
+        content: "";
+        width: 100%;
+        height: calc(100% + 30px);
+        position: absolute;
+        top: 18px;
+        right: 0;
+        background: #fff;
+      }
+    }
+  }
+  &.workflow{
+    position: relative;
+    &::before{
+      top: 33px;
+      left: 6px;
+    }
+    .flow_item{
+      margin-bottom: 50px;
+      &:nth-last-of-type(1){
+        margin-bottom: 0;
+      }
+      .title_wrap{
+        @include flexSet;
+        .flow_ttl{
+          font-size: 24px;
+          padding-left: 40px;
+          line-height: normal;
+          color: #363636;
+          &::before{
+            display: block;
+            content: attr(number);
+            position: absolute;
+            top: 8px;
+            left: -13px;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            background-color: $basicBaige;
+            font-size: 14px;
+            text-align: center;
+            color: #fff;
+            line-height: 37px;
+            text-indent: 0.1em;
+          }
+        }
+      }
+      .desc_wrap{
+        padding-left: 45px;
+      }
+      &.image{
+        @include flexSet;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row-reverse;
+        .img_wrap{
+          position: relative;
+          z-index: 10;
+          width: 310px;
+          border-radius: 10px;
+          overflow: hidden;
+          img{
+            pointer-events: none;
+          }
+        }
+        .txt_wrap{
+          width: calc(100% - 360px);
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1150px){
+  .comp-flow-layout{
+    &.workflow{
+      .flow_item{
+        margin-bottom: 50px;
+        .title_wrap{
+        }
+        .desc_wrap{
+          font-size: 13px;
+          padding-left: 45px;
+        }
+        &.image{
+          @include flexSet;
+          justify-content: space-between;
+          align-items: center;
+          flex-direction: row-reverse;
+          .img_wrap{
+            position: relative;
+            z-index: 10;
+            width: 38%;
+            border-radius: 10px;
+            overflow: hidden;
+            img{
+              pointer-events: none;
+            }
+          }
+          .txt_wrap{
+            width: 55%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 720px){
+  .comp-flow-layout{
+    position: relative;
+    &::before{
+      display: block;
+      content: "";
+      width: 1px;
+      height: 100%;
+      border-left: 1px dotted $basicBaige;
+      position: absolute;
+      top: 18px;
+      left: 6px;
+    }
+    .flow_item{
+      margin-bottom: 25px;
+      .title_wrap{
+        display: block;
+        .date{
+          font-size: 12px;
+          padding-left: 35px;
+          &::before{
+            top: 7px;
+            left:0;
+            width: 12px;
+            height: 12px;
+          }
+        }
+        .flow_ttl{
+          font-size: 18px;
+          line-height: 1.6;
+          padding-left: 35px;
+        }
+      }
+      .desc_wrap{
+        margin-top: 5px;
+        padding-left: 35px;
+      }
+    }
+    &.workflow{
+      position: relative;
+      &::before{
+        top: 33px;
+        left: 10px;
+      }
+      .flow_item{
+        margin-bottom: 40px;
+        &:nth-last-of-type(1){
+          margin-bottom: 0;
+          &::before{
+            top: 72vw;
+          }
+        }
+        .title_wrap{
+          @include flexSet;
+          .flow_ttl{
+            font-size: 18px;
+            line-height: 1.7;
+            padding-left: 35px;
+            &::before{
+              top: 2px;
+              left: -5px;
+              width: 30px;
+              height: 30px;
+              font-size: 12px;
+              line-height: 30px;
+            }
+          }
+        }
+        .desc_wrap{
+          font-size: 13px;
+          padding-left: 37px;
+        }
+        &.image{
+          display: block;
+          .img_wrap{
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 30px;
+          }
+          .txt_wrap{
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}

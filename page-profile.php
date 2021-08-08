@@ -2,8 +2,8 @@
 <article id="profile" class="page-profile">
   <section class="profile-content">
     <section class="section-main">
-      <div class="main_image" style="background-image: url(<?= get_template_directory_uri() ?>/assets/img/profile/main.jpg;)">
-        <img src="<?= get_template_directory_uri() ?>/assets/img/profile/main_sp.jpg">
+      <div class="main_image" style="background-image: url(https://res.cloudinary.com/tetoteto/image/upload/f_auto,q_auto/v1628408880/profile/main_ayddka.jpg)">
+        <img src="https://res.cloudinary.com/tetoteto/image/upload/f_auto,q_auto/v1628408880/profile/main_sp_bdivip.jpg">
       </div>
     </section>
     <section class="section-table">
@@ -99,7 +99,7 @@
   				<h3 class="profile_ttl">会社プロフィール</h3>
   				<div class="detail_item align_center">
   					<div class="img_wrap logo_image">
-  						<img src="<?= get_template_directory_uri() ?>/assets/img//profile/corporate.jpg">
+  						<img src="https://res.cloudinary.com/tetoteto/image/upload/f_auto,q_auto/v1628408880/profile/corporate_opa6vz.jpg">
   					</div>
   					<div class="txt_wrap">
   						<h4 class="detail_title">TETOTETO Inc.</h4>
@@ -110,9 +110,9 @@
   				<h3 class="profile_ttl margin">役員プロフィール</h3>
   				<div class="detail_item">
   					<div class="img_wrap logo_image">
-  						<img src="<?= get_template_directory_uri() ?>/assets/img//profile/goki.jpg">
+  						<img src="https://res.cloudinary.com/tetoteto/image/upload/f_auto,q_auto/v1628408880/profile/goki_hsq1ix.jpg">
   						<h4 class="name">井上豪希<span class="kana">(いのうえ ごうき)</span></h4>
-  						<p class="detail">代表取締役社長<br>プロデューサー・料理家</p>
+  						<p class="detail">代表取締役社長<br>食のクリエイティブディレクター</p>
   					</div>
   					<div class="txt_wrap">
   						<div class="career-wrapper">
@@ -149,9 +149,9 @@
   				</div><!-- detail_item -->
   				<div class="detail_item">
   					<div class="img_wrap logo_image">
-  						<img src="<?= get_template_directory_uri() ?>/assets/img//profile/momoko.jpg">
+  						<img src="https://res.cloudinary.com/tetoteto/image/upload/f_auto,q_auto/v1628408880/profile/momoko_nn7qld.jpg">
   						<h4 class="name">井上桃子<span class="kana">(いのうえ ももこ)</span></h4>
-  						<p class="detail">代表取締役<br>ライフスタイルデザイナ</p>
+  						<p class="detail">代表取締役社長<br>ライフスタイルデザイナー</p>
   					</div>
   					<div class="txt_wrap">
   						<div class="career-wrapper">
@@ -183,7 +183,7 @@
                   </div>
                 </div>
               </div>
-  						<p class="detail_desc">暮らしの感度を高めるクリエイティブプロダクションTETOTETO Inc.にて、食のクリエイティブディレクターとして活動。レシピや商品開発、店舗開発、ブランディングなど活躍は多岐にわたる。料理人でありながら、料理以外のスキルを掛け合わせて、独自の路線を走る新しい料理人。</p>
+  						<p class="detail_desc">暮らしの感度を高めるクリエイティブプロダクションTETOTETO Inc.にて、ライフスタイルデザイナーとして活動。UXデザイナーのスキルを活かして、チームメンバーが働きやすい環境作りを中心に、全てのプロジェクトを包括的にサポート。</p>
   					</div><!-- txt_wrap -->
   				</div><!-- detail_item -->
   			</div><!-- comp-profile-detail -->

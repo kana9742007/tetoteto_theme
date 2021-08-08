@@ -39,7 +39,7 @@ $the_query = new WP_Query($posts);
 if ($the_query->have_posts()) :
 ?>
 
-  <div class="comp-project-list detail is-list-page">
+  <div id="projectList" class="comp-project-list detail is-list-page">
     <?php if ($the_query->have_posts()) :
       while ($the_query->have_posts()) : $the_query->the_post();
         global $post_id;

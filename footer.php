@@ -8,7 +8,7 @@
                 <ul>
                     <li class="fade_box"><a href="/about">私たちについて</a></li>
                     <li class="fade_box"><a href="/case">制作実績</a></li>
-                    <li class="fade_box"><a href="/team">プロジェクトメンバー</a></li>
+                    <li class="fade_box comp-disable"><a href="/team">プロジェクトメンバー</a></li>
                     <li class="fade_box"><a href="/profile">会社概要</a></li>
                     <li class="fade_box"><a target="_blank" href="http://tetoteto.info/">ブログ</a></li>
                 </ul>
@@ -33,7 +33,7 @@
                 <ul>
                     <li><a href="/about">私たちについて</a></li>
                     <li><a href="/case">制作実績</a></li>
-                    <li><a href="/team">プロジェクトメンバー</a></li>
+                    <li><a class="comp-disable" href="/team">プロジェクトメンバー</a></li>
                     <li><a href="/profile">会社概要</a></li>
                     <li><a target="_blank" href="http://tetoteto.info/">ブログ</a></li>
                 </ul>

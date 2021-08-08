@@ -1,0 +1,6 @@
+/* ----- Google Fonts ----- */
+@font-face {
+  font-family: "hinde";
+  font-weight: 400;
+  src: url("../fonts/hindguntur.eot"), url("../fonts/hindguntur.woff") format("woff"), url("../fonts/hindguntur.ttf") format("truetype");
+}

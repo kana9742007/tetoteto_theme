@@ -1,0 +1,282 @@
+.hummenu{
+  position: fixed;
+  top: 0;
+  right: 0;
+  left:0;
+  margin: auto;
+  width: 100vw;
+  height: 100vh;
+  z-index: 999;
+  top: -100vh;
+  right: 0;
+  left:0;
+  transition: top .5s cubic-bezier(0.65, 0, 0.35, 1);
+  background-color: #f9f6f3;
+  @media screen and (min-width: 981px){
+    display: none;
+  }
+  .fade_box{
+    opacity: 0;
+    filter: blur(10px) brightness(1.25);
+    transform: translate3d(0, 50px, 0);
+    will-change: opacity, filter, transform;
+    transition: opacity 0.6s, filter 0.6s cubic-bezier(0.5, 1, 0.89, 1), transform 0.6s cubic-bezier(0.5, 1, 0.89, 1);
+    will-change: opacity, filter, transform;
+    &.display{
+      opacity: 1;
+      filter: blur(0px) brightness(1);
+      transform: translate3d(0, 0%, 0);
+    }
+  }
+  .hummenu_inner{
+    width: 100%;
+    padding-top: 120px;
+    box-sizing: border-box;
+    display: block;
+    @include flexSet;
+    justify-content: center;
+    align-items: center;
+    overflow: scroll;
+    overflow-x: hidden;
+    &::-webkit-scrollbar {
+      display:none;
+    }
+    .height_adjust{
+      width: 1px;
+      height: 100vw;
+    }
+    .content{
+      width: 500px;
+      margin-right: 1px;
+      .h_logo{
+        display: block;
+        width: 62px;
+        height: 120px;
+        @include bgSet;
+        @include logoSvg;
+        margin: 0 auto 30px;
+        transition: all 0.6s cubic-bezier(0.5, 1, 0.89, 1);
+      }
+      .copy{
+        display: block;
+        @include tsukushi-b;
+        font-size: 14px;
+        line-height: 1.83;
+        letter-spacing: 0.33px;
+        text-align: center;
+        span{
+          display: block;
+        }
+      }
+      .header_nav{
+        margin-top: 30px;
+        padding-top: 30px;
+        border-top: solid 1px #d8d8d8;
+        margin-bottom: 60px;
+        ul{
+          @include flexSet;
+          justify-content: center;
+          li{
+            padding: 0 12px;
+            writing-mode: vertical-rl;
+            a{
+              @include hover;
+              @include tsukushi-b;
+              font-size: 16px;
+              line-height: 1.19;
+              letter-spacing: 0.33px;
+              text-align: center;
+              color: inherit;
+            }
+          }
+        }
+      }
+      .h_footer{
+        .contact{
+          display: block;
+          width: 100%;
+          padding: 12px 0;
+          text-align: center;
+          font-size: 18px;
+          line-height: 1;
+          letter-spacing: 0.42px;
+          text-align: center;
+          background: $basicBaige;
+          border: 1px solid $basicBaige;
+          border-radius: 100px;
+          color: #fff;
+          transition: all 0.6s cubic-bezier(0.5, 1, 0.89, 1);
+          &:hover{
+            background: #fff;
+            color: $basicBaige;
+          }
+        }
+        .sns_wrap{
+          @include flexSet;
+          justify-content: center;
+          margin-top: 35px;
+          a{
+            @include hover;
+            display: block;
+            width: 35px;
+            height: 35px;
+            margin-right: 10px;
+            border-radius: 50%;
+            border: solid 1px $basicBaige;
+            @include bgSet;
+            &:nth-last-of-type(1){
+              margin-right: 0;
+            }
+            &.ig{
+              background-size: 15px;
+              // background-image: url(../img/common/icon_ig.png);
+            }
+            &.fb{
+              background-size: 10px;
+              // background-image: url(../img/common/icon_fb.png);
+            }
+            &.tw{
+              background-size: 14px;
+              // background-image: url(../img/common/icon_tw.png);
+            }
+          }
+        }
+      }
+    }
+  }
+  &.open{
+    top: 0;
+  }
+}
+
+@media screen and (max-width: 720px){
+  .hummenu{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left:0;
+    margin: auto;
+    width: 100vw;
+    height: 100vh;
+    z-index: 999;
+    top: -100vh;
+    right: 0;
+    left:0;
+    transition: top .5s cubic-bezier(0.65, 0, 0.35, 1);
+    background-color: #f9f6f3;
+    @media screen and (min-width: 981px){
+      display: none;
+    }
+    .fade_box{
+      opacity: 0;
+      filter: blur(10px) brightness(1.25);
+      transform: translate3d(0, -50px, 0);
+      will-change: opacity, filter, transform;
+      transition: opacity 0.6s, filter 0.6s cubic-bezier(0.5, 1, 0.89, 1), transform 0.6s cubic-bezier(0.5, 1, 0.89, 1);
+      will-change: opacity, filter, transform;
+      &.display{
+        opacity: 1;
+        filter: blur(0px) brightness(1);
+        transform: translate3d(0, 0%, 0);
+      }
+    }
+    .hummenu_inner{
+      @include waku;
+      height: 100vh;
+      padding-top: 0px;
+      display: block;
+      .height_adjust{
+        display: none;
+      }
+      .content{
+        width: 100%;
+        padding-top: 80px;
+        margin-right: 0;
+        .h_logo{
+          display: block;
+          width: 62px;
+          height: 120px;
+          @include bgSet;
+          @include logoSvg;
+          margin: 0 auto 30px;
+          transition: all 0.6s cubic-bezier(0.5, 1, 0.89, 1);
+        }
+        .copy{
+          display: block;
+          @include tsukushi-b;
+          font-size: 14px;
+          line-height: 1.83;
+          letter-spacing: 0.33px;
+          text-align: center;
+          span{
+            display: block;
+          }
+        }
+        .header_nav{
+          margin-top: 30px;
+          padding-top: 30px;
+          border-top: solid 1px #d8d8d8;
+          margin-bottom: 60px;
+          ul{
+            @include flexSet;
+            justify-content: center;
+            li{
+              padding: 0 12px;
+              writing-mode: vertical-rl;
+              a{
+                @include hover;
+                @include tsukushi-b;
+                font-size: 16px;
+                line-height: 1.19;
+                letter-spacing: 0.33px;
+                text-align: center;
+                color: inherit;
+              }
+            }
+          }
+        }
+        .h_footer{
+          margin-bottom: 60px;
+          .contact{
+            display: block;
+            width: 80%;
+            margin: 0 auto;
+            padding: 12px 0;
+            text-align: center;
+            font-size: 18px;
+          }
+          .sns_wrap{
+            @include flexSet;
+            justify-content: center;
+            margin-top: 35px;
+            a{
+              @include hover;
+              display: block;
+              width: 35px;
+              height: 35px;
+              margin-right: 10px;
+              border-radius: 50%;
+              border: solid 1px $basicBaige;
+              @include bgSet;
+              &.ig{
+                background-size: 15px;
+                background-image: url(../img/common/icon_ig.png);
+              }
+              &.fb{
+                background-size: 10px;
+                background-image: url(../img/common/icon_fb.png);
+              }
+              &.tw{
+                background-size: 14px;
+                background-image: url(../img/common/icon_tw.png);
+              }
+            }
+          }
+        }
+      }
+    }
+    &.open{
+      top: 0;
+    }
+  }
+}

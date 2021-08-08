@@ -1,8 +1,8 @@
 <?php get_header(); ?>
 <article id="caseList" class="page-case-list">
   <section class="case-list">
-    <div class="main_image" style="background-image: url(<?= get_template_directory_uri() ?>/assets/img/case/projectList.jpg);">
-      <img src="<?= get_template_directory_uri() ?>/assets/img/case/projectList_sp.jpg">
+    <div class="main_image" style="background-image: url(https://res.cloudinary.com/tetoteto/image/upload/f_auto,q_auto/v1628409109/case/projectList_tjrr9k.jpg);">
+      <img src="https://res.cloudinary.com/tetoteto/image/upload/f_auto,q_auto/v1628409109/case/projectList_sp_xrndx0.jpg">
     </div>
     <div class="section_inner">
       <div class="lead_txt">

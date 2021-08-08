@@ -1,0 +1,83 @@
+.comp-ctrl-button{
+  display: block;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #979797;
+  border-radius: 50%;
+  position: relative;
+  cursor: pointer;
+  transition: background .2s;
+  will-change: background;
+  &::before{
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    display: block;
+    content: "";
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    transform: rotate(45deg);
+    transition: border .2s;
+    will-change: border;
+  }
+  &.right{
+    margin-right: 10px;
+    &::before{
+      right: -4px;
+      left: 0px;
+      border-bottom: 1px solid #979797;
+      border-left: 1px solid #979797;
+    }
+  }
+  &.left{
+    &::before{
+      right:0;
+      left: -4px;
+      border-top: 1px solid #979797;
+      border-right: 1px solid #979797;
+      transform: rotate(45deg);
+    }
+  }
+  &.upper{
+    margin-bottom: 10px;
+    &::before{
+      right: 0;
+      left: 0;
+      border-top: 1px solid #979797;
+      border-left: 1px solid #979797;
+      transform: rotate(45deg);
+      top: 4px;
+    }
+  }
+  &.bottom{
+    margin-bottom: 10px;
+    &::before{
+      right: 0;
+      left: 0;
+      border-bottom: 1px solid #979797;
+      border-right: 1px solid #979797;
+      transform: rotate(45deg);
+      bottom: 4px;
+    }
+  }
+  &:hover{
+    background: $basicBaige;
+    border-color: $basicBaige;
+    &::before{
+      border-color: #fff;
+    }
+  }
+}
+
+@media screen and (max-width: 1150px){
+  .comp-ctrl-button{
+    display: block;
+    width: 34px;
+    height: 34px;
+    &::before{
+      width: 6px;
+      height: 6px;
+    }
+  }
+}

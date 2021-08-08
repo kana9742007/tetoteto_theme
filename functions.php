@@ -16,6 +16,14 @@ add_image_size('ogp', 1200, 9999);
 remove_filter('the_content', 'wpautop'); // 記事の自動整形を無効にする
 remove_filter('the_excerpt', 'wpautop'); // 抜粋の自動整形を無効にする
 
+function call_back($buffer) {
+    $buffer = str_replace("https://res.cloudinary.com/v1628319569/image/upload/","https://res.cloudinary.com/v1628319569/image/upload/c_fit,f_auto,q_auto/",$buffer); //HTML出力で置き換える処理 cloudinary
+    return $buffer;
+}
+
+function buf_start() { ob_start("call_back"); }
+function buf_end() { ob_end_flush(); }
+
 // REST APIからのデータ読み込みを許可
 function add_allow_header( $headers ) {
   global $wp;

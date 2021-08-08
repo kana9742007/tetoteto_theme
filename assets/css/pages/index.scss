@@ -1,0 +1,405 @@
+.page-index{
+  .section-main{
+    position: relative;
+    max-height: 54vw;
+    .index_title_en{
+      position: absolute;
+      z-index: 15;
+      left: 30px;
+      color: #fff;
+      font-size: 12px;
+      writing-mode: vertical-rl;
+      z-index: 100;
+      height: 270px;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+    }
+    .main_slider_bar{
+      position: absolute;
+      z-index: 15;
+      right: 30px;
+      z-index: 100;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      height: 580px;
+      .slide_number{
+        @include varela;
+        @include flexSet;
+        justify-content: center;
+        font-size: 14px;
+        line-height: normal;
+        letter-spacing: normal;
+        margin-bottom: 20px;
+        color: #fff;
+        .current_num{
+          margin-right: 0.5em;
+        }
+        .slash{
+          width: 1px;
+          height: 40px;
+          background: #fff;
+          transform: rotate(30deg);
+          margin-top: 0.3em;
+        }
+        .all_num{
+          margin-left: 0.4em;
+          margin-top: 1.5em;
+        }
+      }
+      .gauge_wrap{
+        margin-bottom: 30px;
+        .gauge_inner{
+          width: 1px;
+          height: 400px;
+          background: #fff;
+          margin: 0 auto;
+          position: relative;
+          .gauge_display{
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: 0;
+            top: 0;
+            left: 0;
+            margin: auto;
+            background: $basicBaige;
+            /*animation: loading2 6s linear 0s infinite normal;*/
+          }
+        }
+      }
+      .slide_button{
+        button{
+          border: 1px solid #fff;
+          margin-left: auto;
+          margin-right: auto;
+          &::before{
+            border-color: #fff;
+          }
+          &.disable{
+            pointer-events: none !important;
+          }
+        }
+      }
+    }
+  }
+  .section-about{
+    padding: 120px 0 0;
+    position: relative;
+    .section_inner{
+      @include flexSet;
+      align-items: flex-start;
+      justify-content: space-between;
+      flex-direction: row-reverse;
+      .img_wrap{
+        width: 50%;
+        border-radius: 10px;
+        overflow: hidden;
+        margin-right: -120px;
+        img{
+          pointer-events: none;
+        }
+      }
+      .txt_wrap{
+        width: 55%;
+        margin-top: 50px;
+        .img_wrap{
+          display: none;
+        }
+        .sub_ttl{
+          font-size: 24px;
+          line-height: 1.88;
+          margin-bottom: 30px;
+          span{
+            display: block;
+          }
+        }
+        .desc_wrap{
+          @include basicP;
+          margin-bottom: 40px;
+        }
+      }
+    }
+  }
+  .section-case{
+    .comp-section-title{
+      margin-bottom: 80px;
+    }
+    .comp-link-button{
+      margin-top: 100px;
+    }
+  }
+  .section-space{
+    .img_wrap{
+      border-radius: 15px;
+      overflow: hidden;
+      margin-bottom: 60px;
+    }
+    .txt_wrap{
+      .comp-section-title{
+        margin-bottom: 30px;
+        .title_en{
+          margin-bottom: 15px;
+        }
+        .title_ja{
+          text-indent: -0.2em;
+        }
+      }
+      .sub_ttl{
+        font-size: 24px;
+        line-height: 1.88;
+        margin-bottom: 30px;
+      }
+      .img_wrap{
+        display: none;
+      }
+      .desc_wrap{
+        width: 100%;
+        @include basicP;
+      }
+    }
+  }
+  .section-member{
+    .section_inner{
+      padding-bottom: 50px;
+    }
+  }
+  .section-produce{
+    margin-bottom: 120px;
+    .comp-section-title{
+      margin-bottom: 60px;
+    }
+  }
+}
+
+@media screen and (max-width: 1150px){
+  .page-index{
+    .section-main{
+      position: relative;
+      max-height: 52vw;
+      .index_title_en{
+        left: 20px;
+        color: #fff;
+        font-size: 10px;
+        height: 270px;
+      }
+      .main_slider_bar{
+        right: 20px;
+        height: 430px;
+        .slide_number{
+          transform: scale(0.8);
+          font-size: 14px;
+          margin-bottom: 20px;
+        }
+        .gauge_wrap{
+          .gauge_inner{
+            height: 250px;
+          }
+        }
+      }
+    }
+    .section-about{
+      padding: 60px 0 0;
+      position: relative;
+      .comp-section-title{
+        margin-bottom: 60px;
+      }
+      .section_inner{
+        display: block;
+        .img_wrap{
+          display: none;
+          width: 100%;
+          border-radius: 10px;
+          margin-right: 0;
+        }
+        .txt_wrap{
+          width: 100%;
+          margin-top: 50px;
+          .img_wrap{
+            display: block;
+            margin-bottom: 40px;
+          }
+          .sub_ttl{
+            font-size: 24px;
+            margin-bottom: 30px;
+          }
+          .desc_wrap{
+            @include basicP;
+            margin-bottom: 40px;
+          }
+        }
+      }
+    }
+    .section-case{
+      .comp-section-title{
+        margin-bottom: 60px;
+      }
+      .comp-link-button{
+        margin-top: 80px;
+      }
+    }
+    .section-space{
+      .img_wrap{
+        border-radius: 15px;
+        overflow: hidden;
+        margin-bottom: 60px;
+      }
+      .txt_wrap{
+        .comp-section-title{
+          margin-bottom: 30px;
+          .title_en{
+            margin-bottom: 15px;
+          }
+          .title_ja{
+            text-indent: -0.2em;
+          }
+        }
+        .sub_ttl{
+          font-size: 24px;
+          margin-bottom: 30px;
+          span{
+            display: block;
+          }
+        }
+        .desc_flex{
+          display: block;
+          .desc_wrap{
+            width: 100%;
+          }
+        }
+      }
+    }
+    .section-produce{
+      margin-bottom: 80px;
+    }
+  }
+}
+
+@media screen and (max-width: 980px){
+  .page-index{
+    .section-main{
+      max-height: 125vw;
+      .main_slider_bar{
+        right: 30px;
+        height: 580px;
+        .gauge_wrap{
+          margin-bottom: 30px;
+          .gauge_inner{
+            width: 1px;
+            height: 400px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 720px){
+  .page-index{
+    .section-main{
+      max-height: 125vw;
+      .index_title_en{
+        left: 25px;
+        color: #fff;
+        font-size: 10px;
+        height: 230px;
+        transform: scale(0.8);
+      }
+      .main_slider_bar{
+        right: 12px;
+        height: 85vw;
+        .slide_number{
+          transform: scale(0.7);
+          margin-bottom: 10px;
+        }
+        .gauge_wrap{
+          margin-bottom: 20px;
+          .gauge_inner{
+            width: 1px;
+            height: 50vw;
+          }
+        }
+        .slide_button{
+          button{
+            width: 30px;
+            height: 30px;
+            &.upper{
+              margin-bottom: 7px;
+            }
+          }
+        }
+      }
+    }
+    .section-about{
+      padding: 60px 0 0;
+      position: relative;
+      .section_inner{
+        .comp-section-title{
+          margin-bottom: 40px;
+        }
+        .txt_wrap{
+          margin-top: 0px;
+          .img_wrap{
+            display: block;
+            margin-bottom: 30px;
+          }
+          .sub_ttl{
+            font-size: 20px;
+            margin-bottom: 25px;
+          }
+          .desc_wrap{
+            margin-bottom: 30px;
+          }
+        }
+      }
+    }
+    .section-case{
+      .comp-section-title{
+        margin-bottom: 40px;
+      }
+      .comp-link-button{
+        margin-top: 60px;
+      }
+    }
+    .section-space{
+      .img_wrap{
+        display: none;
+      }
+      .txt_wrap{
+        .comp-section-title{
+          margin-bottom: 40px;
+          .title_en{
+            margin-bottom: 15px;
+          }
+          .title_ja{
+            text-indent: -0.2em;
+          }
+        }
+        .img_wrap{
+          display: block;
+          border-radius: 10px;
+          margin-bottom: 30px;
+          @include bgSet;
+          height: 110vw;
+          background-image: url(https://res.cloudinary.com/tetoteto/image/upload/f_auto,q_auto/v1628410344/index/space_sp_zrxe7j.jpg);
+        }
+        .sub_ttl{
+          font-size: 18px;
+          margin-bottom: 20px;
+        }
+      }
+    }
+    .section-member{
+      .section_inner{
+        padding-bottom: 50px;
+      }
+    }
+    .section-produce{
+      margin-bottom: 60px;
+      .comp-section-title{
+        margin-bottom: 40px;
+      }
+    }
+  }
+}
